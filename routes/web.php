@@ -12,5 +12,5 @@
 */
 
 Route::get('/', "PageController@index");
-Route::get('/standart2', "Standart2Controller@index");
-Route::post('/standart2/save', "Standart2Controller@save");
+Route::get('/standar2', "Standar2Controller@index");
+Route::post('/standar2/save', "Standar2Controller@save");

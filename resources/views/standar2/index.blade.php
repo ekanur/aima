@@ -7,7 +7,7 @@
             <p class="category">Standar 1</p>
         </div>
         <div class="content">
-            <form action="/standart2/save" method="post" class="kuesioner">
+            <form action="/standar2/save" method="post" class="kuesioner">
             {{csrf_field()}}
                 <ul class="list-unstyled">
                     <li class="row">
