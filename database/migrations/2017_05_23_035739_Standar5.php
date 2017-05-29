@@ -13,7 +13,7 @@ class Standar5 extends Migration
      */
     public function up()
     {
-        Schema::create('standar5', function (Blueprint $table) {
+        Schema::create('standar5s', function (Blueprint $table) {
           $table->increments('id');
           $table->string('kode', 15);
           $table->integer('nilai');
@@ -30,6 +30,6 @@ class Standar5 extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('standar5');
+        Schema::dropIfExists('standar5s');
     }
 }
