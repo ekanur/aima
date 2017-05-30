@@ -83,11 +83,12 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="/standar2">Standar 2</a>
+                    <a href="/standar3">Standar 3</a>
+                    <a href="/standar4">Standar 4</a>
+                    <a href="/standar5">Standar 5</a>
+                    <a href="/standar6">Standar 6</a>
+                    <a href="/standar7">Standar 7</a>
                 </div>
             </div>
         </div>

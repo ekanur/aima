@@ -110,31 +110,31 @@ class Standar7Controller extends Controller
         $standar7 = new Standar7;
         $standar7->kode = '7.1.1';
         $standar7->id_jurusan = '1';
-        $standar7->nilai = $request->skor7_1_1;
+        $standar7->nilai = $skor7_1_1;
         $standar7->save();
 
         $standar7 = new Standar7;
         $standar7->kode = '7.1.2';
         $standar7->id_jurusan = '1';
-        $standar7->nilai = $request->skor7_1_2;
+        $standar7->nilai = $skor7_1_2;
         $standar7->save();
 
         $standar7 = new Standar7;
         $standar7->kode = '7.1.3';
         $standar7->id_jurusan = '1';
-        $standar7->nilai = $request->skor7_1_3;
+        $standar7->nilai = $skor7_1_3;
         $standar7->save();
 
         $standar7 = new Standar7;
         $standar7->kode = '7.1.4';
         $standar7->id_jurusan = '1';
-        $standar7->nilai = $request->skor7_1_4;
+        $standar7->nilai = $skor7_1_4;
         $standar7->save();
 
         $standar7 = new Standar7;
         $standar7->kode = '7.2.1';
         $standar7->id_jurusan = '1';
-        $standar7->nilai = $request->skor7_2_1;
+        $standar7->nilai = $skor7_2_1;
         $standar7->save();
 
         // return "saved";

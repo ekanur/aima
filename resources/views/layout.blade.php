@@ -36,7 +36,7 @@
 <body>
 
 <div class="wrapper">
-    
+
 
     <div class="main-panel">
         <nav class="navbar navbar-default">
@@ -99,15 +99,15 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Standar 1</p>
-                                            50%
+                                            <p>Standar 2</p>
+                                            100%
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <a href="dashboard.html">Detail</a>
+                                        <a href="/standar2">Isi Sekarang</a>
                                          <span class="pull-right"><a href="#"><i class="fa fa-info-circle"></i></a></span>
                                     </div>
                                 </div>
@@ -125,7 +125,7 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Standar 2</p>
+                                            <p>Standar 3</p>
                                             100%
                                         </div>
                                     </div>
@@ -133,7 +133,7 @@
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <a href="standar2.html">Detail</a>
+                                        <a href="/standar3">Isi Sekarang</a>
                                         <span class="pull-right"><a href="#"><i class="fa fa-info-circle"></i></a></span>
                                     </div>
                                 </div>
@@ -151,15 +151,15 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Standar 3</p>
-                                            0%
+                                            <p>Standar 4</p>
+                                            100%
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                       <a href="#">Detail</a>
+                                       <a href="/standar4">Isi Sekarang</a>
                                          <span class="pull-right"><a href="#"><i class="fa fa-info-circle"></i></a></span>
                                     </div>
                                 </div>
@@ -177,15 +177,15 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Standar 4</p>
-                                            76%
+                                            <p>Standar 5</p>
+                                            100%
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <a href="#">Detail</a>
+                                        <a href="standar5">Isi Sekarang</a>
                                          <span class="pull-right"><a href="#"><i class="fa fa-info-circle"></i></a></span>
                                     </div>
                                 </div>
@@ -203,15 +203,15 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Standar 5</p>
-                                           85%
+                                            <p>Standar 6</p>
+                                           100%
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <a href="#">Detail</a>
+                                        <a href="standar6">Isi Sekarang</a>
                                          <span class="pull-right"><a href="#"><i class="fa fa-info-circle"></i></a></span>
                                     </div>
                                 </div>
@@ -230,15 +230,15 @@
                                     </div>
                                     <div class="col-xs-7">
                                         <div class="numbers">
-                                            <p>Standar 6</p>
-                                            44%
+                                            <p>Standar 7</p>
+                                            100%
                                         </div>
                                     </div>
                                 </div>
                                 <div class="footer">
                                     <hr />
                                     <div class="stats">
-                                        <a href="#">Detail</a>
+                                        <a href="standar7">Isi Sekarang</a>
                                          <span class="pull-right"><a href="#"><i class="fa fa-info-circle"></i></a></span>
                                     </div>
                                 </div>
@@ -248,7 +248,7 @@
 
                 </div>
                 <div class="row">
-                    @yield("content")  
+                    @yield("content")
                 </div>
             </div>
         </div>
