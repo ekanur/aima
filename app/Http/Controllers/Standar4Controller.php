@@ -15,36 +15,36 @@ class Standar4Controller extends Controller
       //dd($request->all());
 
       //perhitungan skor 4.3.1.a
-      if($request->kd4_3_1_a >= (90/100)){
+      if($request->kd4_3_1_a >= 90){
         $skor4_3_1_a = 4;
-      }elseif($request->kd4_3_1_a > (30/100)){
-        $skor4_3_1_a = (20 * $request->kd4_3_1_a / 3) - 2;
-      }elseif($request->kd4_3_1_a <= (30/100)){
+      }elseif($request->kd4_3_1_a > 30){
+        $skor4_3_1_a = (20 * ($request->kd4_3_1_a/100) / 3) - 2;
+      }elseif($request->kd4_3_1_a <= 30){
         $skor4_3_1_a = 0;
       }
       $skor4_3_1_a = intval(round($skor4_3_1_a));
 
       //perhitungan skor 4.3.1.b
-      if($request->kd4_3_1_b >= (40/100)){
+      if($request->kd4_3_1_b >= 40){
         $skor4_3_1_b = 4;
-      }elseif($request->kd4_3_1_b < (40/100)){
-        $skor4_3_1_b = 2 + 5 * $request->kd4_3_1_b;
+      }elseif($request->kd4_3_1_b < 40){
+        $skor4_3_1_b = 2 + 5 * ($request->kd4_3_1_b/100);
       }
       $skor4_3_1_b = intval(round($skor4_3_1_b));
 
       //perhitungan skor 4.3.1.c
-      if($request->kd4_3_1_c >= (40/100)){
+      if($request->kd4_3_1_c >= (40)){
         $skor4_3_1_c = 4;
-      }elseif($request->kd4_3_1_c < (40/100)){
-        $skor4_3_1_c = 1 + 7.5 * $request->kd4_3_1_c;
+      }elseif($request->kd4_3_1_c < (40)){
+        $skor4_3_1_c = 1 + 7.5 * ($request->kd4_3_1_c/100);
       }
       $skor4_3_1_c = intval(round($skor4_3_1_c));
 
       //perhitungan skor 4.3.1.d
-      if($request->kd4_3_1_d >= (40/100)){
+      if($request->kd4_3_1_d >= 40){
         $skor4_3_1_d = 4;
-      }elseif($request->kd4_3_1_d < (40/100)){
-        $skor4_3_1_d = 1 + 7.5 * $request->kd4_3_1_d;
+      }elseif($request->kd4_3_1_d < 40){
+        $skor4_3_1_d = 1 + 7.5 * ($request->kd4_3_1_d/100);
       }
       $skor4_3_1_d = intval(round($skor4_3_1_d));
 
@@ -77,21 +77,21 @@ class Standar4Controller extends Controller
       $skor4_3_4 = intval(round($skor4_3_4));
 
       //perhitungan skor 4.3.6
-      if ($request->pkdt4_3_6 >= (95/100)) {
+      if ($request->pkdt4_3_6 >= 95) {
         $skor4_3_6 = 4;
-      } elseif ($request->pkdt4_3_6 > (60/100) && $request->pkdt4_3_6 < (95/100)) {
-        $skor4_3_6 = ((80 * $request->pkdt4_3_6) - 48) / 7;
-      } elseif ($request->pkdt4_3_6 <= (60/100)) {
+      } elseif ($request->pkdt4_3_6 > 60 && $request->pkdt4_3_6 < 95) {
+        $skor4_3_6 = ((80 * ($request->pkdt4_3_6/100)) - 48) / 7;
+      } elseif ($request->pkdt4_3_6 <= 60) {
         $skor4_3_6 = 0;
       }
       $skor4_3_6 = intval(round($skor4_3_6));
 
       //perhitungan skor 4.4.1
-      if ($request->pdtt4_4_1 <= (10/100)) {
+      if ($request->pdtt4_4_1 <= 10) {
         $skor4_4_1 = 4;
-      } elseif ($request->pdtt4_4_1 > (10/100) && $request->pdtt4_4_1 < (50/100)) {
-        $skor4_4_1 = 10 * ((50/100) - $request->pdtt4_4_1);
-      } elseif ($request->pdtt4_4_1 >= (50/100)) {
+      } elseif ($request->pdtt4_4_1 > 10 && $request->pdtt4_4_1 < 50) {
+        $skor4_4_1 = 10 * ((50/100) - ($request->pdtt4_4_1/100));
+      } elseif ($request->pdtt4_4_1 >= 50) {
         $skor4_4_1 = 0;
       }
       $skor4_4_1 = intval(round($skor4_4_1));
@@ -101,11 +101,11 @@ class Standar4Controller extends Controller
       $skor4_4_2_a = intval(round($skor4_4_2_a));
 
       //perhitungan skor 4.4.2.b
-      if ($request->pkdtt4_4_2_b >= (95/100)) {
+      if ($request->pkdtt4_4_2_b >= 95) {
         $skor4_4_2_b = 4;
-      } elseif ($request->pkdtt4_4_2_b > (60/100) && $request->pkdtt4_4_2_b < (95/100)) {
-        $skor4_4_2_b = (80 * $request->pkdtt4_4_2_b - 48) / 7;
-      } elseif ($request->pkdtt4_4_2_b <= (60/100)){
+      } elseif ($request->pkdtt4_4_2_b > 60 && $request->pkdtt4_4_2_b < 95) {
+        $skor4_4_2_b = (80 * ($request->pkdtt4_4_2_b/100) - 48) / 7;
+      } elseif ($request->pkdtt4_4_2_b <= 60){
         $skor4_4_2_b = 0;
       }
       $skor4_4_2_b = intval(round($skor4_4_2_b));
