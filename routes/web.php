@@ -18,3 +18,5 @@ Route::get('/standar4', 'Standar4Controller@index');
 Route::post('/standar4/save', 'Standar4Controller@save');
 Route::get('/standar7', "Standar7Controller@index");
 Route::post('/standar7/save', 'Standar7Controller@save');
+Route::get('/standar6', "Standar6Controller@index");
+Route::post('/standar6/save', "Standar6Controller@save");
