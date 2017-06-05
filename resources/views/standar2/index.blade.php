@@ -7,8 +7,12 @@
             <p class="category">Standar 1</p>
         </div>
         <div class="content">
-            <form action="/standar2/save" method="post" class="kuesioner">
+            <form @if(0==sizeof($data)) action="/standar2/save" @else action="/standar2/update" @endif method="post" class="kuesioner">
             {{csrf_field()}}
+            <input type="hidden" name="skor2_1_old" value="@if(isset($data["2.1"])) {{ $data["2.1"] }} @endif">
+            <input type="hidden" name="skor2_2_old" value="@if(isset($data["2.2"])) {{ $data["2.2"] }} @endif">
+            <input type="hidden" name="skor2_6_old" value="@if(isset($data["2.6"])) {{ $data["2.6"] }} @endif">
+
                 <ul class="list-unstyled">
                     <li class="row">
                         <div class="col-md-11 komponen">
