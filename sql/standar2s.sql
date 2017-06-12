@@ -1,3 +1,42 @@
-INSERT INTO "standar2s" ("id", "kode", "nilai", "id_jurusan", "created_at", "updated_at", "deleted_at") VALUES (4, '2.1', 4, 1, '2017-6-5 02:08:33', '2017-6-5 02:08:33', NULL);
-INSERT INTO "standar2s" ("id", "kode", "nilai", "id_jurusan", "created_at", "updated_at", "deleted_at") VALUES (5, '2.2', 1, 1, '2017-6-5 02:08:33', '2017-6-5 02:08:33', NULL);
-INSERT INTO "standar2s" ("id", "kode", "nilai", "id_jurusan", "created_at", "updated_at", "deleted_at") VALUES (6, '2.6', 2, 1, '2017-6-5 02:08:33', '2017-6-5 02:08:33', NULL);
+/*
+Navicat PGSQL Data Transfer
+
+Source Server         : localhost
+Source Server Version : 90504
+Source Host           : localhost:5432
+Source Database       : aima
+Source Schema         : public
+
+Target Server Type    : PGSQL
+Target Server Version : 90504
+File Encoding         : 65001
+
+Date: 2017-06-12 09:53:23
+*/
+
+
+-- ----------------------------
+-- Table structure for standar2s
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."standar2s";
+CREATE TABLE "public"."standar2s" (
+"id" int4 DEFAULT nextval('standar2s_id_seq'::regclass) NOT NULL,
+"kode" varchar(15) COLLATE "default" NOT NULL,
+"nilai" int4 NOT NULL,
+"id_jurusan" int4 NOT NULL,
+"created_at" timestamp(0),
+"updated_at" timestamp(0),
+"deleted_at" timestamp(0)
+)
+WITH (OIDS=FALSE)
+
+;
+
+-- ----------------------------
+-- Alter Sequences Owned By 
+-- ----------------------------
+
+-- ----------------------------
+-- Primary Key structure for table standar2s
+-- ----------------------------
+ALTER TABLE "public"."standar2s" ADD PRIMARY KEY ("id");
