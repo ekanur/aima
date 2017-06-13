@@ -13,8 +13,8 @@ class Standar2Controller extends Controller
     foreach ($standar2 as $data_standar2) {
       $data[$data_standar2->kode]=$data_standar2->nilai;
     }
-    // dd(sizeof($data));
-    return view("standar2.index", compact('data'));
+    $standar="Standar 2";
+    return view("standar2.index", compact('data', 'standar'));
   }
 
   public function save(Request $request){

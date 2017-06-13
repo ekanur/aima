@@ -66,6 +66,18 @@ return [
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
+        'pgsql_2' => [
+        // untuk cek data pegawai yg sebagai koor prodi
+                    'driver'   => 'pgsql',
+                    'host'     => env('DB_HOST2', '192.168.1.197'),
+                    'port' => env('DB_PORT', '5432'),
+                    'database' => env('DB_DATABASE2', 'PTIK'),
+                    'username' => env('DB_USERNAME2', 'litbangdev'),
+                    'password' => env('DB_PASSWORD2', '123456789'),
+                    'charset'  => 'utf8',
+                    'prefix'   => '',
+                    'schema'   => 'pegawai',
+            ],
 
     ],
 

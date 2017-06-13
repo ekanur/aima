@@ -7,7 +7,8 @@ use App\Standar5;
 class Standar5Controller extends Controller
 {
     public function index(){
-      return view('standar5.index');
+      $standar="Standar 5";
+      return view('standar5.index', compact('standar'));
     }
 
     public function save(Request $masuk){

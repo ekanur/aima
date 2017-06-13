@@ -6,7 +6,7 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="{{ URL::asset('img/favicon.png') }}">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>AKREDITASI PROGRAM STUDI SARJANA</title>
+	<title>AIMA</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -48,24 +48,24 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="#">AKREDITASI PROGRAM STUDI SARJANA</a>
+                    <a class="navbar-brand" href="#">AIMA / {{$standar}} </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
+                        {{-- <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="ti-panel"></i>
 								<p>Hasil</p>
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="ti-user"></i>
-									<p>Ekonomi Pembangunan</p>
+									<p>{{Session::get("userID")}}</p>
 									<b class="caret"></b>
                               </a>
                               <ul class="dropdown-menu">
-                                <li><a href="#">Logout</a></li>
+                                <li><a href="{{ url('/servicelogout') }}">Logout</a></li>
                                 <!-- <li><a href="#">Notification 2</a></li>
                                 <li><a href="#">Notification 3</a></li>
                                 <li><a href="#">Notification 4</a></li>
@@ -100,7 +100,7 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Standar 2</p>
-                                            100%
+                                           {{--  100% --}}
                                         </div>
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Standar 3</p>
-                                            100%
+                                           {{--  100% --}}
                                         </div>
                                     </div>
                                 </div>
@@ -152,7 +152,7 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Standar 4</p>
-                                            100%
+                                           {{--  100% --}}
                                         </div>
                                     </div>
                                 </div>
@@ -178,7 +178,7 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Standar 5</p>
-                                            100%
+                                           {{--  100% --}}
                                         </div>
                                     </div>
                                 </div>
@@ -204,7 +204,7 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Standar 6</p>
-                                           100%
+                                          {{--  100% --}}
                                         </div>
                                     </div>
                                 </div>
@@ -231,7 +231,7 @@
                                     <div class="col-xs-7">
                                         <div class="numbers">
                                             <p>Standar 7</p>
-                                            100%
+                                           {{--  100% --}}
                                         </div>
                                     </div>
                                 </div>
@@ -291,14 +291,14 @@
 
         	demo.initChartist();
 
-        	$.notify({
-            	icon: 'ti-gift',
-            	message: "Welcome to <b>Paper Dashboard</b> - a beautiful Bootstrap freebie for your next project."
+        	// $.notify({
+         //    	icon: 'ti-gift',
+         //    	message: "Welcome to <b>Paper Dashboard</b> - a beautiful Bootstrap freebie for your next project."
 
-            },{
-                type: 'success',
-                timer: 4000
-            });
+         //    },{
+         //        type: 'success',
+         //        timer: 4000
+         //    });
 
     	});
 	</script>

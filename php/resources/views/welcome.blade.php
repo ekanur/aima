@@ -79,9 +79,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Audit Internal Mutu Akademik
                 </div>
-
+                
                 <div class="links">
                     <a href="/standar2">Standar 2</a>
                     <a href="/standar3">Standar 3</a>

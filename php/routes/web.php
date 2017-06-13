@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/servicecheck','SecurityController@check');
+Route::get('/servicelogout','SecurityController@logout');
+
 
 Route::get('/', "PageController@index");
 Route::get('/standar2', "Standar2Controller@index");

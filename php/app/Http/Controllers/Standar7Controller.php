@@ -8,7 +8,8 @@ use App\Standar7;
 class Standar7Controller extends Controller
 {
     public function index(){
-      return view('standar7.index');
+      $standar="Standar 7";
+      return view('standar7.index', compact('standar'));
     }
 
     public function save(Request $request){

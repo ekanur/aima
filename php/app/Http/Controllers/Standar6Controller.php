@@ -9,7 +9,8 @@ class Standar6Controller extends Controller
 {
     public function index()
     {
-        return view('standar6.index');
+        $standar="Standar 6";
+        return view('standar6.index', compact('standar'));
     }
      public function save(Request $request)
      {
