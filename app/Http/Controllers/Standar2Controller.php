@@ -4,15 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Standar2;
-use App\Standar1;
 
 class Standar2Controller extends Controller
 {
   public function index(){
-    $standar1 = Standar1::where("id_prodi", session('id_prodi'))->get();
-    if($standar1->count() <= 0){
-      return redirect('/standar1');
-    }
     
     $standar2 = Standar2::where("id_prodi", session('id_prodi'))->get();
     $data=array();

@@ -4,16 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Standar4;
-use App\Standar3;
 
 class Standar4Controller extends Controller
 {
     public function index(){
-      $standar3 = Standar3::where("id_prodi", session('id_prodi'))->get();
-      if($standar3->count() <= 0){
-        return redirect('/standar3');
-      }
-
       $standar="Standar 4";
       $data = Standar4::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', session('id_prodi'))->orderBy('kode', 'asc')->get();
       if(!$data->count()){
