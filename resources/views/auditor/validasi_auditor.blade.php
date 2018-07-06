@@ -9,6 +9,8 @@
                                     <tr>
                                         <td>
                                         {{ $validasi_auditor or '' }}
+                                        <span>Catatan :</span>
+                                            <textarea class="form-control border-input" name="catatan" placeholder="Catatan ..."></textarea>
                                         </td>
                                     </tr>
                                 </tbody>

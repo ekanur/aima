@@ -14,11 +14,21 @@
 
                   <ul class="list-unstyled">
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <span class="nomor pull-left">3.1.1.a</span>
                               <div class="deskriptor pull-left">
-                                   <strong>Rasio calon mahasiswa yang ikut seleksi : daya tampung </strong>
-                                   <div class="row">
+                                   <strong>Rasio calon mahasiswa yang ikut seleksi : daya tampung  </strong>
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              
+                          <div class="row">
                                      <div class="form-group col-md-3">
                                        <label for="n_3_1_1_mhs">Calon mahasiswa yang ikut seleksi</label>
                                        <input type="number" step=1  name="n_3_1_1_mhs" class="form-control border-input" id="3_1_1" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[0] ?>" required="">
@@ -28,16 +38,20 @@
                                      <input type="number" step=1  name="n_3_1_1_daya" class="form-control border-input" id="3_1_1" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[1] ?>" required="">
                                    </div>
                                </div>
-                              </div>
+                            
+                              
+                             
+                             
                           </div>
 
                       </li>
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <span class="nomor pull-left">3.1.1.b</span>
                               <div class="deskriptor pull-left">
                                    <strong>Rasio mahasiswa baru reguler yang melakukan registrasi : calon mahasiswa baru reguler yang lulus seleksi</strong>
-                                   <div class="row">
+                                </div>
+                                <div class="row">
                                      <div class="form-group col-md-3">
                                        <label for="n_3_1_1_b1">Mahasiswa baru reguler yang melakukan registrasi</label>
                                        <input type="number" step=1 name="n_3_1_1_b1" class="form-control border-input" id="n_3_1_1_b" value="<?php if(!$dataCheck) echo json_decode($data[1]->data)[0] ?>" required="">
@@ -48,17 +62,26 @@
                                    </div>
                                  </div>
                               </div>
-                          </div>
+                          
                       </li>
 
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.1.1.c</div>
                               <div class="deskriptor pull-left">
                                   <strong>
                                   Rasio mahasiswa baru transfer terhadap mahasiswa baru bukan transfer.
                                   </strong>
-                                  <div class="row">
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
                                     <div class="form-group col-md-3">
                                       <label for="n_3_1_1_c1">Total mahasiswa baru transfer untuk program S1 reguler dan S1 non-reguler</label>
                                       <input type="number" step=1 name="n_3_1_1_c1" class="form-control border-input" id="n_3_1_1_c" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[0] ?>" required="">
@@ -69,33 +92,51 @@
                                   </div>
                                 </div>
                               </div>
-                          </div>
+                          
                       </li>
 
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.1.1.d</div>
                               <div class="deskriptor pull-left">
                                   <strong>
                                   Rata-rata Indeks Prestasi Kumulatif (IPK) selama lima tahun terakhir.
                                   </strong>
-                                  <div class="row">
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
                                     <div class="form-group col-md-3">
                                       <input type="number" step=0.01 name="n_3_1_1_d" class="form-control border-input" id="n_3_1_1_d" value="<?php if(!$dataCheck) echo json_decode($data[3]->data)[0] ?>" required="">
                                     </div>
                                   </div>
                               </div>
-                          </div>
+                          
                       </li>
 
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.1.2</div>
                               <div class="deskriptor pull-left">
                                   <strong>
                                   Penerimaan mahasiswa non-reguler selayaknya tidak membuat beban dosen sangat berat, jauh melebihi beban ideal  (sekitar 12 sks).
                                   </strong>
-                                  <div class="row">
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
                                     <div class="form-group col-md-3">
                                       <select name="n_3_1_2" id="" class="form-control border-input">
                                           <option disabled selected >--Pilih--</option>
@@ -108,17 +149,26 @@
                                     </div>
                                   </div>
                               </div>
-                            </div>
+                            
                       </li>
 
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.1.3</div>
                               <div class="deskriptor pull-left">
                                   <strong>
                                   Penghargaan atas prestasi mahasiswa di bidang nalar, bakat dan minat
                                   </strong>
-                                  <div class="row">
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
                                     <div class="form-group col-md-3">
                                       <select name="n_3_1_3" id="" class="form-control border-input">
                                         <option disabled selected >--Pilih--</option>
@@ -130,17 +180,26 @@
                                     </div>
                                   </div>
                               </div>
-                          </div>
+                          
                       </li>
 
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.1.4.a</div>
                               <div class="deskriptor pull-left">
                                   <strong>
                                   Persentase kelulusan tepat waktu
                                   </strong>
-                                  <div class="row">
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
                                     <div class="form-group col-md-3">
                                       <label for="f">Mahasiswa lulus tepat waktu</label>
                                       <input type="number" step=1 name="f" class="form-control border-input" id="f" value="<?php if(!$dataCheck) echo json_decode($data[6]->data)[0] ?>" required="">
@@ -151,17 +210,26 @@
                                     </div>
                                   </div>
                               </div>
-                          </div>
+                          
                       </li>
 
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.1.4.b</div>
                               <div class="deskriptor pull-left">
                                   <strong>
                                   Persentase mahasiswa yang DO atau mengundurkan diri
                                   </strong>
-                                  <div class="row">
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
                                     <div class="form-group col-md-3">
                                       <label for="a">Jumlah mahasiswa</label>
                                       <input type="number" step=1 name="a3_1_4_b" class="form-control border-input" id="a" value="<?php if(!$dataCheck) echo json_decode($data[7]->data)[0] ?>" required="">
@@ -170,18 +238,18 @@
                                       <label for="b">Banyaknya <em>Drop Out</em></label>
                                       <input type="number" step=1 name="b3_1_4_b" class="form-control border-input" id="b" value="<?php if(!$dataCheck) echo json_decode($data[7]->data)[1] ?>" required="">
                                     </div>
-                                    <div class="form-group col-md-3">
+                                    <div class="form-group col-md-4">
                                       <label for="c">Jumlah mahasiswa mengundurkan diri</label>
                                       <input type="number" step=1 name="c3_1_4_b" class="form-control border-input" id="c" value="<?php if(!$dataCheck) echo json_decode($data[7]->data)[2] ?>" required="">
                                     </div>
                                   </div>
                               </div>
-                          </div>
+                          
                       </li>
 
 
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.2.1</div>
                               <div class="deskriptor pull-left">
                                   <strong>
@@ -194,7 +262,16 @@
                                           <li>Layanan kesehatan</li>
                                       </ol>
                                   </strong>
-                                  <div class="row">
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
                                     <div class="form-group col-md-3">
                                       <select name="n_3_2_1" id="" class="form-control border-input">
                                         <option disabled selected >--Pilih--</option>
@@ -207,17 +284,26 @@
                                     </div>
                                   </div>
                               </div>
-                          </div>
+                          
                       </li>
 
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.2.2</div>
                               <div class="deskriptor pull-left">
                                   <strong>
                                   Kualitas layanan kepada mahasiswa Untuk setiap jenis pelayanan, pemberian skor sebagai berikut: <br/>4 : sangat baik, <br/>3 : baik, <br/>2: cukup, <br/>1: kurang, <br/>0: sangat kurang
                                   </strong>
-                                  <div class="row">
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
                                     <div class="form-group col-md-3">
                                       <select name="n_3_2_2" id="" class="form-control border-input" >
                                         <option disabled selected >--Pilih--</option>
@@ -230,17 +316,26 @@
                                     </div>
                                 </div>
                               </div>
-                          </div>
+                          
                       </li>
 
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.3.1.b</div>
                               <div class="deskriptor pull-left">
                                   <strong>
                                  Penggunaan hasil pelacakan untuk perbaikan: (1) proses pembelajaran, (2) penggalangan dana, (3) informasi pekerjaan, (4) membangun jejaring.
                                   </strong>
-                                  <div class="row">
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
                                   <div class="col-md-3">
                                       <select name="n_3_3_1_b" id="" class="form-control border-input" required="">
                                           <option disabled selected >--Pilih--</option>
@@ -253,17 +348,26 @@
                                   </div>
                                 </div>
                               </div>
-                          </div>
+                          
                       </li>
 
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.3.1.c</div>
                               <div class="deskriptor pull-left">
                                   <strong>
                                  Pendapat pengguna (employer) lulusan terhadap kualitas alumni. Ada 7 jenis kompetensi.
                                   </strong>
-                                  <div class="row">
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
                                     <div class="form-group col-md-3">
                                       <label for="a">Sangat Baik</label>
                                       <input type="number" step=1 name="a3_3_1_c" class="form-control border-input" id="a" value="<?php if(!$dataCheck) echo json_decode($data[11]->data)[0] ?>" required="">
@@ -283,34 +387,53 @@
 
                                   </div>
                               </div>
-                          </div>
+                          
                       </li>
                       <li class="row">
 
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.3.2</div>
                               <div class="deskriptor pull-left">
                                   <strong>
                                  Profil masa tunggu kerja pertama
                                   </strong>
-                                  <div class="row">
-                                    <div class="form-group col-md-3">
-                                      <label for="n_3_3_2">Rata-rata masa tunggu lulusan memperoleh pekerjaan yang pertama (dalam bulan)</label>
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
+                                    <div class="form-group col-md-12 form-inline">
+                                      <label for="n_3_3_2"></label>
                                       <input type="number" step=1 name="n_3_3_2" class="form-control border-input" id="n_3_3_2" value="<?php if(!$dataCheck) echo json_decode($data[12]->data)[0] ?>" required="">
+                                      <small>Rata-rata masa tunggu lulusan memperoleh pekerjaan yang pertama (dalam bulan)</small>
                                     </div>
                                   </div>
                               </div>
-                          </div>
+                          
                       </li>
 
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.3.3</div>
                               <div class="deskriptor pull-left">
                                   <strong>
                                  Profil kesesuaian bidang kerja dengan bidang studi
                                   </strong>
-                                  <div class="row">
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
                                     <div class="form-group col-md-12 form-inline">
                                       <label for="n_3_3_3"></label>
                                       <input type="number" step=1 name="n_3_3_3" class="form-control border-input" id="n_3_3_3" value="<?php if(!$dataCheck) echo json_decode($data[13]->data)[0] ?>" required="">
@@ -319,18 +442,26 @@
                                     </div>
                                   </div>
                               </div>
-                          </div>
 
                         </li>
 
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.4.1</div>
                               <div class="deskriptor pull-left">
                                   <strong>
                                  Partisipasi alumni dalam mendukung pengembangan akademik program studi dalam bentuk: (1) Sumbangan dana, (2) Sumbangan fasilitas, (3) Keterlibatan dalam kegiatan akademik, (4) Pengembangan jejaring, (5) Penyediaan fasilitas untuk kegiatan akademik
                                   </strong>
-                                  <div class="row">
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
                                   <div class="col-md-5">
                                       <select name="n_3_4_1" id="" class="form-control border-input">
                                           <option disabled selected >--Pilih--</option>
@@ -343,17 +474,26 @@
                                     </div>
                                   </div>
                               </div>
-                          </div>
+                          
                       </li>
 
                       <li class="row">
-                          <div class="col-md-11 komponen">
+                          <div class="col-md-12 komponen">
                               <div class="pull-left nomor">3.4.2</div>
                               <div class="deskriptor pull-left">
                                   <strong>
                                  Partisipasi lulusan dan alumni dalam mendukung pengembangan non-akademik program studi dalam bentuk: (1) Sumbangan dana,(2) Sumbangan fasilitas, (3) Keterlibatan dalam kegiatan non akademik, (4) Pengembangan jejaring, (5) Penyediaan fasilitas untuk kegiatan non akademik.
                                   </strong>
-                                  <div class="row">
+                              </div>
+                              <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                              <div class="row">
                                   <div class="col-md-5">
                                       <select name="n_3_4_2" id="" class="form-control border-input">
                                         <option disabled selected >--Pilih--</option>
@@ -366,7 +506,6 @@
                                     </div>
                                   </div>
                               </div>
-                          </div>
 
                       </li>
                   </ul>

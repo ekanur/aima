@@ -28,6 +28,15 @@
                                 <strong>Dosen tetap berpendidikan (terakhir) S2 dan S3 yang bidang keahliannya sesuai dengan kompetensi PS</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
@@ -40,7 +49,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -59,6 +68,15 @@
                                 <strong>Dosen tetap yang berpendidikan S3 yang bidang keahliannya sesuai dengan kompetensi PS</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
@@ -71,7 +89,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -90,6 +108,15 @@
                                 <strong>Dosen tetap yang memiliki jabatan lektor kepala dan guru besar yang bidang keahliannya sesuai dengan kompetensi PS</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
@@ -102,7 +129,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -121,6 +148,15 @@
                                 <strong>Dosen yang memiliki Sertifikat Pendidik Profesional</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
@@ -133,7 +169,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -152,6 +188,15 @@
                                 <strong>Rasio mahasiswa terhadap dosen tetap yang bidang keahliannya sesuai dengan bidang</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
@@ -163,7 +208,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -182,6 +227,15 @@
                                 <strong>Rata-rata beban dosen per semester, atau rata-rata FTE (Fulltime Teaching Equivalent)</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
@@ -193,7 +247,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -212,6 +266,15 @@
                                 <strong>Kesesuaian keahlian (pendidikan terakhir) dosen dengan mata kuliah yang diajarkannya</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-12">
@@ -225,7 +288,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -244,6 +307,15 @@
                                 <strong>Tingkat kehadiran dosen tetap dalam mengajar</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
@@ -256,7 +328,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -275,6 +347,15 @@
                                 <strong>Persentase jumlah dosen tidak tetap terhadap jumlah seluruh dosen</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
@@ -287,7 +368,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -306,6 +387,15 @@
                                 <strong>Kesesuaian keahlian dosen tidak tetap dengan mata kuliah yang diampu</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-12">
@@ -320,7 +410,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -339,6 +429,15 @@
                                 <strong>Pelaksanaan tugas / tingkat kehadiran dosen tidak tetap dalam mengajar</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
@@ -351,7 +450,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -370,6 +469,15 @@
                                 <strong>Kegiatan tenaga ahli/pakar (sebagai pembicara dalam seminar/pelatihan, pembicara tamu, dsb, dari luar PT sendiri (tidak termasuk dosen tidak tetap))</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
@@ -381,10 +489,11 @@
                                 </div>
                               </div>
                             </div>
+
                             <div class="row">
                               <small>Catatan : Tenaga ahli dari luar perguruan tinggi denngan tujuan untuk pengayaan pengetahuan dan bukan untuk mengisi kekurangan tenaga pengajar, tidak bekerja secara rutin.</small>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -403,6 +512,15 @@
                                 <strong>Peningkatan kemampuan dosen tetap melalui program tugas belajar dalam bidang yang sesuai dengan bidang PS</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-6">
                                 <label for="n2_4_5_2">N2</label>
@@ -415,7 +533,7 @@
                                 <small>Jumlah dosen yang mengikuti tugas belajar jenjang S3 pada bidang keahlian yang sesuai dengan PS dalam kurun waktu tiga tahun terakhir</small>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -434,6 +552,15 @@
                                 <strong>Kegiatan dosen tetap yang bidang keahliannya sesuai dengan PS dalam seminar ilmiah/ lokakarya/ penataran/ workshop/ pagelaran/ pameran/peragaan yang tidak hanya melibatkan dosen PT sendiri</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-4">
                                 <label for="a4_5_3">a</label>
@@ -451,7 +578,7 @@
                                 <small>Jumlah dosen tetap</small>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -482,13 +609,23 @@
                                 </select>
                               </div>
                             </div>
+                            
                             <div class="row">
                               <div class="col-md-12">
                                 <small>Catatan : Selama tiga tahun terakhir</small>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
+                        <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
+                      </div>
                       </li>
 
                       <li class="row">
@@ -506,6 +643,15 @@
                                 <strong>Pustakawan dan kualifikasinya</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-4">
                                 <label for="x1_4_6_1_a">X1</label>
@@ -523,7 +669,7 @@
                                 <small>Jumlah pustakawan yang berpendidikan D1, D2, atau D3</small>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 
@@ -542,6 +688,15 @@
                                 <strong>Tenaga administrasi</strong>
                               </div>
                             </div>
+                            </div>
+                            <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                             <div class="row">
                               <div class="form-group col-md-3">
                                 <label for="x1_4_6_1_c">X1</label>
@@ -564,7 +719,7 @@
                                 <small>Jumlah tenaga adminstirasi yang berpendidikan SMU / SMK</small>
                               </div>
                             </div>
-                          </div>
+                          
                         </div>
                       </li>
 

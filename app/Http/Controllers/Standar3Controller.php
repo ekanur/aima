@@ -18,27 +18,13 @@ class Standar3Controller extends Controller
         }
         return view('standar3.index', compact('standar', 'data', 'dataCheck'));
     }
+
+
     public function save(Request $in)
     {
         //PERHITUNGAN 3.1.1.a
         // dd($in->all());
-      if($in->n_3_1_1_mhs == 0 || $in->n_3_1_1_daya == 0){
-        $rasio = 1;
-      }else{
-        $rasio=$in->n_3_1_1_mhs/$in->n_3_1_1_daya;
-      }
-        if ($rasio >=5) {
-          $kategori3_1_1_a=4;
-        }
-        elseif ($rasio<5 && $rasio > 1) {
-          $kategori3_1_1_a=3+$rasio/2;
-        }
-        elseif ($rasio<= 1) {
-          $kategori3_1_1_a=2*$rasio;
-        }
-        $kategori3_1_1_a = intval(round($kategori3_1_1_a));
-        $data3_1_1_a = '['.$in->n_3_1_1_mhs.', '.$in->n_3_1_1_daya.']';
-        $skor3_1_1_a = $rasio;
+
 
         //PERHITUNGAN 3.1.1.b
       if($in->n_3_1_1_b1 == 0 || $in->n_3_1_1_b2 == 0){
@@ -504,4 +490,113 @@ class Standar3Controller extends Controller
      return redirect()->back();
 
   }
+
+  public function simpan($kode, $data){
+    $standar3 = Standar3::where([
+      ['id_prodi', '=', session('id_prodi')],
+      ['kode', '=', $kode]
+    ])->first();
+    $standar3->kategori = $data['kategori'];
+    $standar3->data = $data['data'];
+    $standar3->skor = $data['skor'];
+    $standar3->save();
+  }
+
+  public function update($kode, $data){
+    $standar3 = new Standar3;
+    $standar3->kode = $kode;
+    $standar3->id_prodi = session('id_prodi');
+    $standar3->kategori = $data['kategori'];
+    $standar3->data = $data['data'];
+    $standar3->skor = $data['skor'];
+    $standar3->save();
+  }
+
+  public function _311a($calon_mahasiswa=null, $daya_tampung=null){
+    if(is_null($calon_mahasiswa) || is_null($daya_tampung)){
+      return array("kategori"=>null,"data"=>null, "skor"=>null);
+    }
+    
+    if($calon_mahasiswa == 0 || $daya_tampung == 0){
+      $skor = 1;
+    }else{
+      $skor=$calon_mahasiswa/$daya_tampung;
+    }
+      if ($skor >=5) {
+        $kategori=4;
+      }
+      elseif ($skor<5 && $skor > 1) {
+        $kategori=3+$skor/2;
+      }
+      elseif ($skor<= 1) {
+        $kategori=2*$skor;
+      }
+
+      $kategori = intval(round($kategori));
+      $data = '['.$calon_mahasiswa.', '.$daya_tampung.']';
+
+    return array("kategori"=>$kategori,"data"=>$data, "skor"=>$skor);
+  }
+
+  public function _311b($mahasiswa_registrasi, $lulus_seleksi){
+
+  }
+
+  public function _311c($total_transfer, $bukan_transfer){
+
+  }
+
+  public function _311d($avg_ipk){
+
+  }
+
+  public function _312($beban_dosen){
+
+  }
+
+  public function _313($prestasi){
+
+  }
+
+  public function _314a($lulus_tepat_waktu, $lulus){
+
+  }
+
+  public function _314b($jumlah_mahasiswa, $drop_out, $undur_diri){
+
+  }
+
+  public function _321($akses_layanan){
+
+  }
+
+  public function _322($kualitas_layanan){
+
+  }
+
+  public function _331b($hasil_pelacakan){
+
+  }
+
+  public function _331c($sangat_baik, $baik, $cukup, $kurang){
+
+  }
+
+  public function _332($masa_tunggu){
+
+  }
+
+  public function _333($kesesuaian){
+
+  }
+
+  public function _341($partisipasi_alumni){
+
+  }
+
+  public function _342($partisipasi_alumni){
+
+  }
+
+
 }

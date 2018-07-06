@@ -42,6 +42,14 @@
                                    </div>
                                  </div>
                             </div>
+                        <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                         </div>
                     </li>
                     <li class="row">
@@ -61,6 +69,14 @@
                                 </div>
                             </div>
 
+                        <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                         </div>
                     </li>
                     <li class="row">
@@ -95,6 +111,14 @@
                                   </div>
                                 </div>
                             </div>
+                        <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                         </div>
                     </li>
                     <li class="row">
@@ -123,6 +147,14 @@
                                   </div>
                                 </div>
                             </div>
+                        <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                         </div>
                     </li>
                     <li class="row">
@@ -157,6 +189,14 @@
                                   </div>
                                 </div>
                             </div>
+                        <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                         </div>
                     </li>
                 </ul>

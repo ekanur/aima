@@ -9,7 +9,7 @@
         <div class="content">
             <form @if(0==sizeof($data)) action="/standar1/save" @else action="/standar1/update" @endif method="post" class="kuesioner">
                 {{csrf_field()}}
-                <fieldset @if(sizeof($data)>0) disabled @endif>
+                {{-- <fieldset @if(sizeof($data)>0) disabled @endif> --}}
                 <input type="hidden" name="skor1_1_a_old" value="@if(isset($data["1.1.a"])) {{ $data["1.1.a"] }} @endif">
                 <input type="hidden" name="skor1_1_b_old" value="@if(isset($data["1.1.b"])) {{ $data["1.1.b"] }} @endif">
                 <input type="hidden" name="skor1_2_old" value="@if(isset($data["1.2"])) {{ $data["1.2"] }} @endif">
@@ -20,11 +20,20 @@
                                 <span class="nomor pull-left">1.1.a</span>
                                 <div class="deskriptor pull-left">
                                     <strong>Kejelasan dan kerealistikan visi, misi, tujuan, dan sasaran, serta strategi pencapaian sasaran Fakultas/Sekolah Tinggi.</strong>
+                                    
                                 </div>
+                                 <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div> 
                             </div>
                             <div class="col-md-12">
                                 <select name="skor1_1_a" id="" class="form-control border-input">
-                                <option disabled selected >--Pilih--</option>
+                                <option value="">--Pilih--</option>
                                 <option value="4" @if (isset($data["1.1.a"])) @if ($data["1.1.a"] == 4) selected @endif @endif>Memiliki visi, misi, tujuan, dan sasaran yang sangat jelas dan sangat realistik</option>
                                 <option value="3" @if (isset($data["1.1.a"])) @if ($data["1.1.a"] == 3) selected @endif @endif>Memiliki visi, misi, tujuan, dan sasaran jelas dan  realistik.</option>
                                 <option value="2" @if (isset($data["1.1.a"])) @if ($data["1.1.a"] == 2) selected @endif @endif>Memiliki visi, misi, tujuan, dan sasaran yang cukup jelas namun kurang realistik.</option>
@@ -39,10 +48,18 @@
                                 <div class="deskriptor pull-left">
                                     <strong>Strategi pencapaian sasaran dengan rentang waktu yang jelas dan didukung oleh dokumen.</strong>
                                 </div>
+                                <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div> 
                             </div>
                             <div class="col-md-12">
                                 <select name="skor1_1_b" id="" class="form-control border-input">
-                                    <option disabled selected >--Pilih--</option>
+                                    <option value="">--Pilih--</option>
                                   <option value="4" @if (isset($data["1.1.b"])) @if ($data["1.1.b"] == 4) selected @endif @endif>dengan tahapan waktu yang jelas dan sangat realistik | didukung dokumen yg sangat lengkap</option>
                                   <option value="3" @if (isset($data["1.1.b"])) @if ($data["1.1.b"] == 3) selected @endif @endif>dengan tahapan waktu yang jelas, dan realistik  | didukung dokumen yang  lengkap.</option>
                                   <option value="2" @if (isset($data["1.1.b"])) @if ($data["1.1.b"] == 2) selected @endif @endif>dengan tahapan waktu yang jelas, dan cukup realistik | didukung dokumen yang cukup lengkap.</option>
@@ -56,11 +73,19 @@
                                 <div class="deskriptor pull-left">
                                     <strong>Pemahaman  visi, misi, tujuan, dan sasaran Fakultas/ Sekolah Tinggi oleh seluruh pemangku kepentingan internal (internal stakeholders): sivitas akademika (dosen dan mahasiswa) dan tenaga kependidikan.</strong>
                                 </div>
+                                <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
 
                             </div>
                             <div class="col-md-12">
                                 <select name="skor1_2" id="" class="form-control border-input">
-                                    <option disabled selected >--Pilih--</option>
+                                    <option value="">--Pilih--</option>
                                     <option value="4" @if (isset($data["1.2"])) @if ($data["1.2"] == 4) selected @endif @endif>Dipahami dengan baik oleh seluruh sivitas akademika  dan tenaga kependidikan. </option>
                                     <option value="3" @if (isset($data["1.2"])) @if ($data["1.2"] == 3) selected @endif @endif>Dipahami dengan baik oleh sebagian  sivitas akademika dan tenaga kependidikan.</option>
                                     <option value="2" @if (isset($data["1.2"])) @if ($data["1.2"] == 2) selected @endif @endif>Kurang dipahami oleh  sivitas akademika  dan tenaga kependidikan.</option>
@@ -69,10 +94,10 @@
                             </div>
                         </li>
                     </ul>
-                  </fieldset>
+                  {{-- </fieldset> --}}
 
                 <div class="footer text-center">
-                    <button type="submit" class="btn btn-info btn-fill btn-wd" @if (sizeof($data)>0) disabled @endif>Simpan</button>
+                    <button type="submit" class="btn btn-info btn-fill btn-wd">@if(sizeof($data)>0) Update @else Simpan @endif</button>
                 <div class="clearfix"></div>
                     <!-- <div class="chart-legend">
                         <i class="fa fa-circle text-info"></i> Open

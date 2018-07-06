@@ -1596,6 +1596,7 @@ textarea.form-control {
   border-radius: 6px;
   display: block;
   margin-top: 10px;
+  /*margin-top: 0px;*/
   padding: 0px;
   position: absolute;
   visibility: hidden;
@@ -2657,8 +2658,8 @@ textarea.form-control {
     transform: translate3d(0px, 0px, 0px);
   }
 
-  .navbar-nav > li > .dropdown-menu:before {
-    border-bottom: 11px solid #F1EAE0;
+  .navbar-nav > li > .dropdown-menu:before, .komponen > div > .dropdown-menu:before {
+    border-bottom: 11px solid #F6F6F6;
     border-left: 11px solid transparent;
     border-right: 11px solid transparent;
     content: "";
@@ -3347,7 +3348,7 @@ textarea.form-control {
 .deskriptor{
   /*margin: auto 10px;*/
   /*line-height: 60px;*/
-  width: 92%;
+  width: 85%;
   display:table-cell;
   vertical-align: middle;
 /*  padding-top: 0.9em;
@@ -3371,3 +3372,7 @@ textarea.form-control {
 .acvtive a:hover{
   color: rgb(240, 240, 240);
 }*/
+
+.komponen > .dropdown{
+  padding-right: 1em;
+}

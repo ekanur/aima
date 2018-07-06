@@ -8,7 +8,6 @@ use App\Standar2;
 class Standar2Controller extends Controller
 {
   public function index(){
-    
     $standar2 = Standar2::where("id_prodi", session('id_prodi'))->get();
     $data=array();
     foreach ($standar2 as $data_standar2) {
