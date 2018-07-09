@@ -597,7 +597,7 @@
                                                         </select>
 
                                                     <div class="form-grpu col-md-5 form-inline">
-                                                      <input type="number" step=0.01 name="rpta5_5_2" class="form-control border-input" id="5_5_2_rpta" value="@if(!$dataCheck){{json_decode($data[10]->data)[1]}}@endif" required="">
+                                                      <input type="number" step=1 name="rpta5_5_2" class="form-control border-input" min=1 id="5_5_2_rpta" value="@if(!$dataCheck){{json_decode($data[10]->data)[1]}}@endif" required="">
                                                       <small>Bulan penyelesaian</small>
                                                     </div>
                                           @endslot

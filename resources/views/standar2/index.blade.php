@@ -33,7 +33,7 @@
                         </div>
                         <div class="col-md-12">
                             <select name="skor2_1" id="" class="form-control border-input">
-                            <option value=''>--Pilih--</option>
+                            <option value="" selected="" disabled="">--Pilih--</option>
                             <option value="4" @if (isset($data["2.1"])) @if ($data["2.1"] == 4) selected @endif @endif>Tata pamong memenuhi 5 aspek tersebut</option>
                             <option value="3" @if (isset($data["2.1"])) @if ($data["2.1"] == 3) selected @endif @endif>Tata pamong memenuhi 4 dari 5 aspek tersebut</option>
                             <option value="2" @if (isset($data["2.1"])) @if ($data["2.1"] == 2) selected @endif @endif>Tata pamong memenuhi 3 dari 5 aspek tersebut</option>
@@ -59,7 +59,7 @@
                         </div>
                         <div class="col-md-12">
                             <select name="skor2_2" id="" class="form-control border-input">
-                                <option value="">--Pilih--</option>
+                                <option value="" selected="" disabled="">--Pilih--</option>
                                 <option value="4" @if (isset($data["2.2"])) @if ($data["2.2"] == 4) selected @endif @endif>Kepemimpinan program studi memiliki karakteristik yang kuat pada 3 aspek tersebut</option>
                                 <option value="3" @if (isset($data["2.2"])) @if ($data["2.2"] == 3) selected @endif @endif>Memiliki karakter kepemimpinan yang kuat dalam dua dari karakteristik tersebut</option>
                                 <option value="2" @if (isset($data["2.2"])) @if ($data["2.2"] == 2) selected @endif @endif>Memiliki karakter kepemimpinan yang kuat dalam salah satu dari karakteristik tersebut</option>
@@ -85,7 +85,7 @@
                         </div>
                         <div class="col-md-12">
                             <select name="skor2_6" id="" class="form-control border-input">
-                                <option value="">--Pilih--</option>
+                                <option value="" selected="" disabled="">--Pilih--</option>
                                 <option value="4" @if (isset($data["2.6"])) @if ($data["2.6"] == 4) selected @endif @endif>Ada bukti semua usaha dilakukan berikut hasilnya.</option>
                                 <option value="3" @if (isset($data["2.6"])) @if ($data["2.6"] == 3) selected @endif @endif>Ada bukti sebagian usaha ( > 3) dilakukan.</option>
                                 <option value="2" @if (isset($data["2.6"])) @if ($data["2.6"] == 2) selected @endif @endif>Ada bukti hanya sebagian kecil usaha (2-3) yang dilakukan.</option>
@@ -115,3 +115,25 @@
     </div>
 </div>
 @endsection
+
+@push('modal')
+<div class="modal fade" id="upload_file" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Catatan Auditor 1.1.a</h4>
+      </div>
+      <div class="modal-body">
+        <figure class="highlight">
+            Catatan auditor tertera pada bagian ini.
+        </figure>
+      </div>
+      <div class="modal-footer">
+        {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button> --}}
+      </div>
+    </div>
+  </div>
+</div>
+@endpush

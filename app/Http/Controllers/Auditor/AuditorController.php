@@ -9,9 +9,13 @@ class AuditorController extends Controller
 {
     public function index()
     {
-          $standar = "Standar 2";
-          $fakultas = Fakultas::with("prodi")->where([["fak_kd", "!=", '00'], ["fak_kd", "!=", '31']])->get();
+          // $standar = "Standar 2";
+          $fakultas = Fakultas::with(["prodi" => function($query){
+            $query->where('jjg_kd', '!=', '');
+          }])->where([["fak_kd", "!=", '00'], ["fak_kd", "!=", '31']])->get();
           
+          // dd($fakultas);
+
           return view('auditor.index', compact('fakultas'));
     }
 

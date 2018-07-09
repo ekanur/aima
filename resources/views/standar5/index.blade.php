@@ -359,7 +359,7 @@
                                           </select>
                                       </div>
                                       <div class="form-grpu col-md-4 form-inline">
-                                        <input class="form-control border-input" type="number" name="rpta5_5_2" id="5_5_2_rpta" value="<?php if(!$dataCheck) echo json_decode($data[10]->data)[1] ?>" required="">
+                                        <input class="form-control border-input" type="number" name="rpta5_5_2" id="5_5_2_rpta" value="<?php if(!$dataCheck) echo json_decode($data[10]->data)[1] ?>" required="" min=1 step="1">
                                         <small>Bulan penyelesaian</small>
                                       </div>
                             </div>
@@ -504,3 +504,25 @@
   </div>
 </div>
 @endsection
+
+@push('modal')
+<div class="modal fade" id="upload_file" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Catatan Auditor 1.1.a</h4>
+      </div>
+      <div class="modal-body">
+        <figure class="highlight">
+            Catatan auditor tertera pada bagian ini.
+        </figure>
+      </div>
+      <div class="modal-footer">
+        {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button> --}}
+      </div>
+    </div>
+  </div>
+</div>
+@endpush

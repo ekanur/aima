@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-md-12">
                                 <select name="skor1_1_a" id="" class="form-control border-input">
-                                <option value="">--Pilih--</option>
+                                <option value="" selected="" disabled="">--Pilih--</option>
                                 <option value="4" @if (isset($data["1.1.a"])) @if ($data["1.1.a"] == 4) selected @endif @endif>Memiliki visi, misi, tujuan, dan sasaran yang sangat jelas dan sangat realistik</option>
                                 <option value="3" @if (isset($data["1.1.a"])) @if ($data["1.1.a"] == 3) selected @endif @endif>Memiliki visi, misi, tujuan, dan sasaran jelas dan  realistik.</option>
                                 <option value="2" @if (isset($data["1.1.a"])) @if ($data["1.1.a"] == 2) selected @endif @endif>Memiliki visi, misi, tujuan, dan sasaran yang cukup jelas namun kurang realistik.</option>
@@ -59,7 +59,7 @@
                             </div>
                             <div class="col-md-12">
                                 <select name="skor1_1_b" id="" class="form-control border-input">
-                                    <option value="">--Pilih--</option>
+                                    <option value="" selected="" disabled="">--Pilih--</option>
                                   <option value="4" @if (isset($data["1.1.b"])) @if ($data["1.1.b"] == 4) selected @endif @endif>dengan tahapan waktu yang jelas dan sangat realistik | didukung dokumen yg sangat lengkap</option>
                                   <option value="3" @if (isset($data["1.1.b"])) @if ($data["1.1.b"] == 3) selected @endif @endif>dengan tahapan waktu yang jelas, dan realistik  | didukung dokumen yang  lengkap.</option>
                                   <option value="2" @if (isset($data["1.1.b"])) @if ($data["1.1.b"] == 2) selected @endif @endif>dengan tahapan waktu yang jelas, dan cukup realistik | didukung dokumen yang cukup lengkap.</option>
@@ -85,7 +85,7 @@
                             </div>
                             <div class="col-md-12">
                                 <select name="skor1_2" id="" class="form-control border-input">
-                                    <option value="">--Pilih--</option>
+                                    <option value="" selected="" disabled="">--Pilih--</option>
                                     <option value="4" @if (isset($data["1.2"])) @if ($data["1.2"] == 4) selected @endif @endif>Dipahami dengan baik oleh seluruh sivitas akademika  dan tenaga kependidikan. </option>
                                     <option value="3" @if (isset($data["1.2"])) @if ($data["1.2"] == 3) selected @endif @endif>Dipahami dengan baik oleh sebagian  sivitas akademika dan tenaga kependidikan.</option>
                                     <option value="2" @if (isset($data["1.2"])) @if ($data["1.2"] == 2) selected @endif @endif>Kurang dipahami oleh  sivitas akademika  dan tenaga kependidikan.</option>
@@ -115,3 +115,25 @@
     </div>
 </div>
 @endsection
+
+@push('modal')
+<div class="modal fade" id="upload_file" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Catatan Auditor 1.1.a</h4>
+      </div>
+      <div class="modal-body">
+        <figure class="highlight">
+            Catatan auditor tertera pada bagian ini.
+        </figure>
+      </div>
+      <div class="modal-footer">
+        {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button> --}}
+      </div>
+    </div>
+  </div>
+</div>
+@endpush

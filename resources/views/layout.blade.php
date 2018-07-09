@@ -195,6 +195,7 @@
     </div>
 </div>
 
+@stack("modal")
 
 </body>
 
