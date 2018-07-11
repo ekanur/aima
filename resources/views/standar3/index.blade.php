@@ -10,7 +10,7 @@
             <form action="/standar3/save" method="post" class="kuesioner">
               {{ csrf_field() }}
 
-              <fieldset @if(sizeof($data)>0) disabled @endif>
+              <fieldset>
 
                   <ul class="list-unstyled">
                       <li class="row">
@@ -31,11 +31,11 @@
                           <div class="row">
                                      <div class="form-group col-md-3">
                                        <label for="n_3_1_1_mhs">Calon mahasiswa yang ikut seleksi</label>
-                                       <input type="number" step=1  name="n_3_1_1_mhs" class="form-control border-input" id="3_1_1" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[0] ?>" required="">
+                                       <input type="number" min=0 step=1  name="n_3_1_1_mhs" class="form-control border-input" id="3_1_1" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[0] ?>" required="">
                                      </div>
                                      <div class="form-group col-md-3">
                                      <label for="n_3_1_1_daya">Daya tampung</label>
-                                     <input type="number" step=1  name="n_3_1_1_daya" class="form-control border-input" id="3_1_1" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[1] ?>" required="">
+                                     <input type="number" min=0 step=1  name="n_3_1_1_daya" class="form-control border-input" id="3_1_1" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[1] ?>" required="">
                                    </div>
                                </div>
                             
@@ -54,11 +54,11 @@
                                 <div class="row">
                                      <div class="form-group col-md-3">
                                        <label for="n_3_1_1_b1">Mahasiswa baru reguler yang melakukan registrasi</label>
-                                       <input type="number" step=1 name="n_3_1_1_b1" class="form-control border-input" id="n_3_1_1_b" value="<?php if(!$dataCheck) echo json_decode($data[1]->data)[0] ?>" required="">
+                                       <input type="number" min=0 step=1 name="n_3_1_1_b1" class="form-control border-input" id="n_3_1_1_b" value="<?php if(!$dataCheck) echo json_decode($data[1]->data)[0] ?>" required="">
                                      </div>
                                      <div class="form-group col-md-3">
                                      <label for="n_3_1_1_b2">Calon mahasiswa baru reguler yang lulus seleksi</label>
-                                     <input type="number" step=1 name="n_3_1_1_b2" class="form-control border-input" id="n_3_1_1_b" value="<?php if(!$dataCheck) echo json_decode($data[1]->data)[1] ?>" required="">
+                                     <input type="number" min=0 step=1 name="n_3_1_1_b2" class="form-control border-input" id="n_3_1_1_b" value="<?php if(!$dataCheck) echo json_decode($data[1]->data)[1] ?>" required="">
                                    </div>
                                  </div>
                               </div>
@@ -84,11 +84,11 @@
                               <div class="row">
                                     <div class="form-group col-md-3">
                                       <label for="n_3_1_1_c1">Total mahasiswa baru transfer untuk program S1 reguler dan S1 non-reguler</label>
-                                      <input type="number" step=1 name="n_3_1_1_c1" class="form-control border-input" id="n_3_1_1_c" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[0] ?>" required="">
+                                      <input type="number" min=0 step=1 name="n_3_1_1_c1" class="form-control border-input" id="n_3_1_1_c" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[0] ?>" required="">
                                     </div>
                                     <div class="form-group col-md-3">
                                     <label for="n_3_1_1_c2">Total mahasiswa baru bukan transfer untuk program S1 reguler dan S1 non-reguler</label>
-                                    <input type="number" step=1 name="n_3_1_1_c2" class="form-control border-input" id="n_3_1_1_c" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[1] ?>" required="">
+                                    <input type="number" min=0 step=1 name="n_3_1_1_c2" class="form-control border-input" id="n_3_1_1_c" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[1] ?>" required="">
                                   </div>
                                 </div>
                               </div>
@@ -113,7 +113,7 @@
                               </div>
                               <div class="row">
                                     <div class="form-group col-md-3">
-                                      <input type="number" step=0.01 name="n_3_1_1_d" class="form-control border-input" id="n_3_1_1_d" value="<?php if(!$dataCheck) echo json_decode($data[3]->data)[0] ?>" required="">
+                                      <input type="number" min=0 step=0.01 name="n_3_1_1_d" class="form-control border-input" id="n_3_1_1_d" value="<?php if(!$dataCheck) echo json_decode($data[3]->data)[0] ?>" required="">
                                     </div>
                                   </div>
                               </div>
@@ -202,11 +202,11 @@
                               <div class="row">
                                     <div class="form-group col-md-3">
                                       <label for="f">Mahasiswa lulus tepat waktu</label>
-                                      <input type="number" step=1 name="f" class="form-control border-input" id="f" value="<?php if(!$dataCheck) echo json_decode($data[6]->data)[0] ?>" required="">
+                                      <input type="number" min=0 step=1 name="f" class="form-control border-input" id="f" value="<?php if(!$dataCheck) echo json_decode($data[6]->data)[0] ?>" required="">
                                     </div>
                                     <div class="form-group col-md-3">
                                       <label for="d">Mahasiswa lulus</label>
-                                      <input type="number" step=1 name="d" class="form-control border-input" id="d" value="<?php if(!$dataCheck) echo json_decode($data[6]->data)[1] ?>" required="">
+                                      <input type="number" min=0 step=1 name="d" class="form-control border-input" id="d" value="<?php if(!$dataCheck) echo json_decode($data[6]->data)[1] ?>" required="">
                                     </div>
                                   </div>
                               </div>
@@ -232,15 +232,15 @@
                               <div class="row">
                                     <div class="form-group col-md-3">
                                       <label for="a">Jumlah mahasiswa</label>
-                                      <input type="number" step=1 name="a3_1_4_b" class="form-control border-input" id="a" value="<?php if(!$dataCheck) echo json_decode($data[7]->data)[0] ?>" required="">
+                                      <input type="number" min=0 step=1 name="a3_1_4_b" class="form-control border-input" id="a" value="<?php if(!$dataCheck) echo json_decode($data[7]->data)[0] ?>" required="">
                                     </div>
                                     <div class="form-group col-md-3">
                                       <label for="b">Banyaknya <em>Drop Out</em></label>
-                                      <input type="number" step=1 name="b3_1_4_b" class="form-control border-input" id="b" value="<?php if(!$dataCheck) echo json_decode($data[7]->data)[1] ?>" required="">
+                                      <input type="number" min=0 step=1 name="b3_1_4_b" class="form-control border-input" id="b" value="<?php if(!$dataCheck) echo json_decode($data[7]->data)[1] ?>" required="">
                                     </div>
                                     <div class="form-group col-md-4">
                                       <label for="c">Jumlah mahasiswa mengundurkan diri</label>
-                                      <input type="number" step=1 name="c3_1_4_b" class="form-control border-input" id="c" value="<?php if(!$dataCheck) echo json_decode($data[7]->data)[2] ?>" required="">
+                                      <input type="number" min=0 step=1 name="c3_1_4_b" class="form-control border-input" id="c" value="<?php if(!$dataCheck) echo json_decode($data[7]->data)[2] ?>" required="">
                                     </div>
                                   </div>
                               </div>
@@ -370,19 +370,19 @@
                               <div class="row">
                                     <div class="form-group col-md-3">
                                       <label for="a">Sangat Baik</label>
-                                      <input type="number" step=1 name="a3_3_1_c" class="form-control border-input" id="a" value="<?php if(!$dataCheck) echo json_decode($data[11]->data)[0] ?>" required="">
+                                      <input type="number" min=0 step=1 name="a3_3_1_c" class="form-control border-input" id="a" value="<?php if(!$dataCheck) echo json_decode($data[11]->data)[0] ?>" required="">
                                     </div>
                                     <div class="form-group col-md-3">
                                       <label for="b">Baik</label>
-                                      <input type="number" step=1 name="b3_3_1_c" class="form-control border-input" id="b" value="<?php if(!$dataCheck) echo json_decode($data[11]->data)[1] ?>" required="">
+                                      <input type="number" min=0 step=1 name="b3_3_1_c" class="form-control border-input" id="b" value="<?php if(!$dataCheck) echo json_decode($data[11]->data)[1] ?>" required="">
                                     </div>
                                     <div class="form-group col-md-3">
                                       <label for="c">Cukup</label>
-                                      <input type="number" step=1 name="c3_3_1_c" class="form-control border-input" id="c" value="<?php if(!$dataCheck) echo json_decode($data[11]->data)[2] ?>" required="">
+                                      <input type="number" min=0 step=1 name="c3_3_1_c" class="form-control border-input" id="c" value="<?php if(!$dataCheck) echo json_decode($data[11]->data)[2] ?>" required="">
                                     </div>
                                     <div class="form-group col-md-3">
                                       <label for="d">Kurang</label>
-                                      <input type="number" step=1 name="d3_3_1_c" class="form-control border-input" id="d" value="<?php if(!$dataCheck) echo json_decode($data[11]->data)[3] ?>" required="">
+                                      <input type="number" min=0 step=1 name="d3_3_1_c" class="form-control border-input" id="d" value="<?php if(!$dataCheck) echo json_decode($data[11]->data)[3] ?>" required="">
                                     </div>
 
                                   </div>
@@ -409,7 +409,7 @@
                               <div class="row">
                                     <div class="form-group col-md-12 form-inline">
                                       <label for="n_3_3_2"></label>
-                                      <input type="number" step=1 name="n_3_3_2" class="form-control border-input" id="n_3_3_2" value="<?php if(!$dataCheck) echo json_decode($data[12]->data)[0] ?>" required="">
+                                      <input type="number" min=0 step=1 name="n_3_3_2" class="form-control border-input" id="n_3_3_2" value="<?php if(!$dataCheck) echo json_decode($data[12]->data)[0] ?>" required="">
                                       <small>Rata-rata masa tunggu lulusan memperoleh pekerjaan yang pertama (dalam bulan)</small>
                                     </div>
                                   </div>
@@ -436,7 +436,7 @@
                               <div class="row">
                                     <div class="form-group col-md-12 form-inline">
                                       <label for="n_3_3_3"></label>
-                                      <input type="number" step=1 name="n_3_3_3" class="form-control border-input" id="n_3_3_3" value="<?php if(!$dataCheck) echo json_decode($data[13]->data)[0] ?>" required="">
+                                      <input type="number" min=0 step=1 name="n_3_3_3" class="form-control border-input" id="n_3_3_3" value="<?php if(!$dataCheck) echo json_decode($data[13]->data)[0] ?>" required="">
                                       <span>%</span>
                                       <small>Persentase kesesuaian bidang kerja dengan bidang studi (keahlian) lulusan</small>
                                     </div>
@@ -512,7 +512,7 @@
               </fieldset>
 
               <div class="footer text-center">
-                  <button type="submit" class="btn btn-info btn-fill btn-wd" @if(sizeof($data)>0) disabled @endif>Simpan</button>
+                  <button type="submit" class="btn btn-info btn-fill btn-wd">@if(sizeof($data)>0) Update @else Simpan @endif</button>
               <div class="clearfix"></div>
               <!-- <div class="chart-legend">
                   <i class="fa fa-circle text-info"></i> Open

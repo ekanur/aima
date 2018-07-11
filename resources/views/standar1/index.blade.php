@@ -9,7 +9,7 @@
         <div class="content">
             <form @if(0==sizeof($data)) action="/standar1/save" @else action="/standar1/update" @endif method="post" class="kuesioner">
                 {{csrf_field()}}
-                {{-- <fieldset @if(sizeof($data)>0) disabled @endif> --}}
+                {{-- <fieldset> --}}
                 <input type="hidden" name="skor1_1_a_old" value="@if(isset($data["1.1.a"])) {{ $data["1.1.a"] }} @endif">
                 <input type="hidden" name="skor1_1_b_old" value="@if(isset($data["1.1.b"])) {{ $data["1.1.b"] }} @endif">
                 <input type="hidden" name="skor1_2_old" value="@if(isset($data["1.2"])) {{ $data["1.2"] }} @endif">

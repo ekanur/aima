@@ -11,7 +11,7 @@ class NilaiStandar2Controller extends Controller
   {
     $standar="Rekap Nilai Standar 2";
 
-    $nilaistandar2=NilaiStandar2::select('kode','kategori')->where('id_prodi',session('id_prodi'))->get();
+    $nilaistandar2=NilaiStandar2::select('kode','kategori')->where('id_prodi',session('id_prodi'))->whereYear("created_at", '=', date("Y"))->get();
     $total = 0;
     foreach ($nilaistandar2 as $value) {
       $total += $value->kategori;

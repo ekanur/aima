@@ -3,14 +3,14 @@
 <div class="col-md-12">
   <div class="card">
       <div class="header">
-          <h4 class="title">Kurikum, Pembelajaran, dan Suasana AKademik</h4>
+          <h4 class="title">Kurikulum, Pembelajaran, dan Suasana AKademik</h4>
           <p class="category">Standar 5</p>
       </div>
       <div class="content">
           <form action="standar5/save" method="post" class="kuesioner">
             {{csrf_field()}}
 
-            <fieldset @if(sizeof($data)>0) disabled @endif>
+            <fieldset>
               <ul class="list-unstyled">
 
                   <li class="row">
@@ -243,7 +243,7 @@
                             </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
-                                <input type="number" name="pp5_4_1_c"class="form-control border-input" id="5_4_1_c_pp" value="<?php if(!$dataCheck) echo json_decode($data[6]->data)[0] ?>" required="">
+                                <input type="number" min=0 name="pp5_4_1_c"class="form-control border-input" id="5_4_1_c_pp" value="<?php if(!$dataCheck) echo json_decode($data[6]->data)[0] ?>" required="">
                                 <small>Pertemuan</small>
                               </div>
                             </div>
@@ -308,7 +308,7 @@
 
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
-                                <input type="number" name="rmta5_5_1_b"class="form-control border-input" id="5_5_1_b_rmta" value="<?php if(!$dataCheck) echo json_decode($data[8]->data)[0] ?>" required="">
+                                <input type="number" min=0 name="rmta5_5_1_b"class="form-control border-input" id="5_5_1_b_rmta" value="<?php if(!$dataCheck) echo json_decode($data[8]->data)[0] ?>" required="">
                                 <small>Pertemuan </small>
                               </div>
                             </div>
@@ -329,7 +329,7 @@
 
                               <div class="row">
                                 <div class="form-group col-md-12 form-inline">
-                                  <input type="number" name="rbta5_5_1_c"class="form-control border-input" id="5_5_1_c_rbta" value="<?php if(!$dataCheck) echo json_decode($data[9]->data)[0] ?>" required="">
+                                  <input type="number" min=0 name="rbta5_5_1_c"class="form-control border-input" id="5_5_1_c_rbta" value="<?php if(!$dataCheck) echo json_decode($data[9]->data)[0] ?>" required="">
                                   <small>Pertemuan </small>
                                 </div>
                               </div>
@@ -487,7 +487,7 @@
               </fieldset>
 
           <div class="footer text-center">
-              <button type="submit" class="btn btn-info btn-fill btn-wd" @if(sizeof($data)>0) disabled @endif>Simpan</button>
+              <button type="submit" class="btn btn-info btn-fill btn-wd">@if(sizeof($data)>0) Update @else Simpan @endif</button>
           <div class="clearfix"></div>
               <!-- <div class="chart-legend">
                   <i class="fa fa-circle text-info"></i> Open

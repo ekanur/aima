@@ -21,22 +21,22 @@
                                  <div class="row">
                                    <div class="form-group col-md-3">
                                      <label for="7_1_1_na">Na</label>
-                                     <input type="number" name="na7_1_1" class="form-control border-input" id="7_1_1_na" min="0" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[0] ?>" required>
+                                     <input type="number" min=0 name="na7_1_1" class="form-control border-input" id="7_1_1_na" min="0" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[0] ?>" required>
                                      <small>Jumlah penelitian dnegan biaya luar negeri yang sesuai bidang ilmu</small>
                                    </div>
                                    <div class="form-group col-md-3">
                                      <label for="7_1_1_nb">Nb</label>
-                                     <input type="number" name="nb7_1_1" class="form-control border-input" id="7_1_1_nb" min="0" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[1] ?>" required>
+                                     <input type="number" min=0 name="nb7_1_1" class="form-control border-input" id="7_1_1_nb" min="0" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[1] ?>" required>
                                      <small>Jumlah penelitian dengna biaya luar yang sesuai bidang ilmu</small>
                                    </div>
                                    <div class="form-group col-md-3">
                                      <label for="7_1_1_nc">Nc</label>
-                                     <input type="number" name="nc7_1_1" class="form-control border-input" id="7_1_1_nc" min="0" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[2] ?>" required>
+                                     <input type="number" min=0 name="nc7_1_1" class="form-control border-input" id="7_1_1_nc" min="0" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[2] ?>" required>
                                      <small>Jumlah penelitian dengna biaya dari PT/sendiri yang sesuai bidang ilmu</small>
                                    </div>
                                    <div class="form-group col-md-3">
                                      <label for="7_1_1_f">F</label>
-                                     <input type="number" name="f7_1_1" class="form-control border-input" id="7_1_1_f" min="1" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[3] ?>" required>
+                                     <input type="number" min=0 name="f7_1_1" class="form-control border-input" id="7_1_1_f" min="1" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[3] ?>" required>
                                      <small>Jumlah dosen tetap yang bidang keahliannya sesuai dengna PS</small>
                                    </div>
                                  </div>
@@ -74,22 +74,22 @@
                                 <div class="row">
                                   <div class="form-group col-md-3">
                                     <label for="7_1_3_na">Na</label>
-                                    <input type="number" name="na7_1_3" class="form-control border-input" id="7_1_3_na" min="0" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[0] ?>" required>
+                                    <input type="number" min=0 name="na7_1_3" class="form-control border-input" id="7_1_3_na" min="0" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[0] ?>" required>
                                     <small>Jumlah penelitian dnegan biaya luar negeri yang sesuai bidang ilmu</small>
                                   </div>
                                   <div class="form-group col-md-3">
                                     <label for="7_1_3_nb">Nb</label>
-                                    <input type="number" name="nb7_1_3" class="form-control border-input" id="7_1_3_nb" min="0" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[1] ?>" required>
+                                    <input type="number" min=0 name="nb7_1_3" class="form-control border-input" id="7_1_3_nb" min="0" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[1] ?>" required>
                                     <small>Jumlah penelitian dengna biaya luar yang sesuai bidang ilmu</small>
                                   </div>
                                   <div class="form-group col-md-3">
                                     <label for="7_1_3_nc">Nc</label>
-                                    <input type="number" name="nc7_1_3" class="form-control border-input" id="7_1_3_nc" min="0" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[2] ?>" required>
+                                    <input type="number" min=0 name="nc7_1_3" class="form-control border-input" id="7_1_3_nc" min="0" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[2] ?>" required>
                                     <small>Jumlah penelitian dengna biaya dari PT/sendiri yang sesuai bidang ilmu</small>
                                   </div>
                                   <div class="form-group col-md-3">
                                     <label for="7_1_3_f">F</label>
-                                    <input type="number" name="f7_1_3" class="form-control border-input" id="7_1_3_f" min="1" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[3] ?>" required>
+                                    <input type="number" min=0 name="f7_1_3" class="form-control border-input" id="7_1_3_f" min="1" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[3] ?>" required>
                                     <small>Jumlah dosen tetap yang bidang keahliannya sesuai dengna PS</small>
                                   </div>
                                 </div>
@@ -135,22 +135,22 @@
                                 <div class="row">
                                   <div class="form-group col-md-3">
                                     <label for="7_2_1_na">Na</label>
-                                    <input type="number" name="na7_2_1" class="form-control border-input" id="7_2_1_na" min="0" value="<?php if(!$dataCheck) echo json_decode($data[4]->data)[0] ?>" required>
+                                    <input type="number" min=0 name="na7_2_1" class="form-control border-input" id="7_2_1_na" min="0" value="<?php if(!$dataCheck) echo json_decode($data[4]->data)[0] ?>" required>
                                     <small>Jumlah kegiatan PkM dengan biaya luar negeri yang sesuai bidang ilmu</small>
                                   </div>
                                   <div class="form-group col-md-3">
                                     <label for="7_2_1_nb">Nb</label>
-                                    <input type="number" name="nb7_2_1" class="form-control border-input" id="7_2_1_nb" min="0" value="<?php if(!$dataCheck) echo json_decode($data[4]->data)[1] ?>" required>
+                                    <input type="number" min=0 name="nb7_2_1" class="form-control border-input" id="7_2_1_nb" min="0" value="<?php if(!$dataCheck) echo json_decode($data[4]->data)[1] ?>" required>
                                     <small>Jumlah kegiatan PkM dengna biaya luar yang sesuai bidang ilmu</small>
                                   </div>
                                   <div class="form-group col-md-3">
                                     <label for="7_2_1_nc">Nc</label>
-                                    <input type="number" name="nc7_2_1" class="form-control border-input" id="7_2_1_nc" min="0" value="<?php if(!$dataCheck) echo json_decode($data[4]->data)[2] ?>" required>
+                                    <input type="number" min=0 name="nc7_2_1" class="form-control border-input" id="7_2_1_nc" min="0" value="<?php if(!$dataCheck) echo json_decode($data[4]->data)[2] ?>" required>
                                     <small>Jumlah kegiatan PkM dengan biaya dari PT/sendiri yang sesuai bidang ilmu</small>
                                   </div>
                                   <div class="form-group col-md-3">
                                     <label for="7_2_1_f">F</label>
-                                    <input type="number" name="f7_2_1" class="form-control border-input" id="7_2_1_f" min="1" value="<?php if(!$dataCheck) echo json_decode($data[4]->data)[3] ?>" required>
+                                    <input type="number" min=0 name="f7_2_1" class="form-control border-input" id="7_2_1_f" min="1" value="<?php if(!$dataCheck) echo json_decode($data[4]->data)[3] ?>" required>
                                     <small>Jumlah dosen tetap yang bidang keahliannya sesuai dengan PS</small>
                                   </div>
                                 </div>

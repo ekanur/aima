@@ -10,7 +10,7 @@ class Standar6Controller extends Controller
     public function index()
     {
         $standar="Standar 6";
-        $data = Standar6::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', session('id_prodi'))->orderBy('kode', 'asc')->get();
+        $data = Standar6::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', session('id_prodi'))->whereYear("created_at", '=', date("Y"))->orderBy('kode', 'asc')->get();
         if(!$data->count()){
           $dataCheck = true;
         }else{
@@ -67,6 +67,7 @@ class Standar6Controller extends Controller
          $kategori6_3_1 = intval(round($kategori6_3_1));
        }else {
          $kategori6_3_1=0;
+         $slrdt=0;
        }
        $data6_3_1 = '['.$request->a.', '.$request->b.', '.$request->c.', '.$request->d.', '.$nilaiA.', '.$nilaiB.']';
        $skor6_3_1 = $slrdt;

@@ -8,7 +8,7 @@ class Standar5Controller extends Controller
 {
     public function index(){
       $standar="Standar 5";
-      $data = Standar5::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', session('id_prodi'))->orderBy('kode', 'asc')->get();
+      $data = Standar5::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', session('id_prodi'))->whereYear("created_at", '=', date("Y"))->orderBy('kode', 'asc')->get();
       // dd($data);
       if(!$data->count()){
         $dataCheck = true;
@@ -104,7 +104,7 @@ class Standar5Controller extends Controller
         $kategori5_4_1_c = 4;
       }elseif ($masuk->pp5_4_1_c < 3 && $masuk->pp5_4_1_c > 0){
         $kategori5_4_1_c = $masuk->pp5_4_1_c + 1;
-      }elseif($masuk->pp5_4_1_c == null){
+      }elseif($masuk->pp5_4_1_c == null || $masuk->pp5_4_1_c == 0){
         $kategori5_4_1_c = 0;
       }
       $kategori5_4_1_c= intval(round($kategori5_4_1_c));

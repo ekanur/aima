@@ -27,11 +27,11 @@
                                       @slot('isian_angket')
                                           <div class="form-group col-md-4">
                                            <label for="n_3_1_1_mhs">Calon mahasiswa yang ikut seleksi</label>
-                                           <input type="number" step=1 name="n_3_1_1_mhs" class="form-control border-input" id="3_1_1" value="{{json_decode($data_kprodi[0]->data)[0]}}" disabled>
+                                           <input type="number" min=0 step=1 name="n_3_1_1_mhs" class="form-control border-input" id="3_1_1" value="{{json_decode($data_kprodi[0]->data)[0]}}" disabled>
                                          </div>
                                          <div class="form-group col-md-3">
                                            <label for="n_3_1_1_daya">Daya tampung</label>
-                                           <input type="number" step=1 name="n_3_1_1_daya" class="form-control border-input" id="3_1_1" value="{{json_decode($data_kprodi[0]->data)[1]}}" disabled>
+                                           <input type="number" min=0 step=1 name="n_3_1_1_daya" class="form-control border-input" id="3_1_1" value="{{json_decode($data_kprodi[0]->data)[1]}}" disabled>
                                          </div>
                                       @endslot
                                           @if ($standar_status_code == 7)
@@ -52,11 +52,11 @@
                                       @slot('validasi_auditor')
                                           <div class="form-group col-md-4">
                                            <label for="n_3_1_1_mhs">Calon mahasiswa yang ikut seleksi </label>
-                                           <input type="number" step=1 name="n_3_1_1_mhs" class="form-control border-input" id="3_1_1" value="@if(!$dataCheck){{json_decode($data[0]->data)[0]}}@endif" required="">
+                                           <input type="number" min=0 step=1 name="n_3_1_1_mhs" class="form-control border-input" id="3_1_1" value="@if(!$dataCheck){{json_decode($data[0]->data)[0]}}@endif" required="">
                                          </div>
                                          <div class="form-group col-md-3">
                                            <label for="n_3_1_1_daya">Daya tampung</label>
-                                           <input type="number" step=1 name="n_3_1_1_daya" class="form-control border-input" id="3_1_1" value="@if(!$dataCheck){{json_decode($data[0]->data)[1]}}@endif" required="">
+                                           <input type="number" min=0 step=1 name="n_3_1_1_daya" class="form-control border-input" id="3_1_1" value="@if(!$dataCheck){{json_decode($data[0]->data)[1]}}@endif" required="">
                                          </div>
                                       @endslot
                                     @endcomponent
@@ -77,11 +77,11 @@
                                       @slot('isian_angket')
                                           <div class="form-group col-md-3">
                                              <label for="n_3_1_1_b1">Mahasiswa baru reguler yang melakukan registrasi</label>
-                                             <input type="number" step=1 name="n_3_1_1_b1" class="form-control border-input" id="n_3_1_1_b" value="{{json_decode($data_kprodi[1]->data)[0]}}" disabled="">
+                                             <input type="number" min=0 step=1 name="n_3_1_1_b1" class="form-control border-input" id="n_3_1_1_b" value="{{json_decode($data_kprodi[1]->data)[0]}}" disabled="">
                                            </div>
                                            <div class="form-group col-md-3">
                                            <label for="n_3_1_1_b2">Calon mahasiswa baru reguler yang lulus seleksi</label>
-                                           <input type="number" step=1 name="n_3_1_1_b2" class="form-control border-input" id="n_3_1_1_b" value="{{json_decode($data_kprodi[1]->data)[1]}}" disabled="">
+                                           <input type="number" min=0 step=1 name="n_3_1_1_b2" class="form-control border-input" id="n_3_1_1_b" value="{{json_decode($data_kprodi[1]->data)[1]}}" disabled="">
                                          </div>
                                       @endslot
                                           @if ($standar_status_code == 7)
@@ -102,11 +102,11 @@
                                       @slot('validasi_auditor')
                                           <div class="form-group col-md-3">
                                              <label for="n_3_1_1_b1">Mahasiswa baru reguler yang melakukan registrasi</label>
-                                             <input type="number" step=1 name="n_3_1_1_b1" class="form-control border-input" id="n_3_1_1_b" value="@if(!$dataCheck){{json_decode($data[1]->data)[0]}}@endif" required="">
+                                             <input type="number" min=0 step=1 name="n_3_1_1_b1" class="form-control border-input" id="n_3_1_1_b" value="@if(!$dataCheck){{json_decode($data[1]->data)[0]}}@endif" required="">
                                            </div>
                                            <div class="form-group col-md-3">
                                            <label for="n_3_1_1_b2">Calon mahasiswa baru reguler yang lulus seleksi</label>
-                                           <input type="number" step=1 name="n_3_1_1_b2" class="form-control border-input" id="n_3_1_1_b" value="@if(!$dataCheck){{json_decode($data[1]->data)[1]}}@endif" required="">
+                                           <input type="number" min=0 step=1 name="n_3_1_1_b2" class="form-control border-input" id="n_3_1_1_b" value="@if(!$dataCheck){{json_decode($data[1]->data)[1]}}@endif" required="">
                                          </div>
                                       @endslot
                                     @endcomponent
@@ -132,11 +132,11 @@
                                       @slot('isian_angket')
                                           <div class="form-group col-md-3">
                                             <label for="n_3_1_1_c1">Total mahasiswa baru transfer untuk program S1 reguler dan S1 non-reguler</label>
-                                            <input type="number" step=1 name="n_3_1_1_c1" class="form-control border-input" id="n_3_1_1_c" value="{{json_decode($data_kprodi[2]->data)[0]}}" disabled="">
+                                            <input type="number" min=0 step=1 name="n_3_1_1_c1" class="form-control border-input" id="n_3_1_1_c" value="{{json_decode($data_kprodi[2]->data)[0]}}" disabled="">
                                           </div>
                                           <div class="form-group col-md-3">
                                           <label for="n_3_1_1_c2">Total mahasiswa baru bukan transfer untuk program S1 reguler dan S1 non-reguler</label>
-                                          <input type="number" step=1 name="n_3_1_1_c2" class="form-control border-input" id="n_3_1_1_c" value="{{json_decode($data_kprodi[2]->data)[1]}}" disabled="">
+                                          <input type="number" min=0 step=1 name="n_3_1_1_c2" class="form-control border-input" id="n_3_1_1_c" value="{{json_decode($data_kprodi[2]->data)[1]}}" disabled="">
                                         </div>
                                       @endslot
                                           @if ($standar_status_code == 7)
@@ -157,11 +157,11 @@
                                       @slot('validasi_auditor')
                                           <div class="form-group col-md-3">
                                             <label for="n_3_1_1_c1">Total mahasiswa baru transfer untuk program S1 reguler dan S1 non-reguler</label>
-                                            <input type="number" step=1 name="n_3_1_1_c1" class="form-control border-input" id="n_3_1_1_c" value="@if(!$dataCheck){{json_decode($data[2]->data)[0]}}@endif" required="">
+                                            <input type="number" min=0 step=1 name="n_3_1_1_c1" class="form-control border-input" id="n_3_1_1_c" value="@if(!$dataCheck){{json_decode($data[2]->data)[0]}}@endif" required="">
                                           </div>
                                           <div class="form-group col-md-3">
                                           <label for="n_3_1_1_c2">Total mahasiswa baru bukan transfer untuk program S1 reguler dan S1 non-reguler</label>
-                                          <input type="number" step=1 name="n_3_1_1_c2" class="form-control border-input" id="n_3_1_1_c2" value="@if(!$dataCheck){{json_decode($data[2]->data)[1]}}@endif" required="">
+                                          <input type="number" min=0 step=1 name="n_3_1_1_c2" class="form-control border-input" id="n_3_1_1_c2" value="@if(!$dataCheck){{json_decode($data[2]->data)[1]}}@endif" required="">
                                         </div>
                                       @endslot
                                     @endcomponent
@@ -187,7 +187,7 @@
                                       @endslot
                                       @slot('isian_angket')
                                          <div class="form-group col-md-3">
-                                          <input type="number" step=1 name="n_3_1_1_d" class="form-control border-input" id="n_3_1_1_d" value="{{json_decode($data_kprodi[3]->data)[0]}}" disabled="">
+                                          <input type="number" min=0 step=1 name="n_3_1_1_d" class="form-control border-input" id="n_3_1_1_d" value="{{json_decode($data_kprodi[3]->data)[0]}}" disabled="">
                                         </div>
                                       @endslot
                                           @if ($standar_status_code == 7)
@@ -207,7 +207,7 @@
                                       @endslot
                                       @slot('validasi_auditor')
                                           <div class="form-group col-md-3">
-                                            <input type="number" step=1 name="n_3_1_1_d" class="form-control border-input" id="n_3_1_1_d" value="@if(!$dataCheck){{json_decode($data[3]->data)[0]}}@endif" required="">
+                                            <input type="number" min=0 step=1 name="n_3_1_1_d" class="form-control border-input" id="n_3_1_1_d" value="@if(!$dataCheck){{json_decode($data[3]->data)[0]}}@endif" required="">
                                           </div>
                                       @endslot
                                     @endcomponent
@@ -342,11 +342,11 @@
                                       @slot('isian_angket')
                                         <div class="form-group col-md-4">
                                             <label for="f">Mahasiswa lulus tepat waktu</label>
-                                            <input type="number" step=1 name="f" class="form-control border-input" id="f" value="{{json_decode($data_kprodi[6]->data)[0]}}" disabled="">
+                                            <input type="number" min=0 step=1 name="f" class="form-control border-input" id="f" value="{{json_decode($data_kprodi[6]->data)[0]}}" disabled="">
                                           </div>
                                           <div class="form-group col-md-3">
                                             <label for="d">Mahasiswa lulus</label>
-                                            <input type="number" step=1 name="d" class="form-control border-input" id="d" value="{{json_decode($data_kprodi[6]->data)[1]}}" disabled="">
+                                            <input type="number" min=0 step=1 name="d" class="form-control border-input" id="d" value="{{json_decode($data_kprodi[6]->data)[1]}}" disabled="">
                                           </div>
                                         </div>
                                       @endslot
@@ -368,11 +368,11 @@
                                       @slot('validasi_auditor')
                                            <div class="form-group col-md-3">
                                                 <label for="f">Mahasiswa lulus tepat waktu</label>
-                                                <input type="number" step=1 name="f" class="form-control border-input" id="f" value="@if(!$dataCheck){{json_decode($data_kprodi[6]->data)[0]}}@endif" required=""`>
+                                                <input type="number" min=0 step=1 name="f" class="form-control border-input" id="f" value="@if(!$dataCheck){{json_decode($data_kprodi[6]->data)[0]}}@endif" required=""`>
                                               </div>
                                               <div class="form-group col-md-3">
                                                 <label for="d">Mahasiswa lulus</label>
-                                                <input type="number" step=1 name="d" class="form-control border-input" id="d" value="@if(!$dataCheck){{json_decode($data_kprodi[6]->data)[1]}}@endif" required=""`>
+                                                <input type="number" min=0 step=1 name="d" class="form-control border-input" id="d" value="@if(!$dataCheck){{json_decode($data_kprodi[6]->data)[1]}}@endif" required=""`>
                                               </div>
                                             </div>
                                       @endslot
@@ -400,15 +400,15 @@
                                       @slot('isian_angket')
                                         <div class="form-group col-md-3">
                                           <label for="a">Jumlah mahasiswa</label>
-                                          <input type="number" step=1 name="a3_1_4_b" class="form-control border-input" id="a" value="{{json_decode($data_kprodi[7]->data)[0]}}" disabled="">
+                                          <input type="number" min=0 step=1 name="a3_1_4_b" class="form-control border-input" id="a" value="{{json_decode($data_kprodi[7]->data)[0]}}" disabled="">
                                         </div>
                                         <div class="form-group col-md-3">
                                           <label for="b">Banyaknya <em>Drop Out</em></label>
-                                          <input type="number" step=1 name="b3_1_4_b" class="form-control border-input" id="b" value="{{json_decode($data_kprodi[7]->data)[1]}}" disabled="">
+                                          <input type="number" min=0 step=1 name="b3_1_4_b" class="form-control border-input" id="b" value="{{json_decode($data_kprodi[7]->data)[1]}}" disabled="">
                                         </div>
                                         <div class="form-group col-md-4">
                                           <label for="c">Jumlah mahasiswa mengundurkan diri</label>
-                                          <input type="number" step=1 name="c3_1_4_b" class="form-control border-input" id="c" value="{{json_decode($data_kprodi[7]->data)[2]}}" disabled="">
+                                          <input type="number" min=0 step=1 name="c3_1_4_b" class="form-control border-input" id="c" value="{{json_decode($data_kprodi[7]->data)[2]}}" disabled="">
                                         </div>
                                       @endslot
                                           @if ($standar_status_code == 7)
@@ -429,15 +429,15 @@
                                       @slot('validasi_auditor')
                                           <div class="form-group col-md-3">
                                             <label for="a">Jumlah mahasiswa</label>
-                                            <input type="number" step=1 name="a3_1_4_b" class="form-control border-input" id="a" value="@if(!$dataCheck){{json_decode($data[7]->data)[0]}}@endif" required="">
+                                            <input type="number" min=0 step=1 name="a3_1_4_b" class="form-control border-input" id="a" value="@if(!$dataCheck){{json_decode($data[7]->data)[0]}}@endif" required="">
                                           </div>
                                           <div class="form-group col-md-3">
                                             <label for="b">Banyaknya <em>Drop Out</em></label>
-                                            <input type="number" step=1 name="b3_1_4_b" class="form-control border-input" id="b" value="@if(!$dataCheck){{json_decode($data[7]->data)[1]}}@endif" required="">
+                                            <input type="number" min=0 step=1 name="b3_1_4_b" class="form-control border-input" id="b" value="@if(!$dataCheck){{json_decode($data[7]->data)[1]}}@endif" required="">
                                           </div>
                                           <div class="form-group col-md-3">
                                             <label for="c">Jumlah mahasiswa mengundurkan diri</label>
-                                            <input type="number" step=1 name="c3_1_4_b" class="form-control border-input" id="c" value="@if(!$dataCheck){{json_decode($data[7]->data)[2]}}@endif" required="">
+                                            <input type="number" min=0 step=1 name="c3_1_4_b" class="form-control border-input" id="c" value="@if(!$dataCheck){{json_decode($data[7]->data)[2]}}@endif" required="">
                                           </div>
                                       @endslot
                                     @endcomponent
@@ -627,19 +627,19 @@
                                       @slot('isian_angket')
                                          <div class="form-group col-md-3">
                                             <label for="a">Sangat Baik</label>
-                                            <input type="number" step=1 name="a3_3_1_c" class="form-control border-input" id="a" value="{{json_decode($data_kprodi[11]->data)[0]}}" disabled="">
+                                            <input type="number" min=0 step=1 name="a3_3_1_c" class="form-control border-input" id="a" value="{{json_decode($data_kprodi[11]->data)[0]}}" disabled="">
                                           </div>
                                           <div class="form-group col-md-3">
                                             <label for="b">Baik</label>
-                                            <input type="number" step=1 name="b3_3_1_c" class="form-control border-input" id="b" value="{{json_decode($data_kprodi[11]->data)[1]}}" disabled="">
+                                            <input type="number" min=0 step=1 name="b3_3_1_c" class="form-control border-input" id="b" value="{{json_decode($data_kprodi[11]->data)[1]}}" disabled="">
                                           </div>
                                           <div class="form-group col-md-3">
                                             <label for="c">Cukup</label>
-                                            <input type="number" step=1 name="c3_3_1_c" class="form-control border-input" id="c" value="{{json_decode($data_kprodi[11]->data)[2]}}" disabled="">
+                                            <input type="number" min=0 step=1 name="c3_3_1_c" class="form-control border-input" id="c" value="{{json_decode($data_kprodi[11]->data)[2]}}" disabled="">
                                           </div>
                                           <div class="form-group col-md-3">
                                             <label for="d">Kurang</label>
-                                            <input type="number" step=1 name="d3_3_1_c" class="form-control border-input" id="d" value="{{json_decode($data_kprodi[11]->data)[3]}}" disabled="">
+                                            <input type="number" min=0 step=1 name="d3_3_1_c" class="form-control border-input" id="d" value="{{json_decode($data_kprodi[11]->data)[3]}}" disabled="">
                                           </div>
                                       @endslot
                                           @if ($standar_status_code == 7)
@@ -660,19 +660,19 @@
                                       @slot('validasi_auditor')
                                             <div class="form-group col-md-3">
                                               <label for="a">Sangat Baik</label>
-                                              <input type="number" step=1 name="a3_3_1_c" class="form-control border-input" id="a" value="@if(!$dataCheck){{json_decode($data[11]->data)[0]}}@endif" required="">
+                                              <input type="number" min=0 step=1 name="a3_3_1_c" class="form-control border-input" id="a" value="@if(!$dataCheck){{json_decode($data[11]->data)[0]}}@endif" required="">
                                             </div>
                                             <div class="form-group col-md-3">
                                               <label for="b">Baik</label>
-                                              <input type="number" step=1 name="b3_3_1_c" class="form-control border-input" id="b" value="@if(!$dataCheck){{json_decode($data[11]->data)[1]}}@endif" required="">
+                                              <input type="number" min=0 step=1 name="b3_3_1_c" class="form-control border-input" id="b" value="@if(!$dataCheck){{json_decode($data[11]->data)[1]}}@endif" required="">
                                             </div>
                                             <div class="form-group col-md-3">
                                               <label for="c">Cukup</label>
-                                              <input type="number" step=1 name="c3_3_1_c" class="form-control border-input" id="c" value="@if(!$dataCheck){{json_decode($data[11]->data)[2]}}@endif" required="">
+                                              <input type="number" min=0 step=1 name="c3_3_1_c" class="form-control border-input" id="c" value="@if(!$dataCheck){{json_decode($data[11]->data)[2]}}@endif" required="">
                                             </div>
                                             <div class="form-group col-md-3">
                                               <label for="d">Kurang</label>
-                                              <input type="number" step=1 name="d3_3_1_c" class="form-control border-input" id="d" value="@if(!$dataCheck){{json_decode($data[11]->data)[3]}}@endif" required="">
+                                              <input type="number" min=0 step=1 name="d3_3_1_c" class="form-control border-input" id="d" value="@if(!$dataCheck){{json_decode($data[11]->data)[3]}}@endif" required="">
                                             </div>
                                       @endslot
                                     @endcomponent
@@ -699,7 +699,7 @@
                                       @slot('isian_angket')
                                          <div class="form-group col-md-12">
                                             <label for="n_3_3_2">Rata-rata masa tunggu lulusan memperoleh pekerjaan yang pertama (dalam bulan)</label>
-                                            <input type="number" step=1 name="n_3_3_2" class="form-control border-input" id="n_3_3_2" value="{{json_decode($data_kprodi[12]->data)[0]}}" disabled="">
+                                            <input type="number" min=0 step=1 name="n_3_3_2" class="form-control border-input" id="n_3_3_2" value="{{json_decode($data_kprodi[12]->data)[0]}}" disabled="">
                                           </div>
                                       @endslot
                                           @if ($standar_status_code == 7)
@@ -720,7 +720,7 @@
                                       @slot('validasi_auditor')
                                             <div class="form-group col-md-12">
                                                 <label for="n_3_3_2">Rata-rata masa tunggu lulusan memperoleh pekerjaan yang pertama (dalam bulan)</label>
-                                                <input type="number" step=1 name="n_3_3_2" class="form-control border-input" id="n_3_3_2" value="@if(!$dataCheck){{json_decode($data[12]->data)[0]}}@endif" required="">
+                                                <input type="number" min=0 step=1 name="n_3_3_2" class="form-control border-input" id="n_3_3_2" value="@if(!$dataCheck){{json_decode($data[12]->data)[0]}}@endif" required="">
                                               </div>
                                       @endslot
                                     @endcomponent
@@ -746,7 +746,7 @@
                                       @slot('isian_angket')
                                         <div class="form-group col-md-12 form-inline">
                                           <label for="n_3_3_3"></label>
-                                            <input type="number" step=0.1 name="n_3_3_3" class="form-control border-input" id="n_3_3_3" value="{{json_decode($data_kprodi[13]->data)[0]}}" disabled="">
+                                            <input type="number" min=0 step=0.1 name="n_3_3_3" class="form-control border-input" id="n_3_3_3" value="{{json_decode($data_kprodi[13]->data)[0]}}" disabled="">
                                             <span>%</span>
                                             <small>Persentase kesesuaian bidang kerja dengan bidang studi (keahlian) lulusan</small>
                                           </div>
@@ -769,7 +769,7 @@
                                       @slot('validasi_auditor')
                                             <div class="form-group col-md-12 form-inline" >
                                               <label for="n_3_3_3"></label>
-                                              <input type="number" step=0.1 name="n_3_3_3" class="form-control border-input" id="n_3_3_3" value="@if(!$dataCheck){{json_decode($data[13]->data)[0]}}@endif" required="">
+                                              <input type="number" min=0 step=0.1 name="n_3_3_3" class="form-control border-input" id="n_3_3_3" value="@if(!$dataCheck){{json_decode($data[13]->data)[0]}}@endif" required="">
                                               <span>%</span>
                                               <small>Persentase kesesuaian bidang kerja dengan bidang studi (keahlian) lulusan</small>
                                             </div>

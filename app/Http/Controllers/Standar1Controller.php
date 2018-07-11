@@ -13,7 +13,7 @@ class Standar1Controller extends Controller
       }
     }
     public function index(){
-      $standar1 = Standar1::where("id_prodi", session('id_prodi'))->get();
+      $standar1 = Standar1::where("id_prodi", session('id_prodi'))->whereYear("created_at", '=', date("Y"))->get();
     	$data=array();
       foreach ($standar1 as $data_standar1) {
         $data[$data_standar1->kode] = $data_standar1->kategori;

@@ -141,20 +141,16 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="#">AIMA / {{$standar}} </a>
+                    <a class="navbar-brand" href="#">AIMA {{ date("Y") }}/ {{$standar}} </a>
                 </div>
                 <div class="collapse navbar-collapse">
+                    
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="{{ url('/Panduan AIMA 1.0.pdf') }}" target="_blank">
-                                <i class="ti-face-smile"></i>
-                                <p>Bantuan</p>
-                            </a>
-                        </li>
+                        
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="ti-user"></i>
-									<p>{{Session::get("nip")}} ({{Session::get('nama_prodi')}})</p>
+									<p>{{Session::get("nip")}} {{-- ({{Session::get('nama_prodi')}}) --}}</p>
 									<b class="caret"></b>
                               </a>
                               <ul class="dropdown-menu">
@@ -172,7 +168,14 @@
                             </a>
                         </li> -->
                     </ul>
-
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <select class="form-control border-input" name="pilih_prodi">
+                                <option value="">S1 Program Studi pertama</option>
+                                <option value="">S2 Program Studi kedua</option>
+                            </select>
+                        </div>
+                    </form>
                 </div>
             </div>
         </nav>
@@ -189,7 +192,18 @@
 
 
         <footer class="footer">
-
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="{{ url('/Panduan AIMA 1.0.pdf') }}" target="_blank">
+                                {{-- <i class="ti-face-smile"></i> --}}
+                                <p>Bantuan</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </footer>
 
     </div>

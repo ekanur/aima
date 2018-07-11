@@ -10,7 +10,7 @@ class NilaiStandar6Controller extends Controller
   public function index()
   {
     $standar="Rekap Nilai Standar 6";
-    $nilaistandar6=NilaiStandar6::select('kode','kategori')->where('id_prodi',session('id_prodi'))->get();
+    $nilaistandar6=NilaiStandar6::select('kode','kategori')->where('id_prodi',session('id_prodi'))->whereYear("created_at", '=', date("Y"))->get();
 
     $total=0;
     foreach ($nilaistandar6 as $value) {

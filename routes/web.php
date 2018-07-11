@@ -34,6 +34,7 @@ Route::get('/servicelogout','SecurityController@logout');
     Route::post('/standar6/save', "Standar6Controller@save");
 
     Route::get('/rekap', "NilaiStandar1Controller@index");
+    Route::get('/rekap/cetak', "NilaiStandar1Controller@cetak");
     Route::get('/rekap/nilaistandar1', "NilaiStandar1Controller@index");
     Route::get('/rekap/nilaistandar2', "NilaiStandar2Controller@index");
     Route::get('/rekap/nilaistandar3', "NilaiStandar3Controller@index");

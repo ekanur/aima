@@ -10,7 +10,7 @@ class Standar3Controller extends Controller
     public function index()
     {
         $standar="Standar 3";
-        $data = Standar3::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', session('id_prodi'))->orderBy('kode', 'asc')->get();
+        $data = Standar3::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', session('id_prodi'))->whereYear("created_at", '=', date("Y"))->orderBy('kode', 'asc')->get();
         if(!$data->count()){
           $dataCheck = true;
         }else{
@@ -24,13 +24,29 @@ class Standar3Controller extends Controller
     {
         //PERHITUNGAN 3.1.1.a
         // dd($in->all());
-
+    if($in->n_3_1_1_mhs == 0 || $in->n_3_1_1_daya == 0){
+       $rasio = 1;
+     }else{
+       $rasio=$in->n_3_1_1_mhs/$in->n_3_1_1_daya;
+     }
+       if ($rasio >=5) {
+         $kategori3_1_1_a=4;
+       }
+       elseif ($rasio<5 && $rasio > 1) {
+         $kategori3_1_1_a=3+$rasio/2;
+       }
+       elseif ($rasio<= 1) {
+         $kategori3_1_1_a=2*$rasio;
+       }
+       $kategori3_1_1_a = intval(round($kategori3_1_1_a));
+       $data3_1_1_a = '['.$in->n_3_1_1_mhs.', '.$in->n_3_1_1_daya.']';
+       $skor3_1_1_a = $rasio;
 
         //PERHITUNGAN 3.1.1.b
       if($in->n_3_1_1_b1 == 0 || $in->n_3_1_1_b2 == 0){
         $rasiomaba = 0;
       }else{
-        $rasiomaba=$in->n_3_1_1_b1/$in->n_3_1_1_b2;
+        $rasiomaba =  $in->n_3_1_1_b1/$in->n_3_1_1_b2;
       }
         
         if ($rasiomaba>=95) {
@@ -128,7 +144,7 @@ class Standar3Controller extends Controller
 
         // }
 
-        $mdo=((($in->a3_1_4_b - $in->b3_1_4_b - $in->c3_1_4_b)/$in->a3_1_4_b)*100)/100;
+        $mdo = ($in->a3_1_4_b == 0)? 0: ((($in->a3_1_4_b - $in->b3_1_4_b - $in->c3_1_4_b)/$in->a3_1_4_b)*100)/100;
         if ($mdo<=6) {
           $kategori3_1_4_b=4;
         }

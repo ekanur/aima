@@ -137,7 +137,7 @@
                                 <!-- <label for="pdmk">PDMK</label> -->
                                 <div class="form-group col-md-3">
                                   <small>mata kuliah yang memiliki deskripsi, silabus dan SAP</small>
-                                  <input type="number" step=0.01 name="pdmk5_1_2_c" class="form-control border-input" id="pdmk5_1_2_c" value="{{json_decode($data_kprodi[2]->data)[0]}}" disabled="">
+                                  <input type="number" min=0 step=0.01 name="pdmk5_1_2_c" class="form-control border-input" id="pdmk5_1_2_c" value="{{json_decode($data_kprodi[2]->data)[0]}}" disabled="">
                                   <span>(0-100 %)</span>
                                 </div>
                                 @endslot
@@ -159,7 +159,7 @@
                             @slot('validasi_auditor')
                             <div class="form-group col-md-3">
                               <small>mata kuliah yang memiliki deskripsi, silabus dan SAP</small>
-                                <input type="number" step=0.01 name="pdmk5_1_2_c" class="form-control border-input" id="pdmk5_1_2_c" value="@if(!$dataCheck){{json_decode($data_kprodi[2]->data)[0]}}@endif" required="">
+                                <input type="number" min=0 step=0.01 name="pdmk5_1_2_c" class="form-control border-input" id="pdmk5_1_2_c" value="@if(!$dataCheck){{json_decode($data_kprodi[2]->data)[0]}}@endif" required="">
                               <span>(0-100 %)</span>
                             </div>
                             @endslot
@@ -301,7 +301,7 @@
                                   @endslot
                                     @slot('isian_angket')
                                     <div class="form-group col-md-12 form-inline">
-                                      <input type="number" step=0.01 name="rmpa5_4_1_a" class="form-control border-input" id="rmpa5_4_1_a" value="{{json_decode($data_kprodi[5]->data)[0]}}" disabled="">
+                                      <input type="number" min=0 step=0.01 name="rmpa5_4_1_a" class="form-control border-input" id="rmpa5_4_1_a" value="{{json_decode($data_kprodi[5]->data)[0]}}" disabled="">
                                       <small>Pertemuan</small>
                                     </div>
                                     @endslot
@@ -322,7 +322,7 @@
                               @endslot
                                 @slot('validasi_auditor')
                                 <div class="form-group col-md-12 form-inline">
-                                  <input type="number" step=0.01 name="rmpa5_4_1_a" class="form-control border-input" id="rmpa5_4_1_a" value="@if(!$dataCheck){{json_decode($data_kprodi[5]->data)[0]}}@endif" required="">
+                                  <input type="number" min=0 step=0.01 name="rmpa5_4_1_a" class="form-control border-input" id="rmpa5_4_1_a" value="@if(!$dataCheck){{json_decode($data_kprodi[5]->data)[0]}}@endif" required="">
                                   <small>Pertemuan</small>
                                 </div>
                                 @endslot
@@ -352,7 +352,7 @@
                                   @endslot
                                     @slot('isian_angket')
                                     <div class="form-group col-md-12 form-inline">
-                                      <input type="number" step=0.01 name="rmpa5_4_1_c" class="form-control border-input" id="rmpa5_4_1_c" value="{{json_decode($data_kprodi[6]->data)[0]}}" disabled="">
+                                      <input type="number" min=0 step=0.01 name="rmpa5_4_1_c" class="form-control border-input" id="rmpa5_4_1_c" value="{{json_decode($data_kprodi[6]->data)[0]}}" disabled="">
                                       <small>Pertemuan</small>
                                     </div>
                                     @endslot
@@ -373,7 +373,7 @@
                                 @endslot
                                   @slot('validasi_auditor')
                                   <div class="form-group col-md-12 form-inline">
-                                    <input type="number" step=0.01 name="rmpa5_4_1_c" class="form-control border-input" id="rmpa5_4_1_c" value="@if(!$dataCheck){{json_decode($data_kprodi[6]->data)[0]}}@endif" required="">
+                                    <input type="number" min=0 step=0.01 name="rmpa5_4_1_c" class="form-control border-input" id="rmpa5_4_1_c" value="@if(!$dataCheck){{json_decode($data_kprodi[6]->data)[0]}}@endif" required="">
                                     <small>Pertemuan</small>
                                   </div>
                                   @endslot
@@ -457,7 +457,7 @@
                                     @endslot
                                     @slot('isian_angket')
                                     <div class="form-group col-md-12 form-inline">
-                                      <input type="number" step=0.01 name="rmta_5_5_1_b" class="form-control border-input" id="rmta_5_5_1_b" value="{{json_decode($data_kprodi[8]->data)[0]}}" disabled="">
+                                      <input type="number" min=0 step=0.01 name="rmta_5_5_1_b" class="form-control border-input" id="rmta_5_5_1_b" value="{{json_decode($data_kprodi[8]->data)[0]}}" disabled="">
                                       <small>Pertemuan </small>
                                     </div>
                                     @endslot
@@ -479,7 +479,7 @@
                                 @endslot
                                 @slot('validasi_auditor')
                                 <div class="form-group col-md-12 form-inline">
-                                  <input type="number" step=0.01 name="5_5_1_b_rmta" class="form-control border-input" id="5_5_1_b_rmta" value="@if(!$dataCheck){{json_decode($data_kprodi[8]->data)[0]}}@endif" required="">
+                                  <input type="number" min=0 step=0.01 name="5_5_1_b_rmta" class="form-control border-input" id="5_5_1_b_rmta" value="@if(!$dataCheck){{json_decode($data_kprodi[8]->data)[0]}}@endif" required="">
 
                                   <small>Pertemuan </small>
                                 </div>
@@ -506,7 +506,7 @@
                                         @endslot
                                         @slot('isian_angket')
                                                     <div class="form-group col-md-12 form-inline">
-                                                      <input type="number" step=0.01 name="5_5_1_c_rbta" class="form-control border-input" id="5_5_1_c_rbta" value="{{json_decode($data_kprodi[9]->data)[0]}}" disabled="">
+                                                      <input type="number" min=0 step=0.01 name="5_5_1_c_rbta" class="form-control border-input" id="5_5_1_c_rbta" value="{{json_decode($data_kprodi[9]->data)[0]}}" disabled="">
                                                       <small>Pertemuan </small>
                                                     </div>
                                 @endslot
@@ -528,7 +528,7 @@
                                       @endslot
                                       @slot('validasi_auditor')
                                                 <div class="form-group col-md-12 form-inline">
-                                                  <input type="number" step=0.01 name="rbta_5_5_1_c" class="form-control border-input" id="rbta_5_5_1_c" value="@if(!$dataCheck){{json_decode($data_kprodi[9]->data)[0]}}@endif" required="">
+                                                  <input type="number" min=0 step=0.01 name="rbta_5_5_1_c" class="form-control border-input" id="rbta_5_5_1_c" value="@if(!$dataCheck){{json_decode($data_kprodi[9]->data)[0]}}@endif" required="">
                                                   <small>Pertemuan </small>
                                                 </div>
                                       @endslot
@@ -569,7 +569,7 @@
                                           </select>
 
                                       <div class="form-grpu col-md-5 form-inline">
-                                        <input type="number" step=0.01 name="rpta5_5_2" class="form-control border-input" id="5_5_2_rpta" value="{{json_decode($data_kprodi[10]->data)[0]}}" disabled="">
+                                        <input type="number" min=0 step=0.01 name="rpta5_5_2" class="form-control border-input" id="5_5_2_rpta" value="{{json_decode($data_kprodi[10]->data)[0]}}" disabled="">
 
                                         <small>Bulan penyelesaian</small>
                                       </div>
@@ -597,7 +597,7 @@
                                                         </select>
 
                                                     <div class="form-grpu col-md-5 form-inline">
-                                                      <input type="number" step=1 name="rpta5_5_2" class="form-control border-input" min=1 id="5_5_2_rpta" value="@if(!$dataCheck){{json_decode($data[10]->data)[1]}}@endif" required="">
+                                                      <input type="number" min=0 step=1 name="rpta5_5_2" class="form-control border-input" min=1 id="5_5_2_rpta" value="@if(!$dataCheck){{json_decode($data[10]->data)[1]}}@endif" required="">
                                                       <small>Bulan penyelesaian</small>
                                                     </div>
                                           @endslot

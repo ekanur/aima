@@ -29,23 +29,27 @@
                             <thead>
                               <tr class="warning">
                                 <!-- tampilkan kode  -->
-                                @foreach ($nilai_kprodi as $tampilkan)
+                               @php $i=1 @endphp
+                              @foreach ($nilai_kprodi as $tampilkan)
+                              @php $i++ @endphp
                                 <td>{{$tampilkan->kode}} </td>
                                  @endforeach
-                                  @if(sizeof($nilai_kprodi)>0)<td>Total</td>@endif
+                                  {{-- @if(sizeof($nilai_kprodi)>0)<td>Total</td>@endif --}}
                                  
 
                               </tr>
 
                           <!-- menampilkan data nilai -->
                               <tr>
+                             @php $i=1 @endphp
                               @foreach ($nilai_kprodi as $tampilkan)
+                              @php $i++ @endphp
                               <td>{{$tampilkan->kategori}} </td>
                                @endforeach
                                <!-- menampilkan nilai total -->
 
-                              @if(sizeof($nilai_kprodi)>0)<td>  {{$total}}</td>
-                              @else<h3 class="text-muted text-center">Data Kosong</h3>
+                              {{-- @if(sizeof($nilai_kprodi)>0)<td>  {{$total}}</td> --}}
+                              @if(sizeof($nilai_kprodi)==0)<td colspan={{ $i }}><h3 class="text-muted text-center">Data Kosong</h3></td>
                               @endif
                                 </tr>
                           </thead>
@@ -66,7 +70,7 @@
                                 @foreach ($nilai_auditor as $tampilkan)
                                 <td>{{$tampilkan->kode}} </td>
                                  @endforeach
-                                  @if(sizeof($nilai_auditor)>0)<td>Total</td>@endif
+                                  {{-- @if(sizeof($nilai_auditor)==0)<td colspan={{ $i }}><h3 class="text-muted text-center">Data Kosong</h3></td> --}}
                                  
 
                               </tr>
@@ -78,8 +82,8 @@
                                @endforeach
                                <!-- menampilkan nilai total -->
 
-                              @if(sizeof($nilai_auditor)>0)<td>  {{$total}}</td>
-                              @else<h3 class="text-muted text-center">Data Kosong</h3>
+                              {{-- @if(sizeof($nilai_auditor)>0)<td>  {{$total}}</td> --}}
+                              @if(sizeof($nilai_auditor)==0)<td colspan={{ $i }}><h3 class="text-muted text-center">Data Kosong</h3></td>
                               @endif
                                 </tr>
                           </thead>

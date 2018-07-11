@@ -9,7 +9,7 @@ class Standar7Controller extends Controller
 {
     public function index(){
       $standar="Standar 7";
-      $data = Standar7::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', session('id_prodi'))->orderBy('kode', 'asc')->get();
+      $data = Standar7::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', session('id_prodi'))->whereYear("created_at", '=', date("Y"))->orderBy('kode', 'asc')->get();
       if(!$data->count()){
         $dataCheck = true;
       }else{

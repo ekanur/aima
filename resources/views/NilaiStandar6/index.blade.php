@@ -5,13 +5,11 @@
 <div class="col-md-12">
     <div class="card">
         <div class="header">
-            <h4 class="title">REKAPITULASI (Lihat Nilai)</h4>
+            <h4 class="title">REKAPITULASI (Lihat Nilai)<span class="pull-right"><a href="{{ url("/rekap/cetak") }}" target="_blank"><i class="fa fa-print"></i></a></span></h4>
             <p class="category">{{session('nama_prodi')}}</p>
         </div>
 
         <div class="content">
-            <form
-
             <div class="btn-group btn-group-justified">
               <a href="/rekap/nilaistandar1" class="btn btn-primary">Standar 1</a>
               <a href="/rekap/nilaistandar2" class="btn btn-primary">Standar 2</a>
@@ -31,19 +29,21 @@
                                       <thead>
                                     <tr class="warning">
                                       <!-- tampilkan kode -->
+                                      @php $i=1 @endphp
                                       @foreach ($nilaistandar6 as $tampilkan)
+                                      @php $i++ @endphp
                                       <td>{{$tampilkan->kode}} </td>
                                        @endforeach
-                                      @if($total)<td> Total Nilai</td>@endif
+                                      {{-- @if($total)<td> Total Nilai</td>@endif --}}
                                     </tr>
-
+                                  </thead>
                                     <!-- tampilkan nilai -->
                                     @foreach ($nilaistandar6 as $tampilkan)
                                     <td>{{$tampilkan->kategori}} </td>
                                      @endforeach
 
-                                    @if($total)<td><!-- {{$total}} --></td>
-                                    @else<h3 class="text-muted text-center">Data Kosong</h3>
+                                    {{-- @if($total)<td>{{$total}}</td> --}}
+                                    @if(!$total)<td colspan={{ $i }}><h3 class="text-muted text-center">Data Kosong</h3></td>
                                     @endif
                                     
                                   </thead>
@@ -53,9 +53,6 @@
                   </div>
                 </div>
               </div>
-            </form>
         </div>
     </div>
-</div>
-
 @endsection

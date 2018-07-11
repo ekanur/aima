@@ -9,7 +9,7 @@ class Standar4Controller extends Controller
 {
     public function index(){
       $standar="Standar 4";
-      $data = Standar4::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', session('id_prodi'))->orderBy('kode', 'asc')->get();
+      $data = Standar4::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', session('id_prodi'))->whereYear("created_at", '=', date("Y"))->orderBy('kode', 'asc')->get();
       if(!$data->count()){
         $dataCheck = true;
       }else{
@@ -161,7 +161,7 @@ class Standar4Controller extends Controller
       $skor4_5_2 = $sd4_5_2;
 
       //perhitungan skor 4.5_3
-      $sp4_5_3 = ($request->a4_5_3 + ($request->b4_5_3 / 4)) / $request->n4_5_3;
+      $sp4_5_3 = ($request->n4_5_3 == 0) ? 0 : ($request->a4_5_3 + ($request->b4_5_3 / 4)) / $request->n4_5_3;
       if ($sp4_5_3 >= 3) {
         $kategori4_5_3 = 4;
       } elseif ($sp4_5_3 > 0 && $sp4_5_3 < 3) {
