@@ -46,7 +46,7 @@
         <div class="sidebar-wrapper">
             <div class="logo">
                 <a href="{{ url('/') }}" class="simple-text">
-                    Koord. Prodi | AIMA
+                    Koord. Prodi
                 </a>
             </div>
 
@@ -141,7 +141,7 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="#">AIMA {{ date("Y") }}/ {{$standar}} </a>
+                    <a class="navbar-brand" href="#">AIMA {{ date("Y") }} / {{$standar}} </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     

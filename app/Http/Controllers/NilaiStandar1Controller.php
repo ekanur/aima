@@ -27,6 +27,15 @@ class NilaiStandar1Controller extends Controller
 
 
   function cetak(){
-    return view("cetak");
+    $nilaistandar1=NilaiStandar1::select('kode','kategori')->where('id_prodi',session('id_prodi'))->whereYear("created_at", '=', date("Y"))->get();
+    $nilaistandar2=NilaiStandar2::select('kode','kategori')->where('id_prodi',session('id_prodi'))->whereYear("created_at", '=', date("Y"))->get();
+    $nilaistandar3=NilaiStandar3::select('kode','kategori')->where('id_prodi',session('id_prodi'))->whereYear("created_at", '=', date("Y"))->get();
+    $nilaistandar4=NilaiStandar4::select('kode','kategori')->where('id_prodi',session('id_prodi'))->whereYear("created_at", '=', date("Y"))->get();
+    $nilaistandar5=NilaiStandar5::select('kode','kategori')->where('id_prodi',session('id_prodi'))->whereYear("created_at", '=', date("Y"))->get();
+    $nilaistandar6=NilaiStandar6::select('kode','kategori')->where('id_prodi',session('id_prodi'))->whereYear("created_at", '=', date("Y"))->get();
+    $nilaistandar7=NilaiStandar7::select('kode','kategori')->where('id_prodi',session('id_prodi'))->whereYear("created_at", '=', date("Y"))->get();
+
+
+    return view("cetak", compact('nilaistandar1', 'nilaistandar2', 'nilaistandar3', 'nilaistandar4', 'nilaistandar5', 'nilaistandar6', 'nilaistandar7'));
   }
 }
