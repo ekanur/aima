@@ -220,14 +220,14 @@ class Standar3Controller extends Controller
         $skor3_4_2 = $kategori3_4_2;
 
 
-        $oldStandar3 = Standar3::where('id_prodi', '=', session('id_prodi'))->first();
+        $oldStandar3 = Standar3::where('id_prodi', '=', session('id_prodi'))->whereYear("created_at", '=', date("Y"))->first();
         if($oldStandar3){
           //jika sudah maka ...
 
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.1.1.a']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_1_a;
           $standar3->data = $data3_1_1_a;
           $standar3->skor = $skor3_1_1_a;
@@ -236,7 +236,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.1.1.b']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_1_b;
           $standar3->data = $data3_1_1_b;
           $standar3->skor = $skor3_1_1_b;
@@ -245,7 +245,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.1.1.c']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_1_c;
           $standar3->data = $data3_1_1_c;
           $standar3->skor = $skor3_1_1_c;
@@ -254,7 +254,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.1.1.d']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_1_d;
           $standar3->data = $data3_1_1_d;
           $standar3->skor = $skor3_1_1_d;
@@ -263,7 +263,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.1.2']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_2;
           $standar3->data = $data3_1_2;
           $standar3->skor = $skor3_1_2;
@@ -272,7 +272,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.1.3']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_3;
           $standar3->data = $data3_1_3;
           $standar3->skor = $skor3_1_3;
@@ -281,7 +281,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.1.4.a']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_4_a;
           $standar3->data = $data3_1_4_a;
           $standar3->skor = $skor3_1_4_a;
@@ -290,7 +290,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.1.4.b']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_4_b;
           $standar3->data = $data3_1_4_b;
           $standar3->skor = $skor3_1_4_b;
@@ -299,7 +299,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.2.1']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_2_1;
           $standar3->data = $data3_2_1;
           $standar3->skor = $skor3_2_1;
@@ -308,7 +308,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.2.2']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_2_2;
           $standar3->data = $data3_2_2;
           $standar3->skor = $skor3_2_2;
@@ -317,7 +317,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.3.1.b']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_3_1_b;
           $standar3->data = $data3_3_1_b;
           $standar3->skor = $skor3_3_1_b;
@@ -326,7 +326,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.3.1.c']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_3_1_c;
           $standar3->data = $data3_3_1_c;
           $standar3->skor = $skor3_3_1_c;
@@ -335,7 +335,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.3.2']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_3_2;
           $standar3->data = $data3_3_2;
           $standar3->skor = $skor3_3_2;
@@ -344,7 +344,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.3.3']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_3_3;
           $standar3->data = $data3_3_3;
           $standar3->skor = $skor3_3_3;
@@ -353,7 +353,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.4.1']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_4_1;
           $standar3->data = $data3_4_1;
           $standar3->skor = $skor3_4_1;
@@ -362,7 +362,7 @@ class Standar3Controller extends Controller
           $standar3 = Standar3::where([
             ['id_prodi', '=', session('id_prodi')],
             ['kode', '=', '3.4.2']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_4_2;
           $standar3->data = $data3_4_2;
           $standar3->skor = $skor3_4_2;
@@ -511,7 +511,7 @@ class Standar3Controller extends Controller
     $standar3 = Standar3::where([
       ['id_prodi', '=', session('id_prodi')],
       ['kode', '=', $kode]
-    ])->first();
+    ])->whereYear("created_at", '=', date("Y"))->first();
     $standar3->kategori = $data['kategori'];
     $standar3->data = $data['data'];
     $standar3->skor = $data['skor'];

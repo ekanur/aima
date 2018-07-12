@@ -34,15 +34,15 @@ class Standar2Controller extends Controller
 
   public function update(Request $request){
     if($request->skor2_1_old != $request->skor2_1){
-      Standar2::where("kode", "2.1")->update(["kategori"=>$request->skor2_1, "data"=>"[".$request->skor2_1."]", "skor"=>$request->skor2_1]);
+      Standar2::where("kode", "2.1")->whereYear("created_at", '=', date("Y"))->update(["kategori"=>$request->skor2_1, "data"=>"[".$request->skor2_1."]", "skor"=>$request->skor2_1]);
     }
 
     if($request->skor2_2_old != $request->skor2_2){
-      Standar2::where("kode", "2.2")->update(["kategori"=>$request->skor2_2, "data"=>"[".$request->skor2_2."]", "skor"=>$request->skor2_2]);
+      Standar2::where("kode", "2.2")->whereYear("created_at", '=', date("Y"))->update(["kategori"=>$request->skor2_2, "data"=>"[".$request->skor2_2."]", "skor"=>$request->skor2_2]);
     }
 
     if($request->skor2_6_old != $request->skor2_6){
-      Standar2::where("kode", "2.6")->update(["kategori"=>$request->skor2_6, "data"=>"[".$request->skor2_6."]", "skor"=>$request->skor2_6]);
+      Standar2::where("kode", "2.6")->whereYear("created_at", '=', date("Y"))->update(["kategori"=>$request->skor2_6, "data"=>"[".$request->skor2_6."]", "skor"=>$request->skor2_6]);
     }
 
     return redirect()->back();

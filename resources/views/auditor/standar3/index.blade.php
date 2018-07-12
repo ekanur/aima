@@ -234,7 +234,7 @@
                                       @endslot
                                       @slot('isian_angket')
                                          <select name="n_3_1_2" id="" class="form-control border-input" disabled="">
-                                            <option>--Pilih--</option>
+                                            <option disabled="" selected="">--Pilih--</option>
                                             <option value="0" @if(json_decode($data_kprodi[4]->data)[0] == 0) {{"selected"}} @endif>Jumlah mahasiswa yang diterima mengakibatkan beban dosen sangat berat, melebihi 19 sks.</option>
                                             <option value="1" @if(json_decode($data_kprodi[4]->data)[0] == 1) {{"selected"}} @endif>Jumlah mahasiswa yang diterima mengakibatkan beban dosen relatif berat, yaitu lebih dari 17 s.d. 19 sks.</option>
                                             <option value="2"@if(json_decode($data_kprodi[4]->data)[0] == 2) {{"selected"}} @endif>Jumlah mahasiswa yang diterima masih memungkinkan dosen mengajar seluruh mahasiswa dengan total beban lebih dari 15  s.d. 17 sks.</option>
@@ -259,7 +259,7 @@
                                       @endslot
                                       @slot('validasi_auditor')
                                           <select name="n_3_1_2" id="" class="form-control border-input" required="">
-                                        <option>--Pilih--</option>
+                                        <option disabled="" selected="">--Pilih--</option>
                                         <option value="0" @if(!$dataCheck) @if(json_decode($data[4]->data)[0] == 0) {{"selected"}} @endif @endif>Jumlah mahasiswa yang diterima mengakibatkan beban dosen sangat berat, melebihi 19 sks.</option>
                                         <option value="1" @if(!$dataCheck) @if(json_decode($data[4]->data)[0] == 1) {{"selected"}} @endif @endif>Jumlah mahasiswa yang diterima mengakibatkan beban dosen relatif berat, yaitu lebih dari 17 s.d. 19 sks.</option>
                                         <option value="2" @if(!$dataCheck) @if(json_decode($data[4]->data)[0] == 2) {{"selected"}} @endif @endif>Jumlah mahasiswa yang diterima masih memungkinkan dosen mengajar seluruh mahasiswa dengan total beban lebih dari 15  s.d. 17 sks.</option>
@@ -291,7 +291,7 @@
                                       @endslot
                                       @slot('isian_angket')
                                          <select name="n_3_1_3" id="" class="form-control border-input" disabled="">
-                                          <option>--Pilih--</option>
+                                          <option disabled="" selected="">--Pilih--</option>
                                           <option value="1" @if(json_decode($data_kprodi[5]->data)[0] == 1) {{"selected"}} @endif>Tidak ada</option>
                                           <option value="2" @if(json_decode($data_kprodi[5]->data)[0] == 2) {{"selected"}} @endif>Tingkat Lokal</option>
                                           <option value="3" @if(json_decode($data_kprodi[5]->data)[0] == 3) {{"selected"}} @endif>Tingkat Wilayah</option>
@@ -315,7 +315,7 @@
                                       @endslot
                                       @slot('validasi_auditor')
                                           <select name="n_3_1_3" id="" class="form-control border-input">
-                                            <option>--Pilih--</option>
+                                            <option disabled="" selected="">--Pilih--</option>
                                             <option value="1" @if(!$dataCheck) @if(json_decode($data[5]->data)[0] == 1) {{"selected"}} @endif @endif>Tidak ada</option>
                                             <option value="2" @if(!$dataCheck) @if(json_decode($data[5]->data)[0] == 2) {{"selected"}} @endif @endif>Tingkat Lokal</option>
                                             <option value="3" @if(!$dataCheck) @if(json_decode($data[5]->data)[0] == 3) {{"selected"}} @endif @endif>Tingkat Wilayah</option>
@@ -468,7 +468,7 @@
                                       @endslot
                                       @slot('isian_angket')
                                         <select name="n_3_2_1" id="" class="form-control border-input" disabled="">
-                                          <option>--Pilih--</option>
+                                          <option disabled="" selected="">--Pilih--</option>
                                           <option value="0" @if(json_decode($data_kprodi[8]->data)[0] == 0) {{"selected"}} @endif>Kurang dari 2 unit pelayanan</option>
                                           <option value="1" @if(json_decode($data_kprodi[8]->data)[0] == 1) {{"selected"}} @endif>2 jenis unit pelayanan</option>
                                           <option value="2" @if(json_decode($data_kprodi[8]->data)[0] == 2) {{"selected"}} @endif>Tersedia pelayanan nomor 1 dan 2</option>
@@ -493,7 +493,7 @@
                                       @endslot
                                       @slot('validasi_auditor')
                                            <select name="n_3_2_1" id="" class="form-control border-input" required="">
-                                              <option>--Pilih--</option>
+                                              <option disabled="" selected="">--Pilih--</option>
                                               <option value="0" @if(!$dataCheck) @if(json_decode($data[8]->data)[0] == 0) {{"selected"}} @endif @endif>Kurang dari 2 unit pelayanan</option>
                                               <option value="1" @if(!$dataCheck) @if(json_decode($data[8]->data)[0] == 1) {{"selected"}} @endif @endif>2 jenis unit pelayanan</option>
                                               <option value="2" @if(!$dataCheck) @if(json_decode($data[8]->data)[0] == 2) {{"selected"}} @endif @endif>Tersedia pelayanan nomor 1 dan 2</option>
@@ -521,7 +521,7 @@
                                       @endslot
                                       @slot('isian_angket')
                                          <select name="n_3_2_2" id="" class="form-control border-input" disabled="">
-                                          <option>--Pilih--</option>
+                                          <option disabled="" selected="">--Pilih--</option>
                                           <option value="0" @if(json_decode($data_kprodi[9]->data)[0] == 0) {{"selected"}} @endif>0</option>
                                           <option value="1" @if(json_decode($data_kprodi[9]->data)[0] == 1) {{"selected"}} @endif>1</option>
                                           <option value="2" @if(json_decode($data_kprodi[9]->data)[0] == 2) {{"selected"}} @endif>2</option>
@@ -546,7 +546,7 @@
                                       @endslot
                                       @slot('validasi_auditor')
                                             <select name="n_3_2_2" id="" class="form-control border-input">
-                                              <option>--Pilih--</option>
+                                              <option disabled="" selected="">--Pilih--</option>
                                               <option value="0" @if(!$dataCheck) @if(json_decode($data[9]->data)[0] == 0) {{"selected"}} @endif @endif>0</option>
                                               <option value="1" @if(!$dataCheck) @if(json_decode($data[9]->data)[0] == 1) {{"selected"}} @endif @endif>1</option>
                                               <option value="2" @if(!$dataCheck) @if(json_decode($data[9]->data)[0] == 2) {{"selected"}} @endif @endif>2</option>
@@ -574,7 +574,7 @@
                                       @endslot
                                       @slot('isian_angket')
                                          <select name="n_3_3_1_b" id="" class="form-control border-input" disabled>
-                                            <option>--Pilih--</option>
+                                            <option disabled="" selected="">--Pilih--</option>
                                             <option value="0" @if(json_decode($data_kprodi[10]->data)[0] == 0) {{"selected"}} @endif>Tidak ada tindak lanjut</option>
                                             <option value="1" @if(json_decode($data_kprodi[10]->data)[0] == 1) {{"selected"}} @endif>Perbaikan 1 item</option>
                                             <option value="2" @if(json_decode($data_kprodi[10]->data)[0] == 2) {{"selected"}} @endif>Perbaikan 2 item</option>
@@ -599,7 +599,7 @@
                                       @endslot
                                       @slot('validasi_auditor')
                                             <select name="n_3_3_1_b" id="" class="form-control border-input" required="">
-                                                <option>--Pilih--</option>
+                                                <option disabled="" selected="">--Pilih--</option>
                                                 <option value="0" @if(!$dataCheck)  @if(json_decode($data[10]->data)[0] == 0) {{"selected"}} @endif @endif>Tidak ada tindak lanjut</option>
                                                 <option value="1" @if(!$dataCheck)  @if(json_decode($data[10]->data)[0] == 1) {{"selected"}} @endif @endif>Perbaikan 1 item</option>
                                                 <option value="2" @if(!$dataCheck)  @if(json_decode($data[10]->data)[0] == 2) {{"selected"}} @endif @endif>Perbaikan 2 item</option>
@@ -793,7 +793,7 @@
                                       @endslot
                                       @slot('isian_angket')
                                         <select name="n_3_4_1" id="" class="form-control border-input" disabled="">
-                                            <option>--Pilih--</option>
+                                            <option disabled="" selected="">--Pilih--</option>
                                             <option value="0" @if(json_decode($data_kprodi[14]->data)[0] == 0) {{"selected"}} @endif>Tidak ada partisipasi alumni.</option>
                                             <option value="1" @if(json_decode($data_kprodi[14]->data)[0] == 1) {{"selected"}} @endif>Hanya 1 bentuk partisipasi saja yang dilakukan oleh alumni</option>
                                             <option value="2" @if(json_decode($data_kprodi[14]->data)[0] == 2) {{"selected"}} @endif>Hanya 2 bentuk partisipasi yang dilakukan oleh alumni.</option>
@@ -818,7 +818,7 @@
                                       @endslot
                                       @slot('validasi_auditor')
                                       <select name="n_3_4_1" id="validasi_auditor_3_4_1" class="form-control border-input" required="">
-                                        <option>--Pilih--</option>
+                                        <option disabled="" selected="">--Pilih--</option>
                                         <option value="0" @if(!$dataCheck) @if(json_decode($data[14]->data)[0] == 0) {{"selected"}} @endif @endif>Tidak ada partisipasi alumni.</option>
                                         <option value="1" @if(!$dataCheck) @if(json_decode($data[14]->data)[0] == 1) {{"selected"}} @endif @endif>Hanya 1 bentuk partisipasi saja yang dilakukan oleh alumni</option>
                                         <option value="2" @if(!$dataCheck) @if(json_decode($data[14]->data)[0] == 2) {{"selected"}} @endif @endif>Hanya 2 bentuk partisipasi yang dilakukan oleh alumni.</option>
@@ -845,7 +845,7 @@
                                       @endslot
                                       @slot('isian_angket')
                                     <select name="n_3_4_2" id="" class="form-control border-input" disabled="">
-                                      <option>--Pilih--</option>
+                                      <option disabled="" selected="">--Pilih--</option>
                                       <option value="0" @if(json_decode($data_kprodi[15]->data)[0] == 0) {{"selected"}} @endif>Tidak ada partisipasi alumni.</option>
                                       <option value="1" @if(json_decode($data_kprodi[15]->data)[0] == 1) {{"selected"}} @endif>Hanya 1 bentuk partisipasi saja yang dilakukan oleh alumni</option>
                                       <option value="2" @if(json_decode($data_kprodi[15]->data)[0] == 2) {{"selected"}} @endif>Hanya 2 bentuk partisipasi yang dilakukan oleh alumni.</option>
@@ -870,7 +870,7 @@
                                       @endslot
                                       @slot('validasi_auditor')
                                       <select name="n_3_4_2" id="validasi_auditor_3_4_2" class="form-control border-input" required="">
-                                      <option>--Pilih--</option>
+                                      <option disabled="" selected="">--Pilih--</option>
                                       <option value="0" @if(!$dataCheck) @if(json_decode($data[15]->data)[0] == 0) {{"selected"}} @endif @endif>Tidak ada partisipasi alumni.</option>
                                       <option value="1" @if(!$dataCheck) @if(json_decode($data[15]->data)[0] == 1) {{"selected"}} @endif @endif>Hanya 1 bentuk partisipasi saja yang dilakukan oleh alumni</option>
                                       <option value="2" @if(!$dataCheck) @if(json_decode($data[15]->data)[0] == 2) {{"selected"}} @endif @endif>Hanya 2 bentuk partisipasi yang dilakukan oleh alumni.</option>

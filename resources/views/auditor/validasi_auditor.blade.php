@@ -11,7 +11,7 @@
                                         {{ $validasi_auditor or '' }}
                                         <div class="col-md-12">
                                             <p>Catatan :</p>
-                                            <textarea class="form-control border-input" name="catatan{{ $id_input }}" placeholder="Catatan ..."></textarea>    
+                                            <textarea class="form-control border-input" name="catatan{{ $id_input }}" placeholder="Catatan ...">{{ $catatan }}</textarea>    
                                         </div>
                                         
                                         </td>

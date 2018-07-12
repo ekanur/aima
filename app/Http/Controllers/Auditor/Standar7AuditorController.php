@@ -26,14 +26,14 @@ class Standar7AuditorController extends Controller
       $nama_prodi = $prodi->jjg_kd." ".$prodi->pro_nm;
 
       // $standar2 = Standar2Auditor::where("id_prodi", $idprodi)->get();
-      $data = Standar7Auditor::select('kode', 'data', 'skor', 'kategori')->where([['id_prodi', '=', $idprodi],['auditor_id', '=', session("auditor_id")]])->orderBy('kode', 'asc')->get();
+      $data = Standar7Auditor::select('kode', 'data', 'skor', 'kategori', 'catatan')->whereYear("created_at", '=', date("Y"))->where([['id_prodi', '=', $idprodi],['auditor_id', '=', session("auditor_id")]])->orderBy('kode', 'asc')->get();
         if(!$data->count()){
           $dataCheck = true;
         }else{
           $dataCheck = false;
         }
 
-      $data_kprodi = Standar7::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', $idprodi)->orderBy('kode', 'asc')->get();
+      $data_kprodi = Standar7::select('kode', 'data', 'skor', 'kategori')->whereYear("created_at", '=', date("Y"))->where('id_prodi', '=', $idprodi)->orderBy('kode', 'asc')->get();
       // $data_kprodi=array();
       // foreach ($standar2_kprodi as $data_prodi) {
       //   $data_kprodi[$data_prodi->kode] = $data_prodi->kategori;
@@ -49,7 +49,7 @@ class Standar7AuditorController extends Controller
 
       //perhitungan kategori 7.1.1
       if($request->setuju_7_1_1 == '1'){
-            $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.1.1"]])->first();
+            $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.1.1"]])->whereYear("created_at", '=', date("Y"))->first();
 
             $kategori7_1_1 = $standar7_kprodi->kategori;
             $data7_1_1 = $standar7_kprodi->data;
@@ -72,7 +72,7 @@ class Standar7AuditorController extends Controller
 
       //perhitungan kategori 7.1.2
       if($request->setuju_7_1_2 == '1'){
-            $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.1.2"]])->first();
+            $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.1.2"]])->whereYear("created_at", '=', date("Y"))->first();
 
             $kategori7_1_2 = $standar7_kprodi->kategori;
             $data7_1_2 = $standar7_kprodi->data;
@@ -95,7 +95,7 @@ class Standar7AuditorController extends Controller
 
       //perhitungan kategori 7.1.3
       if($request->setuju_7_1_3 == '1'){
-            $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.1.3"]])->first();
+            $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.1.3"]])->whereYear("created_at", '=', date("Y"))->first();
 
             $kategori7_1_3 = $standar7_kprodi->kategori;
             $data7_1_3 = $standar7_kprodi->data;
@@ -117,7 +117,7 @@ class Standar7AuditorController extends Controller
 
       //perhitungan kategori 7.1.4
       if($request->setuju_7_1_4 == '1'){
-            $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.1.4"]])->first();
+            $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.1.4"]])->whereYear("created_at", '=', date("Y"))->first();
 
             $kategori7_1_4 = $standar7_kprodi->kategori;
             $data7_1_4 = $standar7_kprodi->data;
@@ -132,7 +132,7 @@ class Standar7AuditorController extends Controller
 
       //perhitungan kategori 7.2.1
       if($request->setuju_7_2_1 == '1'){
-            $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.2.1"]])->first();
+            $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.2.1"]])->whereYear("created_at", '=', date("Y"))->first();
 
             $kategori7_2_1 = $standar7_kprodi->kategori;
             $data7_2_1 = $standar7_kprodi->data;
@@ -154,7 +154,7 @@ class Standar7AuditorController extends Controller
       //return ($kategori7_1_1 . ", " . $kategori7_1_2 . ", " . $kategori7_1_3 . ", " . $kategori7_1_4 . ", " . $kategori7_2_1);
 
       //cek apakah jurusan tersebut sudah pernah input atau belum
-      $oldStandar7 = Standar7Auditor::where([['id_prodi', '=', $idprodi], ['auditor_id', '=', session("auditor_id")]])->first();
+      $oldStandar7 = Standar7Auditor::where([['id_prodi', '=', $idprodi], ['auditor_id', '=', session("auditor_id")]])->whereYear("created_at", '=', date("Y"))->first();
       if($oldStandar7){
         //jika sudah maka ...
 
@@ -162,50 +162,55 @@ class Standar7AuditorController extends Controller
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '7.1.1']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar7->kategori = $kategori7_1_1;
         $standar7->data = $data7_1_1;
         $standar7->skor = $skor7_1_1;
+        $standar7->catatan = $request->catatan7_1_1;
         $standar7->save();
 
         $standar7 = Standar7Auditor::where([
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '7.1.2']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar7->kategori = $kategori7_1_2;
         $standar7->data = $data7_1_2;
         $standar7->skor = $skor7_1_2;
+        $standar7->catatan = $request->catatan7_1_2;
         $standar7->save();
 
         $standar7 = Standar7Auditor::where([
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '7.1.3']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar7->kategori = $kategori7_1_3;
         $standar7->data = $data7_1_3;
         $standar7->skor = $skor7_1_3;
+        $standar7->catatan = $request->catatan7_1_3;
         $standar7->save();
 
         $standar7 = Standar7Auditor::where([
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '7.1.4']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar7->kategori = $kategori7_1_4;
         $standar7->data = $data7_1_4;
         $standar7->skor = $skor7_1_4;
+        $standar7->catatan = $request->catatan7_1_4;
         $standar7->save();
 
         $standar7 = Standar7Auditor::where([
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '7.2.1']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar7->kategori = $kategori7_2_1;
         $standar7->data = $data7_2_1;
         $standar7->skor = $skor7_2_1;
+        $standar7->catatan = $request->catatan7_2_1;
         $standar7->save();
 
         // return "updated";
@@ -219,6 +224,7 @@ class Standar7AuditorController extends Controller
         $standar7->kategori = $kategori7_1_1;
         $standar7->data = $data7_1_1;
         $standar7->skor = $skor7_1_1;
+        $standar7->catatan = $request->catatan7_1_1;
         $standar7->save();
 
         $standar7 = new Standar7Auditor;
@@ -228,6 +234,7 @@ class Standar7AuditorController extends Controller
         $standar7->kategori = $kategori7_1_2;
         $standar7->data = $data7_1_2;
         $standar7->skor = $skor7_1_2;
+        $standar7->catatan = $request->catatan7_1_2;
         $standar7->save();
 
         $standar7 = new Standar7Auditor;
@@ -237,6 +244,7 @@ class Standar7AuditorController extends Controller
         $standar7->kategori = $kategori7_1_3;
         $standar7->data = $data7_1_3;
         $standar7->skor = $skor7_1_3;
+        $standar7->catatan = $request->catatan7_1_3;
         $standar7->save();
 
         $standar7 = new Standar7Auditor;
@@ -246,6 +254,7 @@ class Standar7AuditorController extends Controller
         $standar7->kategori = $kategori7_1_4;
         $standar7->data = $data7_1_4;
         $standar7->skor = $skor7_1_4;
+        $standar7->catatan = $request->catatan7_1_4;
         $standar7->save();
 
         $standar7 = new Standar7Auditor;
@@ -255,6 +264,7 @@ class Standar7AuditorController extends Controller
         $standar7->kategori = $kategori7_2_1;
         $standar7->data = $data7_2_1;
         $standar7->skor = $skor7_2_1;
+        $standar7->catatan = $request->catatan7_2_1;
         $standar7->save();
 
         // return "saved";

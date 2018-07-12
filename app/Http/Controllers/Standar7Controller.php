@@ -101,14 +101,14 @@ class Standar7Controller extends Controller
       //return ($kategori7_1_1 . ", " . $kategori7_1_2 . ", " . $kategori7_1_3 . ", " . $kategori7_1_4 . ", " . $kategori7_2_1);
 
       //cek apakah jurusan tersebut sudah pernah input atau belum
-      $oldStandar7 = Standar7::where('id_prodi', '=', session('id_prodi'))->first();
+      $oldStandar7 = Standar7::where('id_prodi', '=', session('id_prodi'))->whereYear("created_at", '=', date("Y"))->first();
       if($oldStandar7){
         //jika sudah maka ...
 
         $standar7 = Standar7::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '7.1.1']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar7->kategori = $kategori7_1_1;
         $standar7->data = $data7_1_1;
         $standar7->skor = $skor7_1_1;
@@ -117,7 +117,7 @@ class Standar7Controller extends Controller
         $standar7 = Standar7::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '7.1.2']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar7->kategori = $kategori7_1_2;
         $standar7->data = $data7_1_2;
         $standar7->skor = $skor7_1_2;
@@ -126,7 +126,7 @@ class Standar7Controller extends Controller
         $standar7 = Standar7::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '7.1.3']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar7->kategori = $kategori7_1_3;
         $standar7->data = $data7_1_3;
         $standar7->skor = $skor7_1_3;
@@ -135,7 +135,7 @@ class Standar7Controller extends Controller
         $standar7 = Standar7::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '7.1.4']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar7->kategori = $kategori7_1_4;
         $standar7->data = $data7_1_4;
         $standar7->skor = $skor7_1_4;
@@ -144,7 +144,7 @@ class Standar7Controller extends Controller
         $standar7 = Standar7::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '7.2.1']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar7->kategori = $kategori7_2_1;
         $standar7->data = $data7_2_1;
         $standar7->skor = $skor7_2_1;

@@ -27,7 +27,7 @@
                                 @endslot
                                 @slot('isian_angket')
                                 <select name="standar5_1_1_1_a" id="" class="form-control border-input" disabled="">
-                                      <option>--Pilih--</option>
+                                      <option disabled="" selected="">--Pilih--</option>
                                       <option value="0" @if(json_decode($data_kprodi[0]->data)[0] == 0) {{"selected"}} @endif>Kurikulum tidak memuat kompetensi lulusan secara lengkap</option>
                                       <option value="1" @if(json_decode($data_kprodi[0]->data)[0] == 1) {{"selected"}} @endif>Kurikulum memuat kompetensi lulusan secara lengkap (utama, pendukung, lainnya), namun rumusannya kurang jelas</option>
                                       <option value="2" @if(json_decode($data_kprodi[0]->data)[0] == 2) {{"selected"}} @endif>Kurikulum memuat kompetensi lulusan secara lengkap (utama, pendukung, lainnya) yang terumuskan secara cukup jelas</option>
@@ -52,7 +52,7 @@
                                 @endslot
                                 @slot('validasi_auditor')
                                   <select name="n_5_1_1_a" id="" class="form-control border-input">
-                                        <option>--Pilih--</option>
+                                        <option disabled="" selected="">--Pilih--</option>
                                          <option value="0" @if(!$dataCheck) @if(json_decode($data[0]->data)[0] == 0) {{"selected"}} @endif @endif>Kurikulum tidak memuat kompetensi lulusan secara lengkap</option>
                                          <option value="1" @if(!$dataCheck) @if(json_decode($data[0]->data)[0] == 1) {{"selected"}} @endif @endif>Kurikulum memuat kompetensi lulusan secara lengkap (utama, pendukung, lainnya), namun rumusannya kurang jelas</option>
                                          <option value="2" @if(!$dataCheck) @if(json_decode($data[0]->data)[0] == 2) {{"selected"}} @endif @endif>Kurikulum memuat kompetensi lulusan secara lengkap (utama, pendukung, lainnya) yang terumuskan secara cukup jelas</option>
@@ -82,7 +82,7 @@
                                     @endslot
                                   @slot('isian_angket')
                                 <select name="standar5_1_2_b" id="" class="form-control border-input" disabled="">
-                                  <option>--Pilih--</option>
+                                  <option disabled="" selected="">--Pilih--</option>
                                   <option value="0" @if(json_decode($data_kprodi[1]->data)[0] == 0) {{"selected"}} @endif>Tidak sesuai dengan visi - misi serta tidak jelas orientasinya atau Tidak memuat standar kompetensi</option>
                                   <option value="1" @if(json_decode($data_kprodi[1]->data)[0] == 1) {{"selected"}} @endif>Tidak sesuai dengan visi - misi</option>
                                   <option value="2" @if(json_decode($data_kprodi[1]->data)[0] == 2) {{"selected"}} @endif>Sesuai dengan visi - misi, tetapi masih beroreintasi ke masa lalu</option>
@@ -107,7 +107,7 @@
                               @endslot
                               @slot('validasi_auditor')
                               <select name="standar5_1_2_b" id="" class="form-control border-input">
-                              <option>--Pilih--</option>
+                              <option disabled="" selected="">--Pilih--</option>
                                 <option value="0" @if(!$dataCheck) @if(json_decode($data[1]->data)[0] == 0) {{"selected"}} @endif @endif>Tidak sesuai dengan visi - misi serta tidak jelas orientasinya atau Tidak memuat standar kompetensi</option>
                                 <option value="1" @if(!$dataCheck) @if(json_decode($data[1]->data)[0] == 1) {{"selected"}} @endif @endif>Tidak sesuai dengan visi - misi</option>
                                 <option value="2" @if(!$dataCheck) @if(json_decode($data[1]->data)[0] == 2) {{"selected"}} @endif @endif>Sesuai dengan visi - misi, tetapi masih beroreintasi ke masa lalu</option>
@@ -188,7 +188,7 @@
                                           @slot('isian_angket')
                                                   <div class="col-md-8">
                                                       <select name="standar5_1_3_a" id="" class="form-control border-input" disabled="">
-                                                          <option>--Pilih--</option>
+                                                          <option disabled="" selected="">--Pilih--</option>
                                                           <option value="1" @if(json_decode($data_kprodi[3]->data)[0] == 1) {{"selected"}} @endif>Tidak ada monitoring</option>
                                                           <option value="2" @if(json_decode($data_kprodi[3]->data)[0] == 2) {{"selected"}} @endif>Ada monitoring tetapi tidak ada evaluasi</option>
                                                           <option value="3" @if(json_decode($data_kprodi[3]->data)[0] == 3) {{"selected"}} @endif>Ada monitoring, evaluasi tidak kontinu</option>
@@ -214,7 +214,7 @@
                                 @slot('validasi_auditor')
                                 <div class="col-md-8">
                                     <select name="standar5_1_3_a" id="" class="form-control border-input">
-                                        <option>--Pilih--</option>
+                                        <option disabled="" selected="">--Pilih--</option>
                                         <option value="1" @if(!$dataCheck) @if(json_decode($data[3]->data)[0] == 1) {{"selected"}} @endif @endif>Tidak ada monitoring</option>
                                         <option value="2" @if(!$dataCheck) @if(json_decode($data[3]->data)[0] == 2) {{"selected"}} @endif @endif>Ada monitoring tetapi tidak ada evaluasi</option>
                                         <option value="3" @if(!$dataCheck) @if(json_decode($data[3]->data)[0] == 3) {{"selected"}} @endif @endif>Ada monitoring, evaluasi tidak kontinu</option>
@@ -244,7 +244,7 @@
                                         @slot('isian_angket')
                                           <div class="col-md-8">
                                               <select name="standar5_3_2" id="" class="form-control border-input" disabled="">
-                                                 <option>--Pilih--</option>
+                                                 <option disabled="" selected="">--Pilih--</option>
                                                  <option value="0" @if(json_decode($data_kprodi[4]->data)[0] == 0) {{"selected"}} @endif>Semua soal ujian tidak bermutu atau tidak sesuai dengan GBPP/SAP</option>
                                                  <option value="1" @if(json_decode($data_kprodi[4]->data)[0] == 1) {{"selected"}} @endif>Hanya satu contoh soal ujian yang mutunya baik, dan sesuai denganGBPP/SAP</option>
                                                  <option value="2" @if(json_decode($data_kprodi[4]->data)[0] == 2) {{"selected"}} @endif>Dua s.d. tiga contoh soal ujian yang mutunya baik, dansesuai dengan GBPP/SAP</option>
@@ -271,7 +271,7 @@
                                     @slot('validasi_auditor')
                                     <div class="col-md-8">
                                         <select name="standar5_3_2" id="" class="form-control border-input">
-                                           <option>--Pilih--</option>
+                                           <option disabled="" selected="">--Pilih--</option>
                                             <option value="0" @if(!$dataCheck) @if(json_decode($data[4]->data)[0] == 0) {{"selected"}} @endif @endif>Semua soal ujian tidak bermutu atau tidak sesuai dengan GBPP/SAP</option>
                                             <option value="1" @if(!$dataCheck) @if(json_decode($data[4]->data)[0] == 1) {{"selected"}} @endif @endif>Hanya satu contoh soal ujian yang mutunya baik, dan sesuai denganGBPP/SAP</option>
                                             <option value="2" @if(!$dataCheck) @if(json_decode($data[4]->data)[0] == 2) {{"selected"}} @endif @endif>Dua s.d. tiga contoh soal ujian yang mutunya baik, dansesuai dengan GBPP/SAP</option>
@@ -401,7 +401,7 @@
                                       @slot('isian_angket')
                                               <div class="col-md-8">
                                                   <select name="standar5_4_2" id="" class="form-control border-input" disabled="">
-                                                    <option>--Pilih--</option>
+                                                    <option disabled="" selected="">--Pilih--</option>
                                                     <option value="0" @if(json_decode($data_kprodi[7]->data)[0] == 0) {{"selected"}} @endif>Sistem bantuan dan bimbingan akademik tidak jalan, atau tidak ada bimbingan</option>
                                                     <option value="1" @if(json_decode($data_kprodi[7]->data)[0] == 1) {{"selected"}} @endif>Sistem bantuan dan bimbingan akademik tidak efektif</option>
                                                     <option value="2" @if(json_decode($data_kprodi[7]->data)[0] == 2) {{"selected"}} @endif>Sistem bantuan dan bimbingan akademik cukup efektif</option>
@@ -427,7 +427,7 @@
                                 @endslot
                                 @slot('validasi_auditor')
                                     <select name="standar5_4_2" id="" class="form-control border-input" requaired="">
-                                      <option>--Pilih--</option>
+                                      <option disabled="" selected="">--Pilih--</option>
                                       <option value="0" @if(!$dataCheck) @if(json_decode($data[7]->data)[0] == 0) {{"selected"}} @endif @endif>Sistem bantuan dan bimbingan akademik tidak jalan, atau tidak ada bimbingan</option>
                                       <option value="1" @if(!$dataCheck) @if(json_decode($data[7]->data)[0] == 1) {{"selected"}} @endif @endif>Sistem bantuan dan bimbingan akademik tidak efektif</option>
                                       <option value="2" @if(!$dataCheck) @if(json_decode($data[7]->data)[0] == 2) {{"selected"}} @endif @endif>Sistem bantuan dan bimbingan akademik cukup efektif</option>
@@ -687,7 +687,7 @@
                                    @slot('isian_angket')
                                              <div class="col-md-8">
                                                <select name="standar5_7_3" id="" class="form-control border-input" disabled="">
-                                                 <option>--Pilih--</option>
+                                                 <option disabled="" selected="">--Pilih--</option>
                                                  <option value="1" @if(json_decode($data_kprodi[12]->data)[0] == 1) {{"selected"}} @endif>Kegiatan ilmiah yang terjadwal dilaksanakan lebih dari enam bulan sekali</option>
                                                  <option value="2" @if(json_decode($data_kprodi[12]->data)[0] == 2) {{"selected"}} @endif>Kegiatan ilmiah yang terjadwal dilaksanakan empat s.d. enam bulan sekali</option>
                                                  <option value="3" @if(json_decode($data_kprodi[12]->data)[0] == 3) {{"selected"}} @endif>Kegiatan ilmiah yang terjadwal dilaksanakan dua s.d tiga bulan sekali</option>
@@ -714,7 +714,7 @@
                                     @slot('validasi_auditor')
                                                   <div class="col-md-8">
                                                     <select name="standar5_7_3" id="" class="form-control border-input" required="">
-                                                      <option>--Pilih--</option>
+                                                      <option disabled="" selected="">--Pilih--</option>
                                                       <option value="1" @if(!$dataCheck) @if(json_decode($data[12]->data)[0] == 1) {{"selected"}} @endif @endif>Kegiatan ilmiah yang terjadwal dilaksanakan lebih dari enam bulan sekali</option>
                                                       <option value="2" @if(!$dataCheck) @if(json_decode($data[12]->data)[0] == 2) {{"selected"}} @endif @endif>Kegiatan ilmiah yang terjadwal dilaksanakan empat s.d. enam bulan sekali</option>
                                                       <option value="3" @if(!$dataCheck) @if(json_decode($data[12]->data)[0] == 3) {{"selected"}} @endif @endif>Kegiatan ilmiah yang terjadwal dilaksanakan dua s.d tiga bulan sekali</option>
@@ -754,7 +754,7 @@
                                       @slot('isian_angket')
                                                 <div class="col-md-8">
                                                   <select name="standar5_7_5" id="" class="form-control border-input" disabled=""loca>
-                                                    <option>--Pilih--</option>
+                                                    <option disabled="" selected="">--Pilih--</option>
                                                      <option value="1" @if(json_decode($data_kprodi[13]->data)[0] == 1) {{"selected"}} @endif>Kegiatan yang dilakukan tidak menunjang pengembangan perilaku kecendekiawanan</option>
                                                      <option value="2" @if(json_decode($data_kprodi[13]->data)[0] == 2) {{"selected"}} @endif>Kegiatan yang dilakukan cukup menunjang pengembangan perilaku kecendekiawanan</option>
                                                      <option value="3" @if(json_decode($data_kprodi[13]->data)[0] == 3) {{"selected"}} @endif>Kegiatan yang dilakukan menunjang pengembangan perilaku kecendekiawan</option>
@@ -780,7 +780,7 @@
                                       @slot('validasi_auditor')
                                       <div class="col-md-8">
                                         <select name="standar5_7_5" id="" class="form-control border-input" required="">
-                                          <option>--Pilih--</option>
+                                          <option disabled="" selected="">--Pilih--</option>
                                           <option value="1" @if(!$dataCheck) @if(json_decode($data[13]->data)[0] == 1) {{"selected"}} @endif @endif>Kegiatan yang dilakukan tidak menunjang pengembangan perilaku kecendekiawanan</option>
                                           <option value="2" @if(!$dataCheck) @if(json_decode($data[13]->data)[0] == 2) {{"selected"}} @endif @endif>Kegiatan yang dilakukan cukup menunjang pengembangan perilaku kecendekiawanan</option>
                                           <option value="3" @if(!$dataCheck) @if(json_decode($data[13]->data)[0] == 3) {{"selected"}} @endif @endif>Kegiatan yang dilakukan menunjang pengembangan perilaku kecendekiawan</option>

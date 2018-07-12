@@ -31,7 +31,7 @@
                                     @endslot
                                     @slot('isian_angket')
                                     <select name="skor1_1_a_kprodi" id="" class="form-control border-input" disabled >
-                                        <option>--Pilih--</option>
+                                        <option disabled="" selected="">--Pilih--</option>
                                         <option value="4" @if ($data_kprodi["1.1.a"] == 4) selected @endif>Memiliki visi, misi, tujuan, dan sasaran yang sangat jelas dan sangat realistik</option>
                                         <option value="3" @if ($data_kprodi["1.1.a"] == 3) selected @endif>Memiliki visi, misi, tujuan, dan sasaran jelas dan  realistik.</option>
                                         <option value="2" @if ($data_kprodi["1.1.a"] == 2) selected @endif>Memiliki visi, misi, tujuan, dan sasaran yang cukup jelas namun kurang realistik.</option>
@@ -57,13 +57,16 @@
                         @endcomponent
                         
                         @component("auditor.validasi_auditor")
+                            @slot("catatan")
+                                {{ $data_catatan['1.1.a'] }}
+                            @endslot
                             @slot("id_input")
                                 1_1_a
                             @endslot
                             @slot('validasi_auditor')
 
                                             <select name="skor1_1_a" id="validasi_auditor_1_1_a" class="form-control border-input" required="">
-                                                <option>--Pilih--</option>
+                                                <option disabled="" selected="">--Pilih--</option>
                                                 <option value="4" @if (isset($data["1.1.a"])) @if ($data["1.1.a"] == 4 ) selected @endif @endif>Memiliki visi, misi, tujuan, dan sasaran yang sangat jelas dan sangat realistik</option>
                                                 <option value="3" @if (isset($data["1.1.a"])) @if ($data["1.1.a"] == 3) selected @endif @endif>Memiliki visi, misi, tujuan, dan sasaran jelas dan  realistik.</option>
                                                 <option value="2" @if (isset($data["1.1.a"])) @if ($data["1.1.a"] == 2) selected @endif @endif>Memiliki visi, misi, tujuan, dan sasaran yang cukup jelas namun kurang realistik.</option>
@@ -89,7 +92,7 @@
                                     @slot('isian_angket')
 
                                     <select name="skor1_1_b_kprodi" id="" class="form-control border-input" disabled >
-                                        <option>--Pilih--</option>
+                                        <option disabled="" selected="">--Pilih--</option>
                                       <option value="4" @if ($data_kprodi["1.1.b"] == 4) selected  @endif>dengan tahapan waktu yang jelas dan sangat realistik | didukung dokumen yg sangat lengkap</option>
                                       <option value="3"@if ($data_kprodi["1.1.b"] == 3) selected  @endif>dengan tahapan waktu yang jelas, dan realistik  | didukung dokumen yang  lengkap.</option>
                                       <option value="2" @if ($data_kprodi["1.1.b"] == 2) selected  @endif>dengan tahapan waktu yang jelas, dan cukup realistik | didukung dokumen yang cukup lengkap.</option>
@@ -114,12 +117,15 @@
                         @endcomponent
 
                         @component("auditor.validasi_auditor")
+                            @slot("catatan")
+                                {{ $data_catatan['1.1.b'] }}
+                            @endslot
                             @slot("id_input")
                                 1_1_b
                             @endslot
                             @slot('validasi_auditor')
                                 <select name="skor1_1_b" id="validasi_auditor_1_1_b" class="form-control border-input" required="">
-                                    <option>--Pilih--</option>
+                                    <option disabled="" selected="">--Pilih--</option>
                                   <option value="4" @if (isset($data["1.1.b"])) @if ($data["1.1.b"] == 4) selected @endif @endif>dengan tahapan waktu yang jelas dan sangat realistik | didukung dokumen yg sangat lengkap</option>
                                   <option value="3" @if (isset($data["1.1.b"])) @if ($data["1.1.b"] == 3) selected @endif @endif>dengan tahapan waktu yang jelas, dan realistik  | didukung dokumen yang  lengkap.</option>
                                   <option value="2" @if (isset($data["1.1.b"])) @if ($data["1.1.b"] == 2) selected @endif @endif>dengan tahapan waktu yang jelas, dan cukup realistik | didukung dokumen yang cukup lengkap.</option>
@@ -148,7 +154,7 @@
 
                                 @slot("isian_angket")
                                     <select name="skor1_2_kprodi" id="" class="form-control border-input" disabled>
-                                        <option>--Pilih--</option>
+                                        <option disabled="" selected="">--Pilih--</option>
                                         <option value="4" @if ($data_kprodi["1.2"] == 4) selected @endif>Dipahami dengan baik oleh seluruh sivitas akademika  dan tenaga kependidikan. </option>
                                         <option value="3" @if ($data_kprodi["1.2"] == 3) selected @endif>Dipahami dengan baik oleh sebagian  sivitas akademika dan tenaga kependidikan.</option>
                                         <option value="2" @if ($data_kprodi["1.2"] == 2) selected @endif>Kurang dipahami oleh  sivitas akademika  dan tenaga kependidikan.</option>
@@ -168,13 +174,16 @@
                         @endcomponent
 
                         @component("auditor.validasi_auditor")
+                            @slot("catatan")
+                                {{ $data_catatan['1.2'] }}
+                            @endslot
                             @slot("id_input")
                                 1_2
                             @endslot
 
                             @slot("validasi_auditor")
                                 <select name="skor1_2" id="validasi_auditor_1_2" class="form-control border-input" required="">
-                                    <option>--Pilih--</option>
+                                    <option disabled="" selected="">--Pilih--</option>
                                     <option value="4" @if (isset($data["1.2"])) @if ($data["1.2"] == 4) selected @endif @endif>Dipahami dengan baik oleh seluruh sivitas akademika  dan tenaga kependidikan. </option>
                                     <option value="3"@if (isset($data["1.2"])) @if ($data["1.2"] == 3) selected @endif @endif>Dipahami dengan baik oleh sebagian  sivitas akademika dan tenaga kependidikan.</option>
                                     <option value="2" @if (isset($data["1.2"])) @if ($data["1.2"] == 2) selected @endif @endif>Kurang dipahami oleh  sivitas akademika  dan tenaga kependidikan.</option>

@@ -347,7 +347,7 @@
                                           @endslot
                                           @slot('isian_angket')
                                   <select class="form-control border-input" name="n4_3_4" disabled="">
-                                  <option>--Pilih--</option>
+                                  <option disabled="" selected="">--Pilih--</option>
                                     <option value="1" @if(json_decode($data_kprodi[6]->data)[0] == 1) {{"selected"}} @endif>Lebih dari 7 matakuliah diajar oleh dosen yang tidak sesuai keahliannya</option>
                                     <option value="2" @if(json_decode($data_kprodi[6]->data)[0] == 2) {{"selected"}} @endif>4 - 7 mata kuliah diajar oleh doesn yang tidak sesuai keahliannya</option>
                                     <option value="3" @if(json_decode($data_kprodi[6]->data)[0] == 3) {{"selected"}} @endif>1 - 3 mata kuliah diajar oleh dosen tidak sesuai dengan keahliannya</option>
@@ -371,7 +371,7 @@
                                 @endslot
                                 @slot('validasi_auditor')
                                 <select name="n_4_3_4" id="" class="form-control border-input" required="">
-                                <option>--Pilih--</option>
+                                <option disabled="" selected="">--Pilih--</option>
                                 <option value="1" @if(!$dataCheck) @if(json_decode($data[6]->data)[0] == 1) {{"selected"}} @endif @endif>Lebih dari 7 matakuliah diajar oleh dosen yang tidak sesuai keahliannya</option>
                                 <option value="2" @if(!$dataCheck) @if(json_decode($data[6]->data)[0] == 2) {{"selected"}} @endif @endif>4 - 7 mata kuliah diajar oleh doesn yang tidak sesuai keahliannya</option>
                                 <option value="3" @if(!$dataCheck) @if(json_decode($data[6]->data)[0] == 3) {{"selected"}} @endif @endif>1 - 3 mata kuliah diajar oleh dosen tidak sesuai dengan keahliannya</option>
@@ -513,7 +513,7 @@
                                           @slot('isian_angket')
                                 <div class="col-md-12">
                                   <select class="form-control border-input" name="n4_4_2_a" disabled="">
-                                  <option>--Pilih--</option>
+                                  <option disabled="" selected="">--Pilih--</option>
                                   <option value="0" @if(json_decode($data_kprodi[9]->data)[0] == 0) {{"selected"}} @endif>Lebih dari 6 matakuliah diajar oleh dosen tidak tetap yang tidak sesuai keahliannya</option>
                                   <option value="1" @if(json_decode($data_kprodi[9]->data)[0] == 1) {{"selected"}} @endif>5 - 6 mata kuliah diajar oleh dosen tidak tetap yang tidak sesuai kahaliannya</option>
                                   <option value="2" @if(json_decode($data_kprodi[9]->data)[0] == 2) {{"selected"}} @endif>3 - 4 mata kuliah diajar oleh dosen tidak tetap yang tidak sesuai keahliannya</option>
@@ -539,7 +539,7 @@
                                 @endslot
                                 @slot('validasi_auditor')
                                 <select name="n4_4_2_a" id="" class="form-control border-input">
-                                  <option>--Pilih--</option>
+                                  <option disabled="" selected="">--Pilih--</option>
                                   <option value="0" @if(!$dataCheck) @if(json_decode($data[9]->data)[0] == 0) {{"selected"}} @endif @endif>Lebih dari 6 matakuliah diajar oleh dosen tidak tetap yang tidak sesuai keahliannya</option>
                                   <option value="1" @if(!$dataCheck) @if(json_decode($data[9]->data)[0] == 1) {{"selected"}} @endif @endif>5 - 6 mata kuliah diajar oleh dosen tidak tetap yang tidak sesuai kahaliannya</option>
                                   <option value="2" @if(!$dataCheck) @if(json_decode($data[9]->data)[0] == 2) {{"selected"}} @endif @endif>3 - 4 mata kuliah diajar oleh dosen tidak tetap yang tidak sesuai keahliannya</option>
@@ -819,7 +819,7 @@
                                           @endslot
                                           @slot('isian_angket')
                                           <select class="form-control border-input" name="n4_5_4" disabled="">
-                                            <option>--Pilih--</option>
+                                            <option disabled="" selected="">--Pilih--</option>
                                             <option value="0" @if(json_decode($data_kprodi[14]->data)[0] == 0) {{"selected"}} @endif>Tidak pernah mendapat penghargaan</option>
                                             <option value="1" @if(json_decode($data_kprodi[14]->data)[0] == 1) {{"selected"}} @endif>Mendapatkan penghargaan, hibah, pendanaan program dan kegiatan akademik yang berupa hibah dana dari PT snediri (disertai bukti)</option>
                                             <option value="2" @if(json_decode($data_kprodi[14]->data)[0] == 2) {{"selected"}} @endif>Mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari institusi regional/lokal (disertai bukti)</option>
@@ -849,7 +849,7 @@
                                         @endslot
                                         @slot('validasi_auditor')
                                         <select class="form-control border-input" name="n4_5_4" required="">
-                                          <option>--Pilih--</option>
+                                          <option disabled="" selected="">--Pilih--</option>
                                           <option value="0" @if(!$dataCheck) @if(json_decode($data[14]->data)[0] == 0) {{"selected"}} @endif @endif>Tidak pernah mendapat penghargaan</option>
                                           <option value="1" @if(!$dataCheck) @if(json_decode($data[14]->data)[0] == 1) {{"selected"}} @endif @endif>Mendapatkan penghargaan, hibah, pendanaan program dan kegiatan akademik yang berupa hibah dana dari PT snediri (disertai bukti)</option>
                                           <option value="2" @if(!$dataCheck) @if(json_decode($data[14]->data)[0] == 2) {{"selected"}} @endif @endif>Mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari institusi regional/lokal (disertai bukti)</option>

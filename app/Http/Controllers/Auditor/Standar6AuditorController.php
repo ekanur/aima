@@ -26,14 +26,14 @@ class Standar6AuditorController extends Controller
       $nama_prodi = $prodi->jjg_kd." ".$prodi->pro_nm;
 
       // $standar2 = Standar2Auditor::where("id_prodi", $idprodi)->get();
-      $data = Standar6Auditor::select('kode', 'data', 'skor', 'kategori')->where([['id_prodi', '=', $idprodi],['auditor_id', '=', session("auditor_id")]])->orderBy('kode', 'asc')->get();
+      $data = Standar6Auditor::select('kode', 'data', 'skor', 'kategori', 'catatan')->whereYear("created_at", '=', date("Y"))->where([['id_prodi', '=', $idprodi],['auditor_id', '=', session("auditor_id")]])->orderBy('kode', 'asc')->get();
         if(!$data->count()){
           $dataCheck = true;
         }else{
           $dataCheck = false;
         }
 
-      $data_kprodi = Standar6::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', $idprodi)->orderBy('kode', 'asc')->get();
+      $data_kprodi = Standar6::select('kode', 'data', 'skor', 'kategori')->whereYear("created_at", '=', date("Y"))->where('id_prodi', '=', $idprodi)->orderBy('kode', 'asc')->get();
       // $data_kprodi=array();
       // foreach ($standar2_kprodi as $data_prodi) {
       //   $data_kprodi[$data_prodi->kode] = $data_prodi->kategori;
@@ -50,7 +50,7 @@ class Standar6AuditorController extends Controller
          $kprodi = Standar6::where([
            ["id_prodi", $idprodi],
            ["kode", "6.2.1"]
-         ])->first();
+         ])->whereYear("created_at", '=', date("Y"))->first();
          $kategori6_2_1 = $kprodi->kategori;
          $data6_2_1 = $kprodi->data;
          $skor6_2_1 = $kprodi->skor;
@@ -74,7 +74,7 @@ class Standar6AuditorController extends Controller
          $kprodi = Standar6::where([
            ["id_prodi", $idprodi],
            ["kode", "6.2.2"]
-         ])->first();
+         ])->whereYear("created_at", '=', date("Y"))->first();
          $kategori6_2_2 = $kprodi->kategori;
          $data6_2_2 = $kprodi->data;
          $skor6_2_2 = $kprodi->skor;
@@ -96,7 +96,7 @@ class Standar6AuditorController extends Controller
          $kprodi = Standar6::where([
            ["id_prodi", $idprodi],
            ["kode", "6.2.3"]
-         ])->first();
+         ])->whereYear("created_at", '=', date("Y"))->first();
          $kategori6_2_3 = $kprodi->kategori;
          $data6_2_3 = $kprodi->data;
          $skor6_2_3 = $kprodi->skor;
@@ -118,7 +118,7 @@ class Standar6AuditorController extends Controller
          $kprodi = Standar6::where([
            ["id_prodi", $idprodi],
            ["kode", "6.3.1"]
-         ])->first();
+         ])->whereYear("created_at", '=', date("Y"))->first();
          $kategori6_3_1 = $kprodi->kategori;
          $data6_3_1 = $kprodi->data;
          $skor6_3_1 = $kprodi->skor;
@@ -141,7 +141,7 @@ class Standar6AuditorController extends Controller
         $kprodi = Standar6::where([
           ["id_prodi", $idprodi],
           ["kode", "6.4.1.a"]
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $kategori6_4_1_a = $kprodi->kategori;
         $data6_4_1_a = $kprodi->data;
         $skor6_4_1_a = $kprodi->skor;
@@ -157,7 +157,7 @@ class Standar6AuditorController extends Controller
         $kprodi = Standar6::where([
           ["id_prodi", $idprodi],
           ["kode", "6.4.1.b"]
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $kategori6_4_1_b = $kprodi->kategori;
         $data6_4_1_b = $kprodi->data;
         $skor6_4_1_b = $kprodi->skor;
@@ -173,7 +173,7 @@ class Standar6AuditorController extends Controller
         $kprodi = Standar6::where([
           ["id_prodi", $idprodi],
           ["kode", "6.4.1.c"]
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         
         $kategori6_4_1_c = $kprodi->kategori;
         $data6_4_1_c = $kprodi->data;
@@ -190,7 +190,7 @@ class Standar6AuditorController extends Controller
         $kprodi = Standar6::where([
           ["id_prodi", $idprodi],
           ["kode", "6.4.1.d"]
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $kategori6_4_1_d = $kprodi->kategori;
         $data6_4_1_d = $kprodi->data;
         $skor6_4_1_d = $kprodi->skor;
@@ -206,7 +206,7 @@ class Standar6AuditorController extends Controller
         $kprodi = Standar6::where([
           ["id_prodi", $idprodi],
           ["kode", "6.4.1.e"]
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $kategori6_4_1_e = $kprodi->kategori;
         $data6_4_1_e = $kprodi->data;
         $skor6_4_1_e = $kprodi->skor;
@@ -227,7 +227,7 @@ class Standar6AuditorController extends Controller
       $oldStandar6 = Standar6Auditor::where([
         ['id_prodi', '=', $idprodi],
         ['auditor_id', session('auditor_id')]
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
       if($oldStandar6){
         //jika sudah maka ...
 
@@ -235,90 +235,99 @@ class Standar6AuditorController extends Controller
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '6.2.1']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_2_1;
         $standar6->data = $data6_2_1;
         $standar6->skor = $skor6_2_1;
+        $standar6->catatan = $request->catatan6_2_1;
         $standar6->save();
 
         $standar6 = Standar6Auditor::where([
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '6.2.2']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_2_2;
         $standar6->data = $data6_2_2;
         $standar6->skor = $skor6_2_2;
+        $standar6->catatan = $request->catatan6_2_2;
         $standar6->save();
 
         $standar6 = Standar6Auditor::where([
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '6.2.3']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_2_3;
         $standar6->data = $data6_2_3;
         $standar6->skor = $skor6_2_3;
+        $standar6->catatan = $request->catatan6_2_3;
         $standar6->save();
 
         $standar6 = Standar6Auditor::where([
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '6.3.1']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_3_1;
         $standar6->data = $data6_3_1;
         $standar6->skor = $skor6_3_1;
+        $standar6->catatan = $request->catatan6_3_1;
         $standar6->save();
 
         $standar6 = Standar6Auditor::where([
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '6.4.1.a']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_4_1_a;
         $standar6->data = $data6_4_1_a;
         $standar6->skor = $skor6_4_1_a;
+        $standar6->catatan = $request->catatan6_4_1_a;
         $standar6->save();
 
         $standar6 = Standar6Auditor::where([
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '6.4.1.b']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_4_1_b;
         $standar6->data = $data6_4_1_b;
         $standar6->skor = $skor6_4_1_b;
+        $standar6->catatan = $request->catatan6_4_1_b;
         $standar6->save();
 
         $standar6 = Standar6Auditor::where([
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '6.4.1.c']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_4_1_c;
         $standar6->data = $data6_4_1_c;
         $standar6->skor = $skor6_4_1_c;
+        $standar6->catatan = $request->catatan6_4_1_c;
         $standar6->save();
 
         $standar6 = Standar6Auditor::where([
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '6.4.1.d']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_4_1_d;
         $standar6->data = $data6_4_1_d;
         $standar6->skor = $skor6_4_1_d;
+        $standar6->catatan = $request->catatan6_4_1_d;
         $standar6->save();
 
         $standar6 = Standar6Auditor::where([
           ['id_prodi', '=', $idprodi],
           ['auditor_id', '=', session("auditor_id")],
           ['kode', '=', '6.4.1.e']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_4_1_e;
         $standar6->data = $data6_4_1_e;
         $standar6->skor = $skor6_4_1_e;
+        $standar6->catatan = $request->catatan6_4_1_e;
         $standar6->save();
         // return "updated";
       }else{
@@ -331,6 +340,7 @@ class Standar6AuditorController extends Controller
         $standar6->kategori = $kategori6_2_1;
         $standar6->data = $data6_2_1;
         $standar6->skor = $skor6_2_1;
+        $standar6->catatan = $request->catatan6_2_1;
         $standar6->save();
 
         $standar6 = new Standar6Auditor;
@@ -340,6 +350,7 @@ class Standar6AuditorController extends Controller
         $standar6->kategori = $kategori6_2_2;
         $standar6->data = $data6_2_2;
         $standar6->skor = $skor6_2_2;
+        $standar6->catatan = $request->catatan6_2_2;
         $standar6->save();
 
         $standar6 = new Standar6Auditor;
@@ -349,6 +360,7 @@ class Standar6AuditorController extends Controller
         $standar6->kategori = $kategori6_2_3;
         $standar6->data = $data6_2_3;
         $standar6->skor = $skor6_2_3;
+        $standar6->catatan = $request->catatan6_2_3;
         $standar6->save();
 
         $standar6 = new Standar6Auditor;
@@ -358,6 +370,7 @@ class Standar6AuditorController extends Controller
         $standar6->kategori = $kategori6_3_1;
         $standar6->data = $data6_3_1;
         $standar6->skor = $skor6_3_1;
+        $standar6->catatan = $request->catatan6_3_1;
         $standar6->save();
 
         $standar6 = new Standar6Auditor;
@@ -367,6 +380,7 @@ class Standar6AuditorController extends Controller
         $standar6->kategori = $kategori6_4_1_a;
         $standar6->data = $data6_4_1_a;
         $standar6->skor = $skor6_4_1_a;
+        $standar6->catatan = $request->catatan6_4_1_a;
         $standar6->save();
 
         $standar6 = new Standar6Auditor;
@@ -376,6 +390,7 @@ class Standar6AuditorController extends Controller
         $standar6->kategori = $kategori6_4_1_b;
         $standar6->data = $data6_4_1_b;
         $standar6->skor = $skor6_4_1_b;
+        $standar6->catatan = $request->catatan6_4_1_b;
         $standar6->save();
 
         $standar6 = new Standar6Auditor;
@@ -385,6 +400,7 @@ class Standar6AuditorController extends Controller
         $standar6->kategori = $kategori6_4_1_c;
         $standar6->data = $data6_4_1_c;
         $standar6->skor = $skor6_4_1_c;
+        $standar6->catatan = $request->catatan6_4_1_c;
         $standar6->save();
 
         $standar6 = new Standar6Auditor;
@@ -394,6 +410,7 @@ class Standar6AuditorController extends Controller
         $standar6->kategori = $kategori6_4_1_d;
         $standar6->data = $data6_4_1_d;
         $standar6->skor = $skor6_4_1_d;
+        $standar6->catatan = $request->catatan6_4_1_d;
         $standar6->save();
 
         $standar6 = new Standar6Auditor;
@@ -403,6 +420,7 @@ class Standar6AuditorController extends Controller
         $standar6->kategori = $kategori6_4_1_e;
         $standar6->data = $data6_4_1_e;
         $standar6->skor = $skor6_4_1_e;
+        $standar6->catatan = $request->catatan6_4_1_e;
         $standar6->save();
         // return "saved";
       }

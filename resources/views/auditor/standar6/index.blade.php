@@ -305,7 +305,7 @@
                                       @slot('isian_angket')
                                           <div class="col-md-7">
                                             <select name="nilai6_4_1_c" id="" class="form-control border-input" disabled>
-                                              <option>--Pilih--</option>
+                                              <option disabled="" selected="">--Pilih--</option>
                                               <option value="4" {{(json_decode($data_kprodi[6]->data)[0] == 4)?"selected":""}}>≥3 Judul jurnal, nomornya lengkap</option>
                                               <option value="3" {{(json_decode($data_kprodi[6]->data)[0] == 3)?"selected":""}}>2 Judul jurnal, nomornya lengkap</option>
                                               <option value="2" {{(json_decode($data_kprodi[6]->data)[0] == 2)?"selected":""}}>1 Judul jurnal, nomornya lengkap</option>
@@ -332,7 +332,7 @@
                                       @slot('validasi_auditor')
                                           <div class="col-md-5">
                                             <select name="nilai6_4_1_c" id="" class="form-control border-input" required="">
-                                              <option>--Pilih--</option>
+                                              <option disabled="" selected="">--Pilih--</option>
                                               <option value="4" @if(!$dataCheck) (json_decode($data[6]->data)[0] == 4)?"selected":"" @endif>≥3 Judul jurnal, nomornya lengkap</option>
                                               <option value="3" @if(!$dataCheck) (json_decode($data[6]->data)[0] == 3)?"selected":"" @endif>2 Judul jurnal, nomornya lengkap</option>
                                               <option value="2" @if(!$dataCheck) (json_decode($data[6]->data)[0] == 2)?"selected":"" @endif>1 Judul jurnal, nomornya lengkap</option>
@@ -358,7 +358,7 @@
                                       @slot('isian_angket')
                                           <div class="col-md-7">
                                             <select name="nilai6_4_1_d" id="" class="form-control border-input" disabled>
-                                              <option>--Pilih--</option>
+                                              <option disabled="" selected="">--Pilih--</option>
                                               <option value="4" {{(json_decode($data_kprodi[7]->data)[0] == 4)?"selected":""}}>≥2 Judul jurnal, nomornya lengkap</option>
                                               <option value="3" {{(json_decode($data_kprodi[7]->data)[0] == 3)?"selected":""}}>2 Judul jurnal, nomornya lengkap</option>
                                               <option value="2" {{(json_decode($data_kprodi[7]->data)[0] == 2)?"selected":""}}>Tidak ada jurnal yang nomornya lengkap</option>
@@ -383,7 +383,7 @@
                                       @slot('validasi_auditor')
                                           <div class="col-md-5">
                                             <select name="nilai6_4_1_d" id="" class="form-control border-input" required="">
-                                              <option>--Pilih--</option>
+                                              <option disabled="" selected="">--Pilih--</option>
                                               <option value="4" @if(!$dataCheck) (json_decode($data[7]->data)[0] == 4)?"selected":"" @endif>≥2 Judul jurnal, nomornya lengkap</option>
                                               <option value="3" @if(!$dataCheck) (json_decode($data[7]->data)[0] == 3)?"selected":"" @endif>2 Judul jurnal, nomornya lengkap</option>
                                               <option value="2" @if(!$dataCheck) (json_decode($data[7]->data)[0] == 2)?"selected":"" @endif>Tidak ada jurnal yang nomornya lengkap</option>

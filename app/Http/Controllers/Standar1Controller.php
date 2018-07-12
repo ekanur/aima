@@ -39,15 +39,15 @@ class Standar1Controller extends Controller
 
     public function update(Request $request){
       if($request->skor1_1_a_old != $request->skor1_1_a){
-        Standar1::where("kode", "1.1.a")->update(["kategori"=>$request->skor1_1_a, "data"=>"[".$request->skor1_1_a."]", "skor"=>$request->skor1_1_a]);
+        Standar1::where("kode", "1.1.a")->whereYear("created_at", '=', date("Y"))->update(["kategori"=>$request->skor1_1_a, "data"=>"[".$request->skor1_1_a."]", "skor"=>$request->skor1_1_a]);
       }
 
       if($request->skor1_1_b_old != $request->skor1_1_b){
-        Standar1::where("kode", "1.1.b")->update(["kategori"=>$request->skor1_1_b, "data"=>"[".$request->skor1_1_b."]", "skor"=>$request->skor1_1_b]);
+        Standar1::where("kode", "1.1.b")->whereYear("created_at", '=', date("Y"))->update(["kategori"=>$request->skor1_1_b, "data"=>"[".$request->skor1_1_b."]", "skor"=>$request->skor1_1_b]);
       }
 
       if($request->skor1_2_old != $request->skor1_2){
-        Standar1::where("kode", "1.2")->update(["kategori"=>$request->skor1_2, "data"=>"[".$request->skor1_2."]", "skor"=>$request->skor1_2]);
+        Standar1::where("kode", "1.2")->whereYear("created_at", '=', date("Y"))->update(["kategori"=>$request->skor1_2, "data"=>"[".$request->skor1_2."]", "skor"=>$request->skor1_2]);
       }
 
       return redirect()->back();

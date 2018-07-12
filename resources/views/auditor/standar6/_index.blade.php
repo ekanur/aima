@@ -133,7 +133,7 @@
                             <div class="row">
                               <div class="col-md-5">
                                 <select name="nilai6_4_1_c" id="" class="form-control border-input" required="">
-                                  <option>--Pilih--</option>
+                                  <option disabled="" selected="">--Pilih--</option>
                                   <option value="4" <?php if(!$dataCheck){ if (json_decode($data[6]->data)[0] == 4){ echo "selected"; }}?>>≥3 Judul jurnal, nomornya lengkap</option>
                                   <option value="3" <?php if(!$dataCheck){ if (json_decode($data[6]->data)[0] == 3){ echo "selected"; }}?>>2 Judul jurnal, nomornya lengkap</option>
                                   <option value="2" <?php if(!$dataCheck){ if (json_decode($data[6]->data)[0] == 2){ echo "selected"; }}?>>1 Judul jurnal, nomornya lengkap</option>
@@ -158,7 +158,7 @@
                           <div class="row">
                             <div class="col-md-5">
                               <select name="nilai6_4_1_d" id="" class="form-control border-input" required="">
-                                <option>--Pilih--</option>
+                                <option disabled="" selected="">--Pilih--</option>
                                 <option value="4" <?php if(!$dataCheck){ if (json_decode($data[7]->data)[0] == 4){ echo "selected"; }}?>>≥2 Judul jurnal, nomornya lengkap</option>
                                 <option value="3" <?php if(!$dataCheck){ if (json_decode($data[7]->data)[0] == 3){ echo "selected"; }}?>>2 Judul jurnal, nomornya lengkap</option>
                                 <option value="2" <?php if(!$dataCheck){ if (json_decode($data[7]->data)[0] == 2){ echo "selected"; }}?>>Tidak ada jurnal yang nomornya lengkap</option>

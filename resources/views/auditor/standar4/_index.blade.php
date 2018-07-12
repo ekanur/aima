@@ -216,7 +216,7 @@
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-12">
                                   <select class="form-control border-input" name="n4_3_4">
-                                  <option>--Pilih--</option>
+                                  <option disabled="" selected="">--Pilih--</option>
                                     <option value="4" <?php if(!$dataCheck){ if (json_decode($data[6]->data)[0] == 4){ echo "selected"; }}?>>Semua mata kuliah diajar oleh dosen yang sesuai keahliannya</option>
                                     <option value="3" <?php if(!$dataCheck){ if (json_decode($data[6]->data)[0] == 3){ echo "selected"; }}?>>1 - 3 mata kuliah diajar oleh dosen tidak sesuai dengan keahliannya</option>
                                     <option value="2" <?php if(!$dataCheck){ if (json_decode($data[6]->data)[0] == 2){ echo "selected"; }}?>>4 - 7 mata kuliah diajar oleh doesn yang tidak sesuai keahliannya</option>
@@ -310,7 +310,7 @@
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-12">
                                   <select class="form-control border-input" name="n4_4_2_a">
-                                  <option>--Pilih--</option>
+                                  <option disabled="" selected="">--Pilih--</option>
                                     <option value="4" <?php if(!$dataCheck){ if (json_decode($data[9]->data)[0] == 4){ echo "selected"; }}?>>Semua dosen tidak tetap mengajar mata kuliah yang sesuai keahliannya</option>
                                     <option value="3" <?php if(!$dataCheck){ if (json_decode($data[9]->data)[0] == 3){ echo "selected"; }}?>>1 - 2 mata kuliah diajar oleh dosen tidak tetap yang tidak sesuai keahliannya</option>
                                     <option value="2" <?php if(!$dataCheck){ if (json_decode($data[9]->data)[0] == 2){ echo "selected"; }}?>>3 - 4 mata kuliah diajar oelh dosen tidak tetap yang tidak sesuai keahliannya</option>
@@ -473,7 +473,7 @@
                             <div class="row">
                               <div class="col-md-12">
                                 <select class="form-control border-input" name="n4_5_4">
-                                  <option>--Pilih--</option>
+                                  <option disabled="" selected="">--Pilih--</option>
                                   <option value="4" <?php if(!$dataCheck){ if (json_decode($data[14]->data)[0] == 4){ echo "selected"; }}?>>Mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari institusi internasional (disertai bukti)</option>
                                   <option value="3" <?php if(!$dataCheck){ if (json_decode($data[14]->data)[0] == 3){ echo "selected"; }}?>>Mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari institusi nasional (disertai bukti)</option>
                                   <option value="2" <?php if(!$dataCheck){ if (json_decode($data[14]->data)[0] == 2){ echo "selected"; }}?>>Mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari institusi regional/lokal (disertai bukti)</option>

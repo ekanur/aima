@@ -27,14 +27,14 @@ class Standar3AuditorController extends Controller
       $nama_prodi = $prodi->jjg_kd." ".$prodi->pro_nm;
 
       // $standar2 = Standar2Auditor::where("id_prodi", $idprodi)->get();
-      $data = Standar3Auditor::select('kode', 'data', 'skor', 'kategori')->where([['id_prodi', '=', $idprodi],['auditor_id', '=', session("auditor_id")]])->orderBy('kode', 'asc')->get();
+      $data = Standar3Auditor::select('kode', 'data', 'skor', 'kategori', 'catatan')->where([['id_prodi', '=', $idprodi],['auditor_id', '=', session("auditor_id")]])->whereYear("created_at", '=', date("Y"))->orderBy('kode', 'asc')->get();
         if(!$data->count()){
           $dataCheck = true;
         }else{
           $dataCheck = false;
         }
 
-      $data_kprodi = Standar3::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', $idprodi)->orderBy('kode', 'asc')->get();
+      $data_kprodi = Standar3::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', $idprodi)->whereYear("created_at", '=', date("Y"))->orderBy('kode', 'asc')->get();
       // $data_kprodi=array();
       // foreach ($standar2_kprodi as $data_prodi) {
       //   $data_kprodi[$data_prodi->kode] = $data_prodi->kategori;
@@ -45,7 +45,7 @@ class Standar3AuditorController extends Controller
       return view("auditor/standar3.index", compact('idprodi', 'data', 'standar', 'standar_message', 'standar_status_code', 'nama_prodi', 'data_kprodi', 'dataCheck'));
         // $standar="Standar 3";
 
-        // $data = Standar3Auditor::select('kode', 'data', 'skor', 'kategori')->where([['id_prodi', '=', $idprodi],['auditor_id', '=', session("auditor_id")]])->orderBy('kode', 'asc')->get();
+        // $data = Standar3Auditor::select('kode', 'data', 'skor', 'kategori', 'catatan')->where([['id_prodi', '=', $idprodi],['auditor_id', '=', session("auditor_id")]])->orderBy('kode', 'asc')->get();
         // if(!$data->count()){
         //   $dataCheck = true;
         // }else{
@@ -58,7 +58,7 @@ class Standar3AuditorController extends Controller
         //PERHITUNGAN 3.1.1.a
         // dd($in->all());
         if($in->setuju_3_1_1_a == '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.1.a"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.1.a"]])->whereYear("created_at", '=', date("Y"))->first();
 
             $kategori3_1_1_a = $standar3_kprodi->kategori;
             $data3_1_1_a = $standar3_kprodi->data;
@@ -90,7 +90,7 @@ class Standar3AuditorController extends Controller
         //PERHITUNGAN 3.1.1.b
 
         if($in->setuju_3_1_1_b == '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.1.b"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.1.b"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_1_1_b = $standar3_kprodi->kategori;
             $data3_1_1_b = $standar3_kprodi->data;
             $skor3_1_1_b = $standar3_kprodi->skor;
@@ -119,7 +119,7 @@ class Standar3AuditorController extends Controller
         //PERHITUNGAN 3.1.1.c
 
         if($in->setuju_3_1_1_c == '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.1.c"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.1.c"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_1_1_c = $standar3_kprodi->kategori;
             $data3_1_1_c = $standar3_kprodi->data;
             $skor3_1_1_c = $standar3_kprodi->skor;
@@ -148,7 +148,7 @@ class Standar3AuditorController extends Controller
         //PERHITUNGAN 3.1.1.d
 
         if($in->setuju_3_1_1_d == '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.1.d"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.1.d"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_1_1_d = $standar3_kprodi->kategori;
             $data3_1_1_d = $standar3_kprodi->data;
             $skor3_1_1_d = $standar3_kprodi->skor;
@@ -179,7 +179,7 @@ class Standar3AuditorController extends Controller
 
         //PERHITUNGAN 3.1.2
         if($in->setuju_3_1_2 == '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.2"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.2"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_1_2 = $standar3_kprodi->kategori;
             $data3_1_2 = $standar3_kprodi->data;
             $skor3_1_2 = $standar3_kprodi->skor;
@@ -193,7 +193,7 @@ class Standar3AuditorController extends Controller
 
         //PERHITUNGAN 3.1.3
         if($in->setuju_3_1_3 == '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.3"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.3"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_1_3 = $standar3_kprodi->kategori;
             $data3_1_3 = $standar3_kprodi->data;
             $skor3_1_3 = $standar3_kprodi->skor;
@@ -207,7 +207,7 @@ class Standar3AuditorController extends Controller
 
         //PERHITUNGAN 3.1.4.a
         if($in->setuju_3_1_4_a == '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.4.a"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.4.a"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_1_4_a = $standar3_kprodi->kategori;
             $data3_1_4_a = $standar3_kprodi->data;
             $skor3_1_4_a = $standar3_kprodi->skor;
@@ -235,7 +235,7 @@ class Standar3AuditorController extends Controller
 
         //PERHITUNGAN 3.1.4.b
         if($in->setuju_3_1_4_b == '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.4.b"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.1.4.b"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_1_4_b = $standar3_kprodi->kategori;
             $data3_1_4_b = $standar3_kprodi->data;
             $skor3_1_4_b = $standar3_kprodi->skor;
@@ -256,7 +256,7 @@ class Standar3AuditorController extends Controller
         //PERHITUNGAN 3.2.1
 
         if($in->setuju_3_2_1 == '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.2.1"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.2.1"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_2_1 = $standar3_kprodi->kategori;
             $data3_2_1 = $standar3_kprodi->data;
             $skor3_2_1 = $standar3_kprodi->skor;
@@ -269,7 +269,7 @@ class Standar3AuditorController extends Controller
 
         //PERHITUNGAN 3.2.2
         if($in->setuju_3_2_2 == '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.2.2"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.2.2"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_2_2 = $standar3_kprodi->kategori;
             $data3_2_2 = $standar3_kprodi->data;
             $skor3_2_2 = $standar3_kprodi->skor;
@@ -283,7 +283,7 @@ class Standar3AuditorController extends Controller
 
         //PERHITUNGAN 3.3.1.b
         if($in->setuju_3_3_1_b == '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.3.1.b"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.3.1.b"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_3_1_b = $standar3_kprodi->kategori;
             $data3_3_1_b = $standar3_kprodi->data;
             $skor3_3_1_b = $standar3_kprodi->skor;
@@ -297,7 +297,7 @@ class Standar3AuditorController extends Controller
 
         //PERHITUNGAN 3.3.1.c
           if($in->setuju_3_3_1_c == '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.3.1.c"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.3.1.c"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_3_1_c = $standar3_kprodi->kategori;
             $data3_3_1_c = $standar3_kprodi->data;
             $skor3_3_1_c = $standar3_kprodi->skor;
@@ -313,7 +313,7 @@ class Standar3AuditorController extends Controller
         //PERHITUNGAN 3.3.2
 
           if($in->setuju_3_3_2== '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.3.2"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.3.2"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_3_2= $standar3_kprodi->kategori;
             $data3_3_2= $standar3_kprodi->data;
             $skor3_3_2= $standar3_kprodi->skor;
@@ -335,7 +335,7 @@ class Standar3AuditorController extends Controller
 
         //PERHITUNGAN 3.3.3
           if($in->setuju_3_3_3== '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.3.3"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.3.3"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_3_3= $standar3_kprodi->kategori;
             $data3_3_3= $standar3_kprodi->data;
             $skor3_3_3= $standar3_kprodi->skor;
@@ -355,7 +355,7 @@ class Standar3AuditorController extends Controller
 
         //PERHITUNGAN 3.4.1
           if($in->setuju_3_4_1== '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.4.1"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.4.1"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_4_1= $standar3_kprodi->kategori;
             $data3_4_1= $standar3_kprodi->data;
             $skor3_4_1= $standar3_kprodi->skor;
@@ -369,7 +369,7 @@ class Standar3AuditorController extends Controller
 
         //PERHITUNGAN 3.4.2
           if($in->setuju_3_4_2== '1'){
-            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.4.2"]])->first();
+            $standar3_kprodi = Standar3::where([["id_prodi","=", $idprodi ],["kode", "=", "3.4.2"]])->whereYear("created_at", '=', date("Y"))->first();
             $kategori3_4_2= $standar3_kprodi->kategori;
             $data3_4_2= $standar3_kprodi->data;
             $skor3_4_2= $standar3_kprodi->skor;
@@ -382,7 +382,7 @@ class Standar3AuditorController extends Controller
 
 
 
-        $oldStandar3 = Standar3Auditor::where([['id_prodi', '=', $idprodi], ['auditor_id', '=', session("auditor_id")]])->first();
+        $oldStandar3 = Standar3Auditor::where([['id_prodi', '=', $idprodi], ['auditor_id', '=', session("auditor_id")]])->whereYear("created_at", '=', date("Y"))->first();
         if($oldStandar3){
           //jika sudah maka ...
 
@@ -390,160 +390,176 @@ class Standar3AuditorController extends Controller
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.1.1.a']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_1_a;
           $standar3->data = $data3_1_1_a;
           $standar3->skor = $skor3_1_1_a;
+          $standar3->catatan = $in->catatan3_1_1_a;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.1.1.b']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_1_b;
           $standar3->data = $data3_1_1_b;
           $standar3->skor = $skor3_1_1_b;
+          $standar3->catatan = $in->catatan3_1_1_b;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.1.1.c']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_1_c;
           $standar3->data = $data3_1_1_c;
           $standar3->skor = $skor3_1_1_c;
+          $standar3->catatan = $in->catatan3_1_1_c;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.1.1.d']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_1_d;
           $standar3->data = $data3_1_1_d;
           $standar3->skor = $skor3_1_1_d;
+          $standar3->catatan = $in->catatan3_1_1_d;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.1.2']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_2;
           $standar3->data = $data3_1_2;
           $standar3->skor = $skor3_1_2;
+          $standar3->catatan = $in->catatan3_1_2;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.1.3']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_3;
           $standar3->data = $data3_1_3;
           $standar3->skor = $skor3_1_3;
+          $standar3->catatan = $in->catatan3_1_3;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.1.4.a']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_4_a;
           $standar3->data = $data3_1_4_a;
           $standar3->skor = $skor3_1_4_a;
+          $standar3->catatan = $in->catatan3_1_4_a;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.1.4.b']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_1_4_b;
           $standar3->data = $data3_1_4_b;
           $standar3->skor = $skor3_1_4_b;
+          $standar3->catatan = $in->catatan3_1_4_b;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.2.1']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_2_1;
           $standar3->data = $data3_2_1;
           $standar3->skor = $skor3_2_1;
+          $standar3->catatan = $in->catatan3_2_1;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.2.2']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_2_2;
           $standar3->data = $data3_2_2;
           $standar3->skor = $skor3_2_2;
+          $standar3->catatan = $in->catatan3_2_2;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.3.1.b']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_3_1_b;
           $standar3->data = $data3_3_1_b;
           $standar3->skor = $skor3_3_1_b;
+          $standar3->catatan = $in->catatan3_3_1_b;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.3.1.c']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_3_1_c;
           $standar3->data = $data3_3_1_c;
           $standar3->skor = $skor3_3_1_c;
+          $standar3->catatan = $in->catatan3_3_1_c;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.3.2']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_3_2;
           $standar3->data = $data3_3_2;
           $standar3->skor = $skor3_3_2;
+          $standar3->catatan = $in->catatan3_3_2;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.3.3']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_3_3;
           $standar3->data = $data3_3_3;
           $standar3->skor = $skor3_3_3;
+          $standar3->catatan = $in->catatan3_3_3;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.4.1']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_4_1;
           $standar3->data = $data3_4_1;
           $standar3->skor = $skor3_4_1;
+          $standar3->catatan = $in->catatan3_4_1;
           $standar3->save();
 
           $standar3 = Standar3Auditor::where([
             ['id_prodi', '=', $idprodi],
             ['auditor_id', '=', session("auditor_id")],
             ['kode', '=', '3.4.2']
-          ])->first();
+          ])->whereYear("created_at", '=', date("Y"))->first();
           $standar3->kategori = $kategori3_4_2;
           $standar3->data = $data3_4_2;
           $standar3->skor = $skor3_4_2;
+          $standar3->catatan = $in->catatan3_4_2;
           $standar3->save();
           // return "updated";
         }
@@ -560,6 +576,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_1_1_a;
           $standar3->data = $data3_1_1_a;
           $standar3->skor = $skor3_1_1_a;
+          $standar3->catatan = $in->catatan3_1_1_a;
           $standar3->save();
 
 
@@ -570,6 +587,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_1_1_b;
           $standar3->data = $data3_1_1_b;
           $standar3->skor = $skor3_1_1_b;
+          $standar3->catatan = $in->catatan3_1_1_b;
           $standar3->save();
 
 
@@ -580,6 +598,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_1_1_c;
           $standar3->data = $data3_1_1_c;
           $standar3->skor = $skor3_1_1_c;
+          $standar3->catatan = $in->catatan3_1_1_c;
           $standar3->save();
 
 
@@ -590,6 +609,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_1_1_d;
           $standar3->data = $data3_1_1_d;
           $standar3->skor = $skor3_1_1_d;
+          $standar3->catatan = $in->catatan3_1_1_d;
           $standar3->save();
 
 
@@ -601,6 +621,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_1_2;
           $standar3->data = $data3_1_2;
           $standar3->skor = $skor3_1_2;
+          $standar3->catatan = $in->catatan3_1_2;
           $standar3->save();
 
 
@@ -612,6 +633,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_1_3;
           $standar3->data = $data3_1_3;
           $standar3->skor = $skor3_1_3;
+          $standar3->catatan = $in->catatan3_1_3;
           $standar3->save();
 
 
@@ -623,6 +645,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_1_4_a;
           $standar3->data = $data3_1_4_a;
           $standar3->skor = $skor3_1_4_a;
+          $standar3->catatan = $in->catatan3_1_4_a;
           $standar3->save();
 
 
@@ -634,6 +657,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_1_4_b;
           $standar3->data = $data3_1_4_b;
           $standar3->skor = $skor3_1_4_b;
+          $standar3->catatan = $in->catatan3_1_4_b;
           $standar3->save();
 
 
@@ -644,6 +668,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_2_1;
           $standar3->data = $data3_2_1;
           $standar3->skor = $skor3_2_1;
+          $standar3->catatan = $in->catatan3_2_1;
           $standar3->save();
 
 
@@ -654,6 +679,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_2_2;
           $standar3->data = $data3_2_2;
           $standar3->skor = $skor3_2_2;
+          $standar3->catatan = $in->catatan3_2_2;
           $standar3->save();
 
 
@@ -665,6 +691,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_3_1_b;
           $standar3->data = $data3_3_1_b;
           $standar3->skor = $skor3_3_1_b;
+          $standar3->catatan = $in->catatan3_3_1_b;
           $standar3->save();
 
 
@@ -675,6 +702,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_3_1_c;
           $standar3->data = $data3_3_1_c;
           $standar3->skor = $skor3_3_1_c;
+          $standar3->catatan = $in->catatan3_3_1_c;
           $standar3->save();
 
 
@@ -685,6 +713,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_3_2;
           $standar3->data = $data3_3_2;
           $standar3->skor = $skor3_3_2;
+          $standar3->catatan = $in->catatan3_3_2;
           $standar3->save();
 
 
@@ -696,6 +725,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_3_3;
           $standar3->data = $data3_3_3;
           $standar3->skor = $skor3_3_3;
+          $standar3->catatan = $in->catatan3_3_3;
           $standar3->save();
 
 
@@ -706,6 +736,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_4_1;
           $standar3->data = $data3_4_1;
           $standar3->skor = $skor3_4_1;
+          $standar3->catatan = $in->catatan3_4_1;
           $standar3->save();
 
 
@@ -716,6 +747,7 @@ class Standar3AuditorController extends Controller
           $standar3->kategori = $kategori3_4_2;
           $standar3->data = $data3_4_2;
           $standar3->skor = $skor3_4_2;
+          $standar3->catatan = $in->catatan3_4_2;
           $standar3->save();
 
           // return "saved";

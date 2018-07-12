@@ -203,13 +203,13 @@ class Standar5Controller extends Controller
       $skor5_7_5 = $kategori5_7_5;
 
 
-    $dataStandar5 = Standar5::where('id_prodi', '=', session('id_prodi'))->first();
+    $dataStandar5 = Standar5::where('id_prodi', '=', session('id_prodi'))->whereYear("created_at", '=', date("Y"))->first();
     if($dataStandar5) {
       // 5.1.1.a
       $standar5=Standar5::where([
         ['id_prodi','=',session('id_prodi')],
         ['kode','=','5.1.1.a']
-      ])->first();
+      ])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori5_1_1_a;
       $standar5->data=$data5_1_1_a;
       $standar5->skor=$skor5_1_1_a;
@@ -217,7 +217,7 @@ class Standar5Controller extends Controller
 
       // 5.1.2.b
       $standar5=Standar5::where([['id_prodi','=',session('id_prodi')],
-      ['kode','=','5.1.2.b']])->first();
+      ['kode','=','5.1.2.b']])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori_5_1_2_b;
       $standar5->data=$data5_1_2_b;
       $standar5->skor=$skor5_1_2_b;
@@ -225,7 +225,7 @@ class Standar5Controller extends Controller
 
       // 5.1.2.c
       $standar5=Standar5::where([['id_prodi','=',session('id_prodi')],
-      ['kode','=','5.1.2.c']])->first();
+      ['kode','=','5.1.2.c']])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori5_1_2_c;
       $standar5->data=$data5_1_2_c;
       $standar5->skor=$skor5_1_2_c;
@@ -233,7 +233,7 @@ class Standar5Controller extends Controller
 
       // 5.1.3.a
       $standar5=Standar5::where([['id_prodi','=',session('id_prodi')],
-      ['kode','=','5.1.3.a']])->first();
+      ['kode','=','5.1.3.a']])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori5_1_3_a;
       $standar5->data=$data5_1_3_a;
       $standar5->skor=$skor5_1_3_a;
@@ -241,7 +241,7 @@ class Standar5Controller extends Controller
 
       // 5.3.2
       $standar5=Standar5::where([['id_prodi','=',session('id_prodi')],
-      ['kode','=','5.3.2']])->first();
+      ['kode','=','5.3.2']])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori_5_3_2;
       $standar5->data=$data5_3_2;
       $standar5->skor=$skor5_3_2;
@@ -249,7 +249,7 @@ class Standar5Controller extends Controller
 
       //5.4.1.a
       $standar5=Standar5::where([['id_prodi','=',session('id_prodi')],
-      ['kode','=','5.4.1.a']])->first();
+      ['kode','=','5.4.1.a']])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori5_4_1_a;
       $standar5->data=$data5_4_1_a;
       $standar5->skor=$skor5_4_1_a;
@@ -257,7 +257,7 @@ class Standar5Controller extends Controller
 
       //5.4.1.c
       $standar5=Standar5::where([['id_prodi','=',session('id_prodi')],
-      ['kode','=','5.4.1.c']])->first();
+      ['kode','=','5.4.1.c']])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori5_4_1_c;
       $standar5->data=$data5_4_1_c;
       $standar5->skor=$skor5_4_1_c;
@@ -265,7 +265,7 @@ class Standar5Controller extends Controller
 
       //5.4.2
       $standar5=Standar5::where([['id_prodi','=',session('id_prodi')],
-      ['kode','=','5.4.2']])->first();
+      ['kode','=','5.4.2']])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori5_4_2;
       $standar5->data=$data5_4_2;
       $standar5->skor=$skor5_4_2;
@@ -273,7 +273,7 @@ class Standar5Controller extends Controller
 
       //5.5.1.b
       $standar5=Standar5::where([['id_prodi','=',session('id_prodi')],
-      ['kode','=','5.5.1.b']])->first();
+      ['kode','=','5.5.1.b']])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori5_5_1_b ;
       $standar5->data=$data5_5_1_b;
       $standar5->skor=$skor5_5_1_b;
@@ -281,7 +281,7 @@ class Standar5Controller extends Controller
 
       //5.5.1.c
       $standar5=Standar5::where([['id_prodi','=',session('id_prodi')],
-      ['kode','=','5.5.1.c']])->first();
+      ['kode','=','5.5.1.c']])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori5_5_1_c;
       $standar5->data=$data5_5_1_c;
       $standar5->skor=$skor5_5_1_c;
@@ -289,7 +289,7 @@ class Standar5Controller extends Controller
 
       //5.5.2
       $standar5=Standar5::where([['id_prodi','=',session('id_prodi')],
-      ['kode','=','5.5.2']])->first();
+      ['kode','=','5.5.2']])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori_rpta5_5_2;
       $standar5->data=$data5_5_2;
       $standar5->skor=$skor5_5_2;
@@ -297,7 +297,7 @@ class Standar5Controller extends Controller
 
       //5.7.2
       $standar5=Standar5::where([['id_prodi','=',session('id_prodi')],
-      ['kode','=','5.7.2']])->first();
+      ['kode','=','5.7.2']])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori5_7_2;
       $standar5->data=$data5_7_2;
       $standar5->skor=$skor5_7_2;
@@ -305,7 +305,7 @@ class Standar5Controller extends Controller
 
       //5.7.3
       $standar5=Standar5::where([['id_prodi','=',session('id_prodi')],
-      ['kode','=','5.7.3']])->first();
+      ['kode','=','5.7.3']])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori5_7_3;
       $standar5->data=$data5_7_3;
       $standar5->skor=$skor5_7_3;
@@ -313,7 +313,7 @@ class Standar5Controller extends Controller
 
       //5.7.5
       $standar5=Standar5::where([['id_prodi','=',session('id_prodi')],
-      ['kode','=','5.7.5']])->first();
+      ['kode','=','5.7.5']])->whereYear("created_at", '=', date("Y"))->first();
       $standar5->kategori=$kategori5_7_5;
       $standar5->data=$data5_7_5;
       $standar5->skor=$skor5_7_5;

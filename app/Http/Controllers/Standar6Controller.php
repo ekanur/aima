@@ -109,14 +109,14 @@ class Standar6Controller extends Controller
       $skor6_4_1_e = $prosiding;
 
       //cek apakah jurusan tersebut sudah pernah input atau belum
-      $oldStandar6 = Standar6::where('id_prodi', '=', session('id_prodi'))->first();
+      $oldStandar6 = Standar6::where('id_prodi', '=', session('id_prodi'))->whereYear("created_at", '=', date("Y"))->first();
       if($oldStandar6){
         //jika sudah maka ...
 
         $standar6 = Standar6::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '6.2.1']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_2_1;
         $standar6->data = $data6_2_1;
         $standar6->skor = $skor6_2_1;
@@ -125,7 +125,7 @@ class Standar6Controller extends Controller
         $standar6 = Standar6::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '6.2.2']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_2_2;
         $standar6->data = $data6_2_2;
         $standar6->skor = $skor6_2_2;
@@ -134,7 +134,7 @@ class Standar6Controller extends Controller
         $standar6 = Standar6::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '6.2.3']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_2_3;
         $standar6->data = $data6_2_3;
         $standar6->skor = $skor6_2_3;
@@ -143,7 +143,7 @@ class Standar6Controller extends Controller
         $standar6 = Standar6::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '6.3.1']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_3_1;
         $standar6->data = $data6_3_1;
         $standar6->skor = $skor6_3_1;
@@ -152,7 +152,7 @@ class Standar6Controller extends Controller
         $standar6 = Standar6::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '6.4.1.a']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_4_1_a;
         $standar6->data = $data6_4_1_a;
         $standar6->skor = $skor6_4_1_a;
@@ -161,7 +161,7 @@ class Standar6Controller extends Controller
         $standar6 = Standar6::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '6.4.1.b']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_4_1_b;
         $standar6->data = $data6_4_1_b;
         $standar6->skor = $skor6_4_1_b;
@@ -170,7 +170,7 @@ class Standar6Controller extends Controller
         $standar6 = Standar6::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '6.4.1.c']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_4_1_c;
         $standar6->data = $data6_4_1_c;
         $standar6->skor = $skor6_4_1_c;
@@ -179,7 +179,7 @@ class Standar6Controller extends Controller
         $standar6 = Standar6::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '6.4.1.d']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_4_1_d;
         $standar6->data = $data6_4_1_d;
         $standar6->skor = $skor6_4_1_d;
@@ -188,7 +188,7 @@ class Standar6Controller extends Controller
         $standar6 = Standar6::where([
           ['id_prodi', '=', session('id_prodi')],
           ['kode', '=', '6.4.1.e']
-        ])->first();
+        ])->whereYear("created_at", '=', date("Y"))->first();
         $standar6->kategori = $kategori6_4_1_e;
         $standar6->data = $data6_4_1_e;
         $standar6->skor = $skor6_4_1_e;
