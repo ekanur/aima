@@ -30,11 +30,11 @@ class Standar1AuditorController extends Controller
         $data[$data_standar1->kode] = $data_standar1->kategori;
       }
 
-      $data_catatan = array();
+      // $data_catatan = array();
 
-      foreach ($standar1 as $data_standar1) {
-        $data_catatan[$data_standar1->kode] = $data_standar1->catatan;
-      }
+      // foreach ($standar1 as $data_standar1) {
+      //   $data_catatan[$data_standar1->kode] = $data_standar1->catatan;
+      // }
 
       // dd($data_catatan);
 
@@ -47,7 +47,7 @@ class Standar1AuditorController extends Controller
 
     	$standar="Standar 1";
       
-    	return view("auditor/standar1.index", compact('idprodi', 'data', 'standar', 'standar_message', 'standar_status_code', 'nama_prodi', 'data_kprodi', 'data_catatan'));
+    	return view("auditor/standar1.index", compact('idprodi', 'data', 'standar', 'standar_message', 'standar_status_code', 'nama_prodi', 'data_kprodi'));
     }
 
     public function save(Request $request, $idprodi){
