@@ -11,7 +11,7 @@ class AuditorController extends Controller
     {
           // $standar = "Standar 2";
           $fakultas = Fakultas::with(["prodi" => function($query){
-            $query->where('jjg_kd', '!=', '');
+            $query->where('jjg_kd', '!=', '')->orderBy("jjg_kd");
           }])->where([["fak_kd", "!=", '00'], ["fak_kd", "!=", '31']])->get();
           
           // dd($fakultas);
