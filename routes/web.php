@@ -42,6 +42,7 @@ Route::get('/servicelogout','SecurityController@logout');
     Route::get('/rekap/nilaistandar5', "NilaiStandar5Controller@index");
     Route::get('/rekap/nilaistandar6', "NilaiStandar6Controller@index");
     Route::get('/rekap/nilaistandar7', "NilaiStandar7Controller@index");
+    Route::get('/ubah-prodi/{id_prodi}', "Controller@ubahProdi");
   });
 
 

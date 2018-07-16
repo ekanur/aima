@@ -16,7 +16,8 @@ class Standar3Controller extends Controller
         }else{
           $dataCheck = false;
         }
-        return view('standar3.index', compact('standar', 'data', 'dataCheck'));
+        $prodi = $this->getProdi();
+        return view('standar3.index', compact('standar', 'data', 'dataCheck', 'prodi'));
     }
 
 

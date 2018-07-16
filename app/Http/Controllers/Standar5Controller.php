@@ -15,7 +15,8 @@ class Standar5Controller extends Controller
       }else{
         $dataCheck = false;
       }
-      return view('standar5.index', compact('standar', 'data', 'dataCheck'));
+      $prodi = $this->getProdi();
+      return view('standar5.index', compact('standar', 'data', 'dataCheck', 'prodi'));
     }
 
     public function save(Request $masuk){

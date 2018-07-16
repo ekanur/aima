@@ -171,8 +171,9 @@
                     <form class="navbar-form navbar-right">
                         <div class="form-group">
                             <select class="form-control border-input" name="pilih_prodi">
-                                <option value="">S1 Program Studi pertama</option>
-                                <option value="">S2 Program Studi kedua</option>
+                                @foreach($prodi as $list_prodi)
+                                    <option @if(session('id_prodi') == $list_prodi['pro_kd']) selected="" @endif value="{{ $list_prodi['pro_kd'] }}">{{ $list_prodi['pro_nm'] }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </form>
@@ -239,7 +240,10 @@
     	$(document).ready(function(){
 
         	demo.initChartist();
-
+            $("select[name='pilih_prodi']").change(function(){
+                var id_prodi = $("select[name='pilih_prodi']").val();
+                window.location="{{ url("/ubah-prodi/") }}/"+id_prodi;
+            });
         	// $.notify({
          //    	icon: 'ti-gift',
          //    	message: "Welcome to <b>Paper Dashboard</b> - a beautiful Bootstrap freebie for your next project."

@@ -14,7 +14,8 @@ class Standar2Controller extends Controller
       $data[$data_standar2->kode]=$data_standar2->kategori;
     }
     $standar="Standar 2";
-    return view("standar2.index", compact('data', 'standar'));
+    $prodi = $this->getProdi();
+    return view("standar2.index", compact('data', 'standar', 'prodi'));
   }
 
   public function save(Request $request){

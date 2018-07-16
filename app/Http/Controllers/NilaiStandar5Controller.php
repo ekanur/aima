@@ -16,6 +16,7 @@ class NilaiStandar5Controller extends Controller
     foreach ($nilaistandar5 as  $value) {
       $total += $value->kategori;
     }
-    return view("NilaiStandar5.index", compact('nilaistandar5', 'standar','total'));
+    $prodi = $this->getProdi();
+    return view("NilaiStandar5.index", compact('nilaistandar5', 'standar','total', 'prodi'));
   }
 }
