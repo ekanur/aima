@@ -47,6 +47,7 @@
                               @endcomponent
 
                               @component('auditor.validasi_auditor')
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[0]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                 5_1_1_a
                                 @endslot
@@ -102,6 +103,7 @@
                             @endcomponent
 
                             @component("auditor.validasi_auditor")
+                              @slot("catatan") @if(sizeof($data)!=0) {{ $data[1]->catatan or '' }} @endif @endslot
                               @slot('id_input')
                                 5_1_2_b
                               @endslot
@@ -153,13 +155,14 @@
                        @endcomponent
 
                        @component('auditor.validasi_auditor')
+                        @slot("catatan") @if(sizeof($data)!=0) {{ $data[2]->catatan or '' }} @endif @endslot
                           @slot('id_input')
                             5_1_2_c
                           @endslot
                             @slot('validasi_auditor')
                             <div class="form-group col-md-3">
                               <small>mata kuliah yang memiliki deskripsi, silabus dan SAP</small>
-                                <input type="number" min=0 step=0.01 name="pdmk5_1_2_c" class="form-control border-input" id="pdmk5_1_2_c" value="@if(!$dataCheck){{json_decode($data_kprodi[2]->data)[0]}}@endif" required="">
+                                <input type="number" min=0 step=0.01 name="pdmk5_1_2_c" class="form-control border-input" id="pdmk5_1_2_c" value="@if(!$dataCheck){{json_decode($data[2]->data)[0]}}@endif" required="">
                               <span>(0-100 %)</span>
                             </div>
                             @endslot
@@ -208,6 +211,7 @@
                             @endcomponent
 
                             @component("auditor.validasi_auditor")
+                              @slot("catatan") @if(sizeof($data)!=0) {{ $data[3]->catatan or '' }} @endif @endslot
                               @slot('id_input')
                                 5_1_3_a
                               @endslot
@@ -265,6 +269,7 @@
                                @endcomponent
 
                                @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[4]->catatan or '' }} @endif @endslot
                                   @slot('id_input')
                                       5_3_2
                                   @endslot
@@ -317,12 +322,13 @@
                             @endcomponent
 
                             @component("auditor.validasi_auditor")
+                              @slot("catatan") @if(sizeof($data)!=0) {{ $data[5]->catatan or '' }} @endif @endslot
                               @slot('id_input')
                                 5_4_1_a
                               @endslot
                                 @slot('validasi_auditor')
                                 <div class="form-group col-md-12 form-inline">
-                                  <input type="number" min=0 step=0.01 name="rmpa5_4_1_a" class="form-control border-input" id="rmpa5_4_1_a" value="@if(!$dataCheck){{json_decode($data_kprodi[5]->data)[0]}}@endif" required="">
+                                  <input type="number" min=0 step=0.01 name="rmpa5_4_1_a" class="form-control border-input" id="rmpa5_4_1_a" value="@if(!$dataCheck){{json_decode($data[5]->data)[0]}}@endif" required="">
                                   <small>Pertemuan</small>
                                 </div>
                                 @endslot
@@ -368,12 +374,13 @@
                               @endcomponent
 
                               @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[6]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                   5_4_1_c
                                 @endslot
                                   @slot('validasi_auditor')
                                   <div class="form-group col-md-12 form-inline">
-                                    <input type="number" min=0 step=0.01 name="rmpa5_4_1_c" class="form-control border-input" id="rmpa5_4_1_c" value="@if(!$dataCheck){{json_decode($data_kprodi[6]->data)[0]}}@endif" required="">
+                                    <input type="number" min=0 step=0.01 name="rmpa5_4_1_c" class="form-control border-input" id="rmpa5_4_1_c" value="@if(!$dataCheck){{json_decode($data[6]->data)[0]}}@endif" required="">
                                     <small>Pertemuan</small>
                                   </div>
                                   @endslot
@@ -422,6 +429,7 @@
                               @endcomponent
 
                               @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[7]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                   5_4_2
                                 @endslot
@@ -474,12 +482,13 @@
                             @endcomponent
 
                             @component("auditor.validasi_auditor")
+                              @slot("catatan") @if(sizeof($data)!=0) {{ $data[8]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                   5_5_1_b
                                 @endslot
                                 @slot('validasi_auditor')
                                 <div class="form-group col-md-12 form-inline">
-                                  <input type="number" min=0 step=0.01 name="5_5_1_b_rmta" class="form-control border-input" id="5_5_1_b_rmta" value="@if(!$dataCheck){{json_decode($data_kprodi[8]->data)[0]}}@endif" required="">
+                                  <input type="number" min=0 step=0.01 name="rmta5_5_1_b" class="form-control border-input" id="rmta5_5_1_b" value="@if(!$dataCheck){{json_decode($data[8]->data)[0]}}@endif" required="">
 
                                   <small>Pertemuan </small>
                                 </div>
@@ -523,12 +532,13 @@
 
 
                                 @component("auditor.validasi_auditor")
+                                  @slot("catatan") @if(sizeof($data)!=0) {{ $data[9]->catatan or '' }} @endif @endslot
                                       @slot('id_input')
                                             5_5_1_c
                                       @endslot
                                       @slot('validasi_auditor')
                                                 <div class="form-group col-md-12 form-inline">
-                                                  <input type="number" min=0 step=0.01 name="rbta_5_5_1_c" class="form-control border-input" id="rbta_5_5_1_c" value="@if(!$dataCheck){{json_decode($data_kprodi[9]->data)[0]}}@endif" required="">
+                                                  <input type="number" min=0 step=0.01 name="rbta5_5_1_c" class="form-control border-input" id="rbta5_5_1_c" value="@if(!$dataCheck){{json_decode($data[9]->data)[0]}}@endif" required="">
                                                   <small>Pertemuan </small>
                                                 </div>
                                       @endslot
@@ -587,6 +597,7 @@
 
 
                                   @component("auditor.validasi_auditor")
+                                    @slot("catatan") @if(sizeof($data)!=0) {{ $data[10]->catatan or '' }} @endif @endslot
                                           @slot('id_input')
                                                 5_5_2
                                           @endslot
@@ -645,6 +656,7 @@
 
 
                                 @component("auditor.validasi_auditor")
+                                  @slot("catatan") @if(sizeof($data)!=0) {{ $data[11]->catatan or '' }} @endif @endslot
                                         @slot('id_input')
                                               5_7_2
                                         @endslot
@@ -708,6 +720,7 @@
 
 
                                 @component("auditor.validasi_auditor")
+                                  @slot("catatan") @if(sizeof($data)!=0) {{ $data[12]->catatan or '' }} @endif @endslot
                                     @slot('id_input')
                                           5_7_3
                                     @endslot
@@ -774,6 +787,7 @@
                                   @endcomponent
 
                                   @component("auditor.validasi_auditor")
+                                    @slot("catatan") @if(sizeof($data)!=0) {{ $data[13]->catatan or '' }} @endif @endslot
                                       @slot('id_input')
                                             5_7_5
                                       @endslot

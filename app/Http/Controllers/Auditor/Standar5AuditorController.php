@@ -26,6 +26,8 @@ class Standar5AuditorController extends Controller
 
       // $standar2 = Standar2Auditor::where("id_prodi", $idprodi)->get();
   $data = Standar5Auditor::select('kode', 'data', 'skor', 'kategori', 'catatan')->whereYear("created_at", '=', date("Y"))->where([['id_prodi', '=', $idprodi],['auditor_id', '=', session("auditor_id")]])->orderBy('kode', 'asc')->get();
+
+  // dd(!$data->count());
   if(!$data->count()){
     $dataCheck = true;
   }else{
@@ -56,6 +58,7 @@ public function save(Request $masuk, $idprodi){
 
       //hitung skor_5_1_1_a
   if ($masuk->setuju_5_1_1_a == "1") {
+    $masuk->catatan5_1_1_a = "Auditor setuju";
     $kprodi = Standar5::where([
       ["id_prodi", $idprodi],
       ["kode", "5.1.1.a"]
@@ -64,14 +67,15 @@ public function save(Request $masuk, $idprodi){
     $data5_1_1_a = $kprodi->data;
     $skor5_1_1_a = $kprodi->skor;
   } else {
-    $kategori5_1_1_a = $masuk->standar5_1_1_1_a;
+    $kategori5_1_1_a = $masuk->n_5_1_1_a;
     $kategori5_1_1_a = intval(round($kategori5_1_1_a));
-    $data5_1_1_a = '['.$masuk->standar5_1_1_1_a.']';
-    $skor5_1_1_a = $masuk->standar5_1_1_1_a;
+    $data5_1_1_a = '['.$masuk->n_5_1_1_a.']';
+    $skor5_1_1_a = $masuk->n_5_1_1_a;
   }
 
       //hitung skor_5_1_2_b
   if ($masuk->setuju_5_1_2_b == "1") {
+    $masuk->catatan5_1_2_b = "Auditor setuju";
     $kprodi = Standar5::where([
       ["id_prodi", $idprodi],
       ["kode", "5.1.2.b"]
@@ -88,6 +92,7 @@ public function save(Request $masuk, $idprodi){
 
       //perhitungan skor 5_1_2_c
   if ($masuk->setuju_5_1_2_c == "1") {
+    $masuk->catatan5_1_2_c = "Auditor setuju";
     $kprodi = Standar5::where([
       ["id_prodi", $idprodi],
       ["kode", "5.1.2.c"]
@@ -129,6 +134,7 @@ public function save(Request $masuk, $idprodi){
       //   $kategori5_1_3_a = 0;
       // }
       if ($masuk->setuju_5_1_3_a == "1") {
+        $masuk->catatan5_1_3_a = "Auditor setuju";
         $kprodi = Standar5::where([
           ["id_prodi", $idprodi],
           ["kode", "5.1.3.a"]
@@ -145,6 +151,7 @@ public function save(Request $masuk, $idprodi){
 
       //hitung standar5_3_2
       if ($masuk->setuju_5_3_2 == "1") {
+        $masuk->catatan5_3_2 = "Auditor setuju";
         $kprodi = Standar5::where([
           ["id_prodi", $idprodi],
           ["kode", "5.3.2"]
@@ -162,6 +169,7 @@ public function save(Request $masuk, $idprodi){
 
       //perhitungan 5_4_1_a
       if ($masuk->setuju_5_4_1_a == "1") {
+        $masuk->catatan5_4_1_a = "Auditor setuju";
         $kprodi = Standar5::where([
           ["id_prodi", $idprodi],
           ["kode", "5.4.1.a"]
@@ -184,8 +192,9 @@ public function save(Request $masuk, $idprodi){
         $skor5_4_1_a = $kategori5_4_1_a;
       }
 
-      //hitung pp5_4_1_c
+      //hitung rmpa5_4_1_c
       if ($masuk->setuju_5_4_1_c == "1") {
+        $masuk->catatan5_4_1_c = "Auditor setuju";
         $kprodi = Standar5::where([
           ["id_prodi", $idprodi],
           ["kode", "5.4.1.c"]
@@ -194,15 +203,15 @@ public function save(Request $masuk, $idprodi){
         $data5_4_1_c = $kprodi->data;
         $skor5_4_1_c = $kprodi->skor;
       } else {
-        if ($masuk->pp5_4_1_c >= 3){
+        if ($masuk->rmpa5_4_1_c >= 3){
           $kategori5_4_1_c = 4;
-        }elseif ($masuk->pp5_4_1_c < 3 && $masuk->pp5_4_1_c > 0){
-          $kategori5_4_1_c = $masuk->pp5_4_1_c + 1;
-        }elseif($masuk->pp5_4_1_c == null){
+        }elseif ($masuk->rmpa5_4_1_c < 3 && $masuk->rmpa5_4_1_c > 0){
+          $kategori5_4_1_c = $masuk->rmpa5_4_1_c + 1;
+        }elseif($masuk->rmpa5_4_1_c == null){
           $kategori5_4_1_c = 0;
         }
         $kategori5_4_1_c= intval(round($kategori5_4_1_c));
-        $data5_4_1_c = '['.$masuk->pp5_4_1_c.']';
+        $data5_4_1_c = '['.$masuk->rmpa5_4_1_c.']';
         $skor5_4_1_c = $kategori5_4_1_c;
       }
 
@@ -210,6 +219,7 @@ public function save(Request $masuk, $idprodi){
       //hitung standar 5.4.2
 
       if ($masuk->setuju_5_4_2 == "1") {
+        $masuk->catatan5_4_2 = "Auditor setuju";
         $kprodi = Standar5::where([
           ["id_prodi", $idprodi],
           ["kode", "5.4.2"]
@@ -231,6 +241,7 @@ public function save(Request $masuk, $idprodi){
 
       //hitung rmta5_5_1_b
       if ($masuk->setuju_5_5_1_b == "1") {
+        $masuk->catatan5_5_1_b = "Auditor setuju";
         $kprodi = Standar5::where([
           ["id_prodi", $idprodi],
           ["kode", "5.5.1.b"]
@@ -258,6 +269,7 @@ public function save(Request $masuk, $idprodi){
 
       //hitung rbta5_5_1_c
       if ($masuk->setuju_5_5_1_c == "1") {
+        $masuk->catatan5_5_1_c = "Auditor setuju";
         $kprodi = Standar5::where([
           ["id_prodi", $idprodi],
           ["kode", "5.5.1.c"]
@@ -282,6 +294,7 @@ public function save(Request $masuk, $idprodi){
 
       //hitung standar5_5_2 == 0
       if ($masuk->setuju_5_5_2 == "1") {
+        $masuk->catatan5_5_2 = "Auditor setuju";
         $kprodi = Standar5::where([
           ["id_prodi", $idprodi],
           ["kode", "5.5.2"]
@@ -321,6 +334,7 @@ public function save(Request $masuk, $idprodi){
 
       //hitung nilai 5.7.2
       if ($masuk->setuju_5_7_2 == "1") {
+        $masuk->catatan5_7_2 = "Auditor setuju";
         $kprodi = Standar5::where([
           ["id_prodi", $idprodi],
           ["kode", "5.7.2"]
@@ -337,6 +351,7 @@ public function save(Request $masuk, $idprodi){
 
       //hitung nilai 5.7.3
       if ($masuk->setuju_5_7_3 == "1") {
+        $masuk->catatan5_7_3 = "Auditor setuju";
         $kprodi = Standar5::where([
           ["id_prodi", $idprodi],
           ["kode", "5.7.3"]
@@ -353,6 +368,7 @@ public function save(Request $masuk, $idprodi){
 
       //hitung standar 5_7_5
       if ($masuk->setuju_5_7_5 == "1") {
+        $masuk->catatan5_7_5 = "Auditor setuju";
         $kprodi = Standar5::where([
           ["id_prodi", $idprodi],
           ["kode", "5.7.5"]

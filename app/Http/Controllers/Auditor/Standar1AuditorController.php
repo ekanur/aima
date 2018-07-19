@@ -30,11 +30,11 @@ class Standar1AuditorController extends Controller
         $data[$data_standar1->kode] = $data_standar1->kategori;
       }
 
-      // $data_catatan = array();
+      $data_catatan = array();
 
-      // foreach ($standar1 as $data_standar1) {
-      //   $data_catatan[$data_standar1->kode] = $data_standar1->catatan;
-      // }
+      foreach ($standar1 as $data_standar1) {
+        $data_catatan[$data_standar1->kode] = $data_standar1->catatan;
+      }
 
       // dd($data_catatan);
 
@@ -43,11 +43,11 @@ class Standar1AuditorController extends Controller
       foreach ($standar1_kprodi as $data_prodi) {
         $data_kprodi[$data_prodi->kode] = $data_prodi->kategori;
       }
-      // dd($data_kprodi);
+      // dd($data_kprodi["1.1.a"] ." ". $data["1.1.a"]);
 
     	$standar="Standar 1";
       
-    	return view("auditor/standar1.index", compact('idprodi', 'data', 'standar', 'standar_message', 'standar_status_code', 'nama_prodi', 'data_kprodi'));
+    	return view("auditor/standar1.index", compact('idprodi', 'data', 'standar', 'standar_message', 'standar_status_code', 'nama_prodi', 'data_kprodi', 'data_catatan'));
     }
 
     public function save(Request $request, $idprodi){
@@ -59,14 +59,17 @@ class Standar1AuditorController extends Controller
       if($request->setuju_1_1_a == 1){
         $standar1_kprodi = Standar1::where([["id_prodi",'=',$idprodi],["kode", "=", "1.1.a"]])->whereYear("created_at", '=', date("Y"))->first();
         $request->skor1_1_a = $standar1_kprodi->skor;
+        $request->catatan1_1_a = "Auditor setuju";
       }
       if($request->setuju_1_1_b == 1){
         $standar1_kprodi = Standar1::where([["id_prodi",'=',$idprodi],["kode", "=", "1.1.b"]])->whereYear("created_at", '=', date("Y"))->first();
         $request->skor1_1_b = $standar1_kprodi->skor;
+        $request->catatan1_1_b = "Auditor setuju";
       }
       if($request->setuju_1_2 == 1){
         $standar1_kprodi = Standar1::where([["id_prodi",'=',$idprodi],["kode", "=", "1.2"]])->whereYear("created_at", '=', date("Y"))->first();
         $request->skor1_2 = $standar1_kprodi->skor;
+        $request->catatan1_2 = "Auditor setuju";
       }
 
       $data=array(
@@ -86,31 +89,36 @@ class Standar1AuditorController extends Controller
 
     public function update(Request $request, $idprodi){
 
-      if($request->skor1_1_a_old != $request->skor1_1_a){
+      // dd($request->catatan1_1_a." ".$request->catatan1_1_b." ".$request->catatan1_2);
+
+      // if($request->skor1_1_a_old != $request->skor1_1_a){
 
         if($request->setuju_1_1_a == 1){
           $standar1_kprodi = Standar1::where([["id_prodi",'=',$idprodi],["kode", "=", "1.1.a"]])->whereYear("created_at", '=', date("Y"))->first();
           $request->skor1_1_a = $standar1_kprodi->skor;
+          $request->catatan1_1_a = "Auditor setuju";
         }
 
         Standar1Auditor::where([["kode", "1.1.a"], ["id_prodi", $idprodi], ["auditor_id", session("auditor_id")]])->whereYear("created_at", '=', date("Y"))->update(["catatan" => $request->catatan1_1_a, "kategori"=>$request->skor1_1_a, "data"=>"[".$request->skor1_1_a."]", "skor"=>$request->skor1_1_a]);
-      }
+      // }
 
-      if($request->skor1_1_b_old != $request->skor1_1_b){
+      // if($request->skor1_1_b_old != $request->skor1_1_b){
         if($request->setuju_1_1_b == 1){
           $standar1_kprodi = Standar1::where([["id_prodi",'=',$idprodi],["kode", "=", "1.1.b"]])->whereYear("created_at", '=', date("Y"))->first();
           $request->skor1_1_b = $standar1_kprodi->skor;
+          $request->catatan1_1_b = "Auditor setuju";
         }
         Standar1Auditor::where([["kode", "1.1.b"], ["id_prodi", $idprodi], ["auditor_id", session("auditor_id")]])->whereYear("created_at", '=', date("Y"))->update(["catatan" => $request->catatan1_1_b, "kategori"=>$request->skor1_1_b, "data"=>"[".$request->skor1_1_b."]", "skor"=>$request->skor1_1_b]);
-      }
+      // }
 
-      if($request->skor1_2_old != $request->skor1_2){
+      // if($request->skor1_2_old != $request->skor1_2){
         if($request->setuju_1_2 == 1){
           $standar1_kprodi = Standar1::where([["id_prodi",'=',$idprodi],["kode", "=", "1.2"]])->whereYear("created_at", '=', date("Y"))->first();
           $request->skor1_2 = $standar1_kprodi->skor;
+          $request->catatan1_2 = "Auditor setuju";
         }
         Standar1Auditor::where([["kode", "1.2"], ["id_prodi", $idprodi], ["auditor_id", session("auditor_id")]])->whereYear("created_at", '=', date("Y"))->update(["catatan" => $request->catatan1_2, "kategori"=>$request->skor1_2, "data"=>"[".$request->skor1_2."]", "skor"=>$request->skor1_2]);
-      }
+      // }
 
       return redirect()->back();
     }

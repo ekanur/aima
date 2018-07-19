@@ -43,7 +43,7 @@
                                       @slot('aksi_field')
                                           <select name="setuju_4_3_1_a" id="setuju_4_3_1_a" class="form-control border-input">
                                                   <option value="1">Setuju</option>
-                                                  <option value="0">Validasi</option>
+                                                  <option value="0" @if(!$dataCheck) @if($data_kprodi[0]->data != $data[0]->data) selected @endif @endif>Validasi</option>
                                           </select>
                                       @endslot
                                     @endif
@@ -51,6 +51,7 @@
                               @endcomponent
 
                               @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[0]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                     4_3_1_a
                                 @endslot
@@ -96,7 +97,7 @@
                                       @slot('aksi_field')
                                           <select name="setuju_4_3_1_b" id="setuju_4_3_1_b" class="form-control border-input">
                                                   <option value="1">Setuju</option>
-                                                  <option value="0">Validasi</option>
+                                                  <option value="0" @if(!$dataCheck) @if($data_kprodi[1]->data != $data[1]->data) selected @endif @endif>Validasi</option>
                                           </select>
                                       @endslot
                                     @endif
@@ -104,6 +105,7 @@
                               @endcomponent
 
                               @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[1]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                     4_3_1_b
                                 @endslot
@@ -155,6 +157,7 @@
                               @endcomponent
 
                               @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[2]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                     4_3_1_c
                                 @endslot
@@ -207,6 +210,7 @@
                               @endcomponent
 
                               @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[3]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                 4_3_1_d
                                 @endslot
@@ -257,6 +261,7 @@
                               @endcomponent
 
                               @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[4]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                     4_3_2
                                 @endslot
@@ -310,6 +315,7 @@
                               @endcomponent
 
                               @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[5]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                     4_3_3
                                 @endslot
@@ -366,6 +372,7 @@
                               @endcomponent
 
                               @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[6]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                     4_3_4
                                 @endslot
@@ -421,6 +428,7 @@
                               @endcomponent
 
                               @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[7]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                     4_3_6
                                 @endslot
@@ -475,6 +483,7 @@
                               @endcomponent
 
                               @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[8]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                     4_4_1
                                 @endslot
@@ -534,6 +543,7 @@
                                 @endcomponent
 
                                 @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[9]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                     4_4_2_a
                                 @endslot
@@ -594,6 +604,7 @@
                                 @endcomponent
 
                                 @component("auditor.validasi_auditor")
+                                @slot("catatan") @if(sizeof($data)!=0) {{ $data[10]->catatan or '' }} @endif @endslot
                                 @slot('id_input')
                                     4_4_2_b
                                 @endslot
@@ -648,6 +659,7 @@
                             @endcomponent
 
                             @component("auditor.validasi_auditor")
+                              @slot("catatan") @if(sizeof($data)!=0) {{ $data[11]->catatan or '' }} @endif @endslot
                               @slot('id_input')
                                   4_5_1
                               @endslot
@@ -709,6 +721,7 @@
                             @endcomponent
 
                             @component("auditor.validasi_auditor")
+                              @slot("catatan") @if(sizeof($data)!=0) {{ $data[12]->catatan or '' }} @endif @endslot
                               @slot('id_input')
                                   4_5_2
                               @endslot
@@ -773,6 +786,7 @@
                             @endcomponent
 
                             @component("auditor.validasi_auditor")
+                              @slot("catatan") @if(sizeof($data)!=0) {{ $data[13]->catatan or '' }} @endif @endslot
                               @slot('id_input')
                                   4_5_3
                               @endslot
@@ -844,6 +858,7 @@
                                         @endcomponent
 
                                       @component("auditor.validasi_auditor")
+                                        @slot("catatan") @if(sizeof($data)!=0) {{ $data[14]->catatan or '' }} @endif @endslot
                                         @slot('id_input')
                                             4_5_4
                                         @endslot
@@ -911,6 +926,7 @@
                             @endcomponent
 
                             @component("auditor.validasi_auditor")
+                              @slot("catatan") @if(sizeof($data)!=0) {{ $data[15]->catatan or '' }} @endif @endslot
                               @slot('id_input')
                                   4_6_1_a
                               @endslot
@@ -991,6 +1007,7 @@
                             @endcomponent
 
                             @component("auditor.validasi_auditor")
+                              @slot("catatan") @if(sizeof($data)!=0) {{ $data[16]->catatan or '' }} @endif @endslot
                               @slot('id_input')
                                   4_6_1_c
                               @endslot

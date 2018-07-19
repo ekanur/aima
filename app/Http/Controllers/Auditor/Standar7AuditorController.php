@@ -49,6 +49,7 @@ class Standar7AuditorController extends Controller
 
       //perhitungan kategori 7.1.1
       if($request->setuju_7_1_1 == '1'){
+            $request->catatan7_1_1 = "Auditor setuju";
             $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.1.1"]])->whereYear("created_at", '=', date("Y"))->first();
 
             $kategori7_1_1 = $standar7_kprodi->kategori;
@@ -72,6 +73,7 @@ class Standar7AuditorController extends Controller
 
       //perhitungan kategori 7.1.2
       if($request->setuju_7_1_2 == '1'){
+            $request->catatan7_1_2 = "Auditor setuju";
             $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.1.2"]])->whereYear("created_at", '=', date("Y"))->first();
 
             $kategori7_1_2 = $standar7_kprodi->kategori;
@@ -95,6 +97,7 @@ class Standar7AuditorController extends Controller
 
       //perhitungan kategori 7.1.3
       if($request->setuju_7_1_3 == '1'){
+            $request->catatan7_1_3 = "Auditor setuju";
             $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.1.3"]])->whereYear("created_at", '=', date("Y"))->first();
 
             $kategori7_1_3 = $standar7_kprodi->kategori;
@@ -117,6 +120,7 @@ class Standar7AuditorController extends Controller
 
       //perhitungan kategori 7.1.4
       if($request->setuju_7_1_4 == '1'){
+            $request->catatan7_1_4 = "Auditor setuju";
             $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.1.4"]])->whereYear("created_at", '=', date("Y"))->first();
 
             $kategori7_1_4 = $standar7_kprodi->kategori;
@@ -132,6 +136,7 @@ class Standar7AuditorController extends Controller
 
       //perhitungan kategori 7.2.1
       if($request->setuju_7_2_1 == '1'){
+            $request->catatan7_2_1 = "Auditor setuju";
             $standar7_kprodi = Standar7::where([["id_prodi","=", $idprodi ],["kode", "=", "7.2.1"]])->whereYear("created_at", '=', date("Y"))->first();
 
             $kategori7_2_1 = $standar7_kprodi->kategori;

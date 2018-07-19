@@ -50,6 +50,7 @@
                         @endcomponent
 
                         @component("auditor.validasi_auditor")
+                            @slot("catatan") {{ $data_catatan['2.1'] or '' }} @endslot
                             @slot('id_input')
                                 2_1
                             @endslot
@@ -102,6 +103,7 @@
                         @endcomponent
                             
                         @component("auditor.validasi_auditor")
+                            @slot("catatan") {{ $data_catatan['2.2'] or '' }} @endslot
                             @slot('id_input')
                                 2_2                                
                             @endslot
@@ -152,6 +154,7 @@
                         @endcomponent
                             
                         @component("auditor.validasi_auditor")
+                            @slot("catatan") {{ $data_catatan['2.6'] or '' }} @endslot
                             @slot('id_input')
                                 2_6                                
                             @endslot

@@ -1,30 +1,30 @@
 <div class="col-md-12" id="auditor_{{ $id_input }}" style="display: none;">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>Auditor</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                        {{ $validasi_auditor or '' }}
-                                        <div class="col-md-12">
-                                            <p>Catatan :</p>
-                                            <textarea class="form-control border-input" name="catatan{{ $id_input }}" placeholder="Catatan ...">{{-- {{ $catatan }} --}}</textarea>    
-                                        </div>
-                                        
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            
-                        </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Auditor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    {{ $validasi_auditor or '' }}
+                    <div class="col-md-12">
+                        <p>Catatan :</p>
+                        <textarea class="form-control border-input" name="catatan{{ $id_input }}" placeholder="Catatan ...">{{ $catatan or '' }}</textarea>    
+                    </div>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
 
 @push('script')
-    <script type="text/javascript">
-        $(document).ready(function(){
-            var hasValidated_{{ $id_input }} = $("#setuju_{{ $id_input }}").val();
+<script type="text/javascript">
+    $(document).ready(function(){
+        var hasValidated_{{ $id_input }} = $("#setuju_{{ $id_input }}").val();
 
             // $("select[name *='setuju_']").attr("required", false);
 
@@ -57,4 +57,4 @@
 
         });
     </script>
-@endpush
+    @endpush

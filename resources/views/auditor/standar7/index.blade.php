@@ -62,6 +62,7 @@
                                     @endcomponent
 
                                     @component("auditor.validasi_auditor")
+                                      @slot("catatan") @if(sizeof($data)!=0) {{ $data[0]->catatan or '' }} @endif @endslot
                                       @slot('id_input')
                                           7_1_1
                                       @endslot
@@ -121,6 +122,7 @@
                                     @endcomponent
 
                                     @component("auditor.validasi_auditor")
+                                      @slot("catatan") @if(sizeof($data)!=0) {{ $data[1]->catatan or '' }} @endif @endslot
                                       @slot('id_input')
                                           7_1_2
                                       @endslot
@@ -184,6 +186,7 @@
                                     @endcomponent
 
                                     @component("auditor.validasi_auditor")
+                                      @slot("catatan") @if(sizeof($data)!=0) {{ $data[2]->catatan or '' }} @endif @endslot
                                       @slot('id_input')
                                           7_1_3
                                       @endslot
@@ -250,6 +253,7 @@
                                     @endcomponent
 
                                     @component("auditor.validasi_auditor")
+                                      @slot("catatan") @if(sizeof($data)!=0) {{ $data[3]->catatan or '' }} @endif @endslot
                                       @slot('id_input')
                                           7_1_4
                                       @endslot
@@ -320,6 +324,7 @@
                                     @endcomponent
 
                                     @component("auditor.validasi_auditor")
+                                      @slot("catatan") @if(sizeof($data)!=0) {{ $data[4]->catatan or '' }} @endif @endslot
                                       @slot('id_input')
                                           7_2_1
                                       @endslot

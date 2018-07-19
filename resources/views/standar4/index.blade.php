@@ -278,7 +278,7 @@
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-12">
-                                  <select class="form-control border-input" name="n4_3_4">
+                                  <select class="form-control border-input" name="n4_3_4" required="">
                                   <option disabled selected >--Pilih--</option>
                                     <option value="4" <?php if(!$dataCheck){ if (json_decode($data[6]->data)[0] == 4){ echo "selected"; }}?>>Semua mata kuliah diajar oleh dosen yang sesuai keahliannya</option>
                                     <option value="3" <?php if(!$dataCheck){ if (json_decode($data[6]->data)[0] == 3){ echo "selected"; }}?>>1 - 3 mata kuliah diajar oleh dosen tidak sesuai dengan keahliannya</option>

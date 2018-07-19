@@ -132,7 +132,7 @@
                                 </div>
                                 <div class="row">
                                   <div class="col-md-12">
-                                    <select name="n7_1_4" id="" class="form-control border-input">
+                                    <select name="n7_1_4" id="" class="form-control border-input" required="">
                                         <option disabled selected >--Pilih--</option>
                                         <option value="2" <?php if(!$dataCheck){ if (json_decode($data[3]->data)[0] == 2){ echo "selected"; }}?>>
                                           Tidak ada karya dosen tetap yang memperoleh HaKI

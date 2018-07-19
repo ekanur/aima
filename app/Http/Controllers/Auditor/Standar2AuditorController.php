@@ -30,7 +30,14 @@ class Standar2AuditorController extends Controller
         $data[$data_standar2->kode] = $data_standar2->kategori;
       }
 
+      $data_catatan = array();
+
+      foreach ($standar2 as $data_standar2) {
+        $data_catatan[$data_standar2->kode] = $data_standar2->catatan;
+      }
+
       $standar2_kprodi = Standar2::where('id_prodi', $idprodi)->whereYear("created_at", '=', date("Y"))->get();
+      
       $data_kprodi=array();
       foreach ($standar2_kprodi as $data_prodi) {
         $data_kprodi[$data_prodi->kode] = $data_prodi->kategori;
@@ -38,20 +45,23 @@ class Standar2AuditorController extends Controller
       // dd($data_kprodi);
 
       $standar="Standar 2";
-      return view("auditor/standar2.index", compact('idprodi', 'data', 'standar', 'standar_message', 'standar_status_code', 'nama_prodi', 'data_kprodi'));
+      return view("auditor/standar2.index", compact('idprodi', 'data', 'standar', 'standar_message', 'standar_status_code', 'nama_prodi', 'data_kprodi', 'data_catatan'));
   }
 
   public function save(Request $request, $idprodi){
     $timestamp = date("Y-m-d H:i:s");
     if($request->setuju_2_1 == 1){
+      $request->catatan2_1 = "Auditor setuju";
       $standar2_kprodi = Standar2::where([["id_prodi",'=',$idprodi],["kode", "=", "2.1"]])->whereYear("created_at", '=', date("Y"))->first();
       $request->skor2_1 = $standar2_kprodi->skor;
     }
     if($request->setuju_2_2 == 1){
+      $request->catatan2_2 = "Auditor setuju";
       $standar2_kprodi = Standar2::where([["id_prodi",'=',$idprodi],["kode", "=", "2.2"]])->whereYear("created_at", '=', date("Y"))->first();
       $request->skor2_2 = $standar2_kprodi->skor;
     }
     if($request->setuju_2_6 == 1){
+      $request->catatan2_6 = "Auditor setuju";
       $standar2_kprodi = Standar2::where([["id_prodi",'=',$idprodi],["kode", "=", "2.6"]])->whereYear("created_at", '=', date("Y"))->first();
       $request->skor2_6 = $standar2_kprodi->skor;
     }
@@ -71,6 +81,7 @@ class Standar2AuditorController extends Controller
   public function update(Request $request, $idprodi){
     if($request->skor2_1_old != $request->skor2_1){
       if($request->setuju_2_1 == 1){
+        $request->catatan2_1 = "Auditor setuju";
         $standar2_kprodi = Standar2::where([["id_prodi",'=',$idprodi],["kode", "=", "2.1"]])->whereYear("created_at", '=', date("Y"))->first();
         $request->skor2_1 = $standar2_kprodi->skor;
       }
@@ -79,6 +90,7 @@ class Standar2AuditorController extends Controller
 
     if($request->skor2_2_old != $request->skor2_2){
       if($request->setuju_2_2 == 1){
+        $request->catatan2_2 = "Auditor setuju";
         $standar2_kprodi = Standar2::where([["id_prodi",'=',$idprodi],["kode", "=", "2.2"]])->whereYear("created_at", '=', date("Y"))->first();
         $request->skor2_2 = $standar2_kprodi->skor;
       }
@@ -87,6 +99,7 @@ class Standar2AuditorController extends Controller
 
     if($request->skor2_6_old != $request->skor2_6){
       if($request->setuju_2_6 == 1){
+        $request->catatan2_6 = "Auditor setuju";
         $standar2_kprodi = Standar2::where([["id_prodi",'=',$idprodi],["kode", "=", "2.6"]])->whereYear("created_at", '=', date("Y"))->first();
         $request->skor2_6 = $standar2_kprodi->skor;
       }

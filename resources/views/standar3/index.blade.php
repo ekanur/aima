@@ -138,7 +138,7 @@
                               </div>
                               <div class="row">
                                     <div class="form-group col-md-3">
-                                      <select name="n_3_1_2" id="" class="form-control border-input">
+                                      <select name="n_3_1_2" id="" class="form-control border-input" required="">
                                           <option disabled selected >--Pilih--</option>
                                           <option value="0" <?php if(!$dataCheck){if(json_decode($data[4]->data)[0] == 0){echo "selected";}} ?>>Jumlah mahasiswa yang diterima mengakibatkan beban dosen sangat berat, melebihi 19 sks.</option>
                                           <option value="1" <?php if(!$dataCheck){if(json_decode($data[4]->data)[0] == 1){echo "selected";}} ?>>Jumlah mahasiswa yang diterima mengakibatkan beban dosen relatif berat, yaitu lebih dari 17 s.d. 19 sks.</option>
@@ -170,7 +170,7 @@
                               </div>
                               <div class="row">
                                     <div class="form-group col-md-3">
-                                      <select name="n_3_1_3" id="" class="form-control border-input">
+                                      <select name="n_3_1_3" id="" class="form-control border-input" required="">
                                         <option disabled selected >--Pilih--</option>
                                         <option value="1" <?php if(!$dataCheck){if(json_decode($data[5]->data)[0] == 1){echo "selected";}} ?>>Tidak ada</option>
                                         <option value="2" <?php if(!$dataCheck){if(json_decode($data[5]->data)[0] == 2){echo "selected";}} ?>>Tingkat Lokal</option>
@@ -273,7 +273,7 @@
                               </div>
                               <div class="row">
                                     <div class="form-group col-md-3">
-                                      <select name="n_3_2_1" id="" class="form-control border-input">
+                                      <select name="n_3_2_1" id="" class="form-control border-input" required="">
                                         <option disabled selected >--Pilih--</option>
                                         <option value="0" <?php if(!$dataCheck){if(json_decode($data[8]->data)[0] == 0){echo "selected";}} ?>>Kurang dari 2 unit pelayanan</option>
                                         <option value="1" <?php if(!$dataCheck){if(json_decode($data[8]->data)[0] == 1){echo "selected";}} ?>>2 jenis unit pelayanan</option>
@@ -305,7 +305,7 @@
                               </div>
                               <div class="row">
                                     <div class="form-group col-md-3">
-                                      <select name="n_3_2_2" id="" class="form-control border-input" >
+                                      <select name="n_3_2_2" id="" class="form-control border-input" required="">
                                         <option disabled selected >--Pilih--</option>
                                         <option value="0" <?php if(!$dataCheck){if(json_decode($data[9]->data)[0] == 0){echo "selected";}} ?>>0</option>
                                         <option value="1" <?php if(!$dataCheck){if(json_decode($data[9]->data)[0] == 1){echo "selected";}} ?>>1</option>
@@ -463,7 +463,7 @@
                               </div>
                               <div class="row">
                                   <div class="col-md-5">
-                                      <select name="n_3_4_1" id="" class="form-control border-input">
+                                      <select required name="n_3_4_1" id="" class="form-control border-input">
                                           <option disabled selected >--Pilih--</option>
                                           <option value="0" <?php if(!$dataCheck){if(json_decode($data[14]->data)[0] == 0){echo "selected";}} ?>>Tidak ada partisipasi alumni.</option>
                                           <option value="1" <?php if(!$dataCheck){if(json_decode($data[14]->data)[0] == 1){echo "selected";}} ?>>Hanya 1 bentuk partisipasi saja yang dilakukan oleh alumni</option>
@@ -495,7 +495,7 @@
                               </div>
                               <div class="row">
                                   <div class="col-md-5">
-                                      <select name="n_3_4_2" id="" class="form-control border-input">
+                                      <select name="n_3_4_2" id="" class="form-control border-input" required="">
                                         <option disabled selected >--Pilih--</option>
                                         <option value="0" <?php if(!$dataCheck){if(json_decode($data[15]->data)[0] == 0){echo "selected";}} ?>>Tidak ada partisipasi alumni.</option>
                                         <option value="1" <?php if(!$dataCheck){if(json_decode($data[15]->data)[0] == 1){echo "selected";}} ?>>Hanya 1 bentuk partisipasi saja yang dilakukan oleh alumni</option>

@@ -52,9 +52,10 @@ class Standar4AuditorController extends Controller
           ["id_prodi", $idprodi],
           ["kode", "4.3.1.a"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_3_1_a = $standar4_kprodi->kategory;
-        $data4_3_1_a = $kategory4_kprodi->data;
-        $skor4_3_1_a = $kategory4_skor;
+        $request->catatan4_3_1_a = "Auditor setuju";
+        $kategori4_3_1_a = $standar4_kprodi->kategori;
+        $data4_3_1_a = $standar4_kprodi->data;
+        $skor4_3_1_a = $standar4_kprodi->skor;
       } else {
         if($request->kd4_3_1_a >= 90){
           $kategori4_3_1_a = 4;
@@ -69,11 +70,12 @@ class Standar4AuditorController extends Controller
       }
 
       //perhitungan skor 4.3.1.b
-      if ($request->$setuju_4_3_2_b == '1') {
+      if ($request->setuju_4_3_1_b == '1') {
         $kprodi = Standar4::where([
           ["id_prodi", $idprodi],
-          ["kode", "4.2.1.b"]
+          ["kode", "4.3.1.b"]
         ])->whereYear("created_at", '=', date("Y"))->first();
+        $request->catatan4_3_1_b = "Auditor setuju";
         $kategori4_3_1_b = $kprodi->kategori;
         $data4_3_1_b = $kprodi->data;
         $skor4_3_1_b = $kprodi->skor;
@@ -89,12 +91,13 @@ class Standar4AuditorController extends Controller
       }
 
       //perhitungan skor 4.3.1.c
-      if ($request->$setuju_4_3_1_c == "1") {
+      if ($request->setuju_4_3_1_c == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.3.1.c"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_3_1_c = $kprodi->kateogri;
+        $request->catatan4_3_1_c = "Auditor setuju";
+        $kategori4_3_1_c = $kprodi->kategori;
         $data4_3_1_c = $kprodi->data;
         $skor4_3_1_c = $kprodi->skor;
       } else {
@@ -111,10 +114,11 @@ class Standar4AuditorController extends Controller
       //perhitungan skor 4.3.1.d
       if ($request->setuju_4_3_1_d == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.3.1.d"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_3_1_d = $kprodi->kateogri;
+        $request->catatan4_3_1_d = "Auditor setuju";
+        $kategori4_3_1_d = $kprodi->kategori;
         $data4_3_1_d = $kprodi->data;
         $skor4_3_1_d = $kprodi->skor;
       } else {
@@ -131,10 +135,11 @@ class Standar4AuditorController extends Controller
       //perhitungan skor 4.3.2
       if ($request->setuju_4_3_2 == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.3.2"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_3_2 = $kprodi->kateogri;
+        $request->catatan4_3_2 = "Auditor setuju";
+        $kategori4_3_2 = $kprodi->kategori;
         $data4_3_2 = $kprodi->data;
         $skor4_3_2 = $kprodi->skor;
       } else {
@@ -156,10 +161,11 @@ class Standar4AuditorController extends Controller
       //perhitungan skor 4.3.3
       if ($request->setuju_4_3_3 == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.3.3"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_3_3 = $kprodi->kateogri;
+        $request->catatan4_3_3 = "Auditor setuju";
+        $kategori4_3_3 = $kprodi->kategori;
         $data4_3_3 = $kprodi->data;
         $skor4_3_3 = $kprodi->skor;
       } else {
@@ -180,26 +186,28 @@ class Standar4AuditorController extends Controller
       //perhitungan skor 4.3.4
       if ($request->setuju_4_3_4 == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.3.4"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_3_4 = $kprodi->kateogri;
+        $request->catatan4_3_4 = "Auditor setuju";
+        $kategori4_3_4 = $kprodi->kategori;
         $data4_3_4 = $kprodi->data;
         $skor4_3_4 = $kprodi->skor;
       } else {
-        $kategori4_3_4 = $request->n4_3_4;
+        $kategori4_3_4 = $request->n_4_3_4;
         $kategori4_3_4 = intval(round($kategori4_3_4));
-        $data4_3_4 = '['.$request->n4_3_4.']';
-        $skor4_3_4 = $request->n4_3_4;
+        $data4_3_4 = '['.$request->n_4_3_4.']';
+        $skor4_3_4 = $request->n_4_3_4;
       }
 
       //perhitungan skor 4.3.6
       if ($request->setuju_4_3_6 == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.3.6"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_3_6 = $kprodi->kateogri;
+        $request->catatan4_3_6 = "Auditor setuju";
+        $kategori4_3_6 = $kprodi->kategori;
         $data4_3_6 = $kprodi->data;
         $skor4_3_6 = $kprodi->skor;
       } else {
@@ -218,10 +226,11 @@ class Standar4AuditorController extends Controller
       //perhitungan skor 4.4.1
       if ($request->setuju_4_4_1 == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.4.1"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_4_1 = $kprodi->kateogri;
+        $request->catatan4_4_1 = "Auditor setuju";
+        $kategori4_4_1 = $kprodi->kategori;
         $data4_4_1 = $kprodi->data;
         $skor4_4_1 = $kprodi->skor;
       } else {
@@ -240,10 +249,11 @@ class Standar4AuditorController extends Controller
       //perhitungan skor 4.4.2.a
       if ($request->setuju_4_4_2_a == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.4.2.a"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_4_2_a = $kprodi->kateogri;
+        $request->catatan4_4_2_a = "Auditor setuju";
+        $kategori4_4_2_a = $kprodi->kategori;
         $data4_4_2_a = $kprodi->data;
         $skor4_4_2_a = $kprodi->skor;
       } else {
@@ -256,10 +266,11 @@ class Standar4AuditorController extends Controller
       //perhitungan skor 4.4.2.b
       if ($request->setuju_4_4_2_b == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.4.2.b"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_4_2_b = $kprodi->kateogri;
+        $request->catatan4_4_2_b = "Auditor setuju";
+        $kategori4_4_2_b = $kprodi->kategori;
         $data4_4_2_b = $kprodi->data;
         $skor4_4_2_b = $kprodi->skor;
       } else {
@@ -278,10 +289,11 @@ class Standar4AuditorController extends Controller
       //perhitungan skor 4.5.1
       if ($request->setuju_4_5_1 == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.5.1"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_5_1 = $kprodi->kateogri;
+        $request->catatan4_5_1 = "Auditor setuju";
+        $kategori4_5_1 = $kprodi->kategori;
         $data4_5_1 = $kprodi->data;
         $skor4_5_1 = $kprodi->skor;
       } else {
@@ -298,10 +310,11 @@ class Standar4AuditorController extends Controller
       //perhitungan skor 4.5_2
       if ($request->setuju_4_5_2 == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.5.2"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_5_2 = $kprodi->kateogri;
+        $request->catatan4_5_2 = "Auditor setuju";
+        $kategori4_5_2 = $kprodi->kategori;
         $data4_5_2 = $kprodi->data;
         $skor4_5_2 = $kprodi->skor;
       } else {
@@ -319,10 +332,11 @@ class Standar4AuditorController extends Controller
       //perhitungan skor 4.5_3
       if ($request->setuju_4_5_3 == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.5.3"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_5_3 = $kprodi->kateogri;
+        $request->catatan4_5_3 = "Auditor setuju";
+        $kategori4_5_3 = $kprodi->kategori;
         $data4_5_3 = $kprodi->data;
         $skor4_5_3 = $kprodi->skor;
       } else {
@@ -340,12 +354,13 @@ class Standar4AuditorController extends Controller
       }
 
       //perhitungan skor 4.5_4
-      if ($request->$setuju_4_5_4 == "1") {
+      if ($request->setuju_4_5_4 == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.5.4"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_5_4 = $kprodi->kateogri;
+        $request->catatan4_5_4 = "Auditor setuju";
+        $kategori4_5_4 = $kprodi->kategori;
         $data4_5_4 = $kprodi->data;
         $skor4_5_4 = $kprodi->skor;
       } else {
@@ -358,10 +373,11 @@ class Standar4AuditorController extends Controller
       //perhitungan skor 4.6_1_a
       if ($request->setuju_4_6_1_a == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.6.1.a"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_6_1_a = $kprodi->kateogri;
+        $request->catatan4_6_1_a = "Auditor setuju";
+        $kategori4_6_1_a = $kprodi->kategori;
         $data4_6_1_a = $kprodi->data;
         $skor4_6_1_a = $kprodi->skor;
       } else {
@@ -379,10 +395,11 @@ class Standar4AuditorController extends Controller
       //perhitungan skor 4.6_1_c
       if ($request->setuju_4_6_1_c == "1") {
         $kprodi = Standar4::where([
-          ['id_prodi', $id_prodi],
+          ['id_prodi', $idprodi],
           ['kode', "4.6.1.c"]
         ])->whereYear("created_at", '=', date("Y"))->first();
-        $kategori4_6_1_c = $kprodi->kateogri;
+        $request->catatan4_6_1_c = "Auditor setuju";
+        $kategori4_6_1_c = $kprodi->kategori;
         $data4_6_1_c = $kprodi->data;
         $skor4_6_1_c = $kprodi->skor;
       } else {

@@ -35,7 +35,6 @@ class StandarStatus
 
 	public function getStatus(){
 		return $this->status_code;
-
 	}
 
 	public function getStatusMessage(){

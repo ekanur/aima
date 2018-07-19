@@ -47,6 +47,7 @@ class Standar6AuditorController extends Controller
      {
        //PERHITUNGAN 6.2.1
        if ($request->setuju_6_2_1 == "1") {
+        $request->catatan6_2_1 = "Auditor setuju";
          $kprodi = Standar6::where([
            ["id_prodi", $idprodi],
            ["kode", "6.2.1"]
@@ -71,6 +72,7 @@ class Standar6AuditorController extends Controller
 
        //PERHITUNGAN 6.2.2
        if ($request->setuju_6_2_2 == "1") {
+        $request->catatan6_2_2 = "Auditor setuju";
          $kprodi = Standar6::where([
            ["id_prodi", $idprodi],
            ["kode", "6.2.2"]
@@ -93,6 +95,7 @@ class Standar6AuditorController extends Controller
 
        //PERHITUNGAN 6.2.3
        if ($request->setuju_6_2_3 == "1") {
+        $request->catatan6_2_3 = "Auditor setuju";
          $kprodi = Standar6::where([
            ["id_prodi", $idprodi],
            ["kode", "6.2.3"]
@@ -115,6 +118,7 @@ class Standar6AuditorController extends Controller
 
        //PERHITUNGAN 6.3.1
        if ($request->setuju_6_3_1 == "1") {
+        $request->catatan6_3_1 = "Auditor setuju";
          $kprodi = Standar6::where([
            ["id_prodi", $idprodi],
            ["kode", "6.3.1"]
@@ -138,6 +142,7 @@ class Standar6AuditorController extends Controller
 
       //PERHITUNGAN 6.4.1a
       if ($request->setuju_6_4_1_a == "1") {
+        $request->catatan6_4_1_a = "Auditor setuju";
         $kprodi = Standar6::where([
           ["id_prodi", $idprodi],
           ["kode", "6.4.1.a"]
@@ -154,6 +159,7 @@ class Standar6AuditorController extends Controller
 
       //PERHITUNGAN 6.4.1b
       if ($request->setuju_6_4_1_b == "1") {
+        $request->catatan6_4_1_b = "Auditor setuju";
         $kprodi = Standar6::where([
           ["id_prodi", $idprodi],
           ["kode", "6.4.1.b"]
@@ -170,6 +176,7 @@ class Standar6AuditorController extends Controller
 
       //PERHITUNGAN 6.4.1c
       if ($request->setuju_6_4_1_c == "1") {
+        $request->catatan6_4_1_c = "Auditor setuju";
         $kprodi = Standar6::where([
           ["id_prodi", $idprodi],
           ["kode", "6.4.1.c"]
@@ -187,6 +194,7 @@ class Standar6AuditorController extends Controller
 
       //PERHITUNGAN 6.4.1d
       if ($request->setuju_6_4_1_d == "1") {
+        $request->catatan6_4_1_d = "Auditor setuju";
         $kprodi = Standar6::where([
           ["id_prodi", $idprodi],
           ["kode", "6.4.1.d"]
@@ -203,6 +211,7 @@ class Standar6AuditorController extends Controller
 
       //PERHITUNGAN 6.4.1e
       if ($request->setuju_6_4_1_e == "1") {
+        $request->catatan6_4_1_e = "Auditor setuju";
         $kprodi = Standar6::where([
           ["id_prodi", $idprodi],
           ["kode", "6.4.1.e"]
