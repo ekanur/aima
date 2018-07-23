@@ -548,7 +548,7 @@
                                     4_4_2_a
                                 @endslot
                                 @slot('validasi_auditor')
-                                <select name="n4_4_2_a" id="" class="form-control border-input">
+                                <select name="n4_4_2_a" id="" class="form-control border-input" required="">
                                   <option disabled="" selected="">--Pilih--</option>
                                   <option value="0" @if(!$dataCheck) @if(json_decode($data[9]->data)[0] == 0) {{"selected"}} @endif @endif>Lebih dari 6 matakuliah diajar oleh dosen tidak tetap yang tidak sesuai keahliannya</option>
                                   <option value="1" @if(!$dataCheck) @if(json_decode($data[9]->data)[0] == 1) {{"selected"}} @endif @endif>5 - 6 mata kuliah diajar oleh dosen tidak tetap yang tidak sesuai kahaliannya</option>

@@ -320,7 +320,7 @@
                                           3_1_3
                                       @endslot
                                       @slot('validasi_auditor')
-                                          <select name="n_3_1_3" id="" class="form-control border-input">
+                                          <select name="n_3_1_3" id="" class="form-control border-input" required="">
                                             <option disabled="" selected="">--Pilih--</option>
                                             <option value="1" @if(!$dataCheck) @if(json_decode($data[5]->data)[0] == 1) {{"selected"}} @endif @endif>Tidak ada</option>
                                             <option value="2" @if(!$dataCheck) @if(json_decode($data[5]->data)[0] == 2) {{"selected"}} @endif @endif>Tingkat Lokal</option>
@@ -555,7 +555,7 @@
                                           3_2_2
                                       @endslot
                                       @slot('validasi_auditor')
-                                            <select name="n_3_2_2" id="" class="form-control border-input">
+                                            <select name="n_3_2_2" id="" class="form-control border-input" required="">
                                               <option disabled="" selected="">--Pilih--</option>
                                               <option value="0" @if(!$dataCheck) @if(json_decode($data[9]->data)[0] == 0) {{"selected"}} @endif @endif>0</option>
                                               <option value="1" @if(!$dataCheck) @if(json_decode($data[9]->data)[0] == 1) {{"selected"}} @endif @endif>1</option>
