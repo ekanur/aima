@@ -18,8 +18,8 @@ class NilaiStandar1Controller extends Controller
       $standar_status_code=$standar_status->getStatus();
       $standar_message=$standar_status->getStatusMessage();
     $standar="Rekap Nilai Standar 1";
-    $nilai_kprodi=Standar1::select('kode','kategori')->where('id_prodi',$idprodi)->get();
-    $nilai_auditor=Standar1Auditor::select('kode','kategori')->where([['id_prodi', '=',$idprodi], ['auditor_id', '=',session("auditor_id")]])->get();
+    $nilai_kprodi=Standar1::select('kode','kategori')->where('id_prodi',$idprodi)->whereYear("created_at", date("Y"))->get();
+    $nilai_auditor=Standar1Auditor::select('kode','kategori')->where([['id_prodi', '=',$idprodi], ['auditor_id', '=',session("auditor_id")]])->whereYear("created_at", date("Y"))->get();
 
     $prodi = Prodi::findOrFail($idprodi);
     $nama_prodi = $prodi->jjg_kd." ".$prodi->pro_nm;
