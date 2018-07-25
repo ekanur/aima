@@ -28,6 +28,23 @@ class Controller extends BaseController
     	return $this->detail_prodi;
     }
 
+    function getCatatan($model){
+        $catatan = null;
+        if (!is_subclass_of($model, 'Illuminate\Database\Eloquent\Model')) {
+            return null;
+        }
+
+        $data = $model::select("kode", "catatan")->where("id_prodi", session('id_prodi'))->whereYear("created_at", '=', date("Y"))->get();
+
+        foreach ($data as $data_catatan) {
+            $catatan[$data_catatan->kode] = $data_catatan->catatan;
+        }
+
+        // dd($catatan);
+
+        return $catatan;
+    }
+
 
     function ubahProdi($id_prodi){
     	Session::put('id_prodi', $id_prodi);

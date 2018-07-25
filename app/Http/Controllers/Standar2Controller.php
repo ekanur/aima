@@ -15,7 +15,8 @@ class Standar2Controller extends Controller
     }
     $standar="Standar 2";
     $prodi = $this->getProdi();
-    return view("standar2.index", compact('data', 'standar', 'prodi'));
+    $catatan_auditor = $this->getCatatan('App\Standar2Auditor');
+    return view("standar2.index", compact('data', 'standar', 'prodi', 'catatan_auditor'));
   }
 
   public function save(Request $request){

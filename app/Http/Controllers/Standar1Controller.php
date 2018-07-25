@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Standar1;
+// use App\Standar1Auditor;
 
 class Standar1Controller extends Controller
 {
@@ -24,9 +25,11 @@ class Standar1Controller extends Controller
 
     $prodi = $this->getProdi();
 
+    $catatan_auditor = $this->getCatatan('App\Standar1Auditor');
 
-    // dd($prodi);
-    return view("standar1.index", compact('data', 'standar', 'prodi'));
+
+    // dd($catatan_auditor);
+    return view("standar1.index", compact('data', 'standar', 'prodi', 'catatan_auditor'));
   }
 
   public function save(Request $request){

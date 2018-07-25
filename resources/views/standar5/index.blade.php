@@ -41,7 +41,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="" data-kode="">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                       </div>
@@ -76,7 +76,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="" data-kode="">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                       </div>
@@ -106,7 +106,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="" data-kode="">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                     </div>
@@ -160,7 +160,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="" data-kode="">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                       </div>
@@ -195,7 +195,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="" data-kode="">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                       </div>
@@ -226,7 +226,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="" data-kode="">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                     </div>
@@ -254,7 +254,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="" data-kode="">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                       </div>
@@ -290,7 +290,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="" data-kode="">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                       </div>
@@ -371,7 +371,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="" data-kode="">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                     </div>
@@ -405,7 +405,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="" data-kode="">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                       </div>
@@ -478,7 +478,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="" data-kode="">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                       </div>
@@ -511,11 +511,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Catatan Auditor 1.1.a</h4>
+        <h4 class="modal-title" id="myModalLabel">Catatan Auditor poin <span id="kode"></span></h4>
       </div>
       <div class="modal-body">
-        <figure class="highlight">
-            Catatan auditor tertera pada bagian ini.
+        <figure class="highlight" id="catatan">
         </figure>
       </div>
       <div class="modal-footer">
@@ -526,3 +525,22 @@
   </div>
 </div>
 @endpush
+
+@section("js")
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#upload_file").on("show.bs.modal", function (event) {
+                const catatan = $(event.relatedTarget);
+
+                var detail_catatan = catatan.data("catatan");
+                var kode_catatan = catatan.data("kode");
+
+                $("#kode").text(kode_catatan);
+                $("#catatan").text(detail_catatan);         
+                
+            });
+    });
+</script>
+
+@endsection

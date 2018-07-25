@@ -9,7 +9,7 @@
       <b class="fa fa-ellipsis-v"></b>
     </a>
     <ul class="dropdown-menu dropdown-menu-right"> 
-          <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="" data-kode="">Catatan Auditor</a></li>
     </ul>
   </div> 
 </div>

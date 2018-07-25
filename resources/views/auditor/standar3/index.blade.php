@@ -375,11 +375,11 @@
                                       @slot('validasi_auditor')
                                            <div class="form-group col-md-3">
                                                 <label for="f">Mahasiswa lulus tepat waktu</label>
-                                                <input type="number" min=0 step=1 name="f" class="form-control border-input" id="f" value="@if(!$dataCheck){{json_decode($data_kprodi[6]->data)[0]}}@endif" required=""`>
+                                                <input type="number" min=0 step=1 name="f" class="form-control border-input" id="f" value="@if(!$dataCheck){{json_decode($data_kprodi[6]->data)[0]}}@endif" required="">
                                               </div>
                                               <div class="form-group col-md-3">
                                                 <label for="d">Mahasiswa lulus</label>
-                                                <input type="number" min=0 step=1 name="d" class="form-control border-input" id="d" value="@if(!$dataCheck){{json_decode($data_kprodi[6]->data)[1]}}@endif" required=""`>
+                                                <input type="number" min=0 step=1 name="d" class="form-control border-input" id="d" value="@if(!$dataCheck){{json_decode($data_kprodi[6]->data)[1]}}@endif" required="">
                                               </div>
                                             </div>
                                       @endslot

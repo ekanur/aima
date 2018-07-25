@@ -24,7 +24,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.1.1.a"] or ' ' }}" data-kode="3.1.1.a">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               
@@ -51,6 +51,14 @@
                               <div class="deskriptor pull-left">
                                    <strong>Rasio mahasiswa baru reguler yang melakukan registrasi : calon mahasiswa baru reguler yang lulus seleksi</strong>
                                 </div>
+                                <div class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                                  <b class="fa fa-ellipsis-v"></b>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right"> 
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.1.1.b"] or ' ' }}" data-kode="3.1.1.b">Catatan Auditor</a></li>
+                                </ul>
+                              </div>
                                 <div class="row">
                                      <div class="form-group col-md-3">
                                        <label for="n_3_1_1_b1">Mahasiswa baru reguler yang melakukan registrasi</label>
@@ -78,7 +86,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.1.1.c"] or ' ' }}" data-kode="3.1.1.c">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -108,7 +116,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.1.1.d"] or ' ' }}" data-kode="3.1.1.d">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -133,7 +141,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.1.2"] or ' ' }}" data-kode="3.1.2">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -165,7 +173,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.1.3"] or ' ' }}" data-kode="3.1.3">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -196,7 +204,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.1.4.a"] or ' ' }}" data-kode="3.1.4.a">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -226,7 +234,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.1.4.b"] or ' ' }}" data-kode="3.1.4.b">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -268,7 +276,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.2.1"] or ' ' }}" data-kode="3.2.1">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -300,7 +308,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.2.2"] or ' ' }}" data-kode="3.2.2">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -332,7 +340,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.3.1.b"] or ' ' }}" data-kode="3.3.1.b">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -364,7 +372,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.3.1.c"] or ' ' }}" data-kode="3.3.1.c">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -403,7 +411,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.3.2"] or ' ' }}" data-kode="3.3.2">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -430,7 +438,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.3.3"] or ' ' }}" data-kode="3.3.3">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -458,7 +466,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.4.1"] or ' ' }}" data-kode="3.4.1">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -490,7 +498,7 @@
                                   <b class="fa fa-ellipsis-v"></b>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right"> 
-                                      <li><a href="#" data-toggle="modal" data-target="#upload_file" data-file-lama="" data-item-id="3">Catatan Auditor</a></li>
+                                      <li><a href="#" data-toggle="modal" data-target="#upload_file"  data-catatan="{{ $catatan_auditor["3.4.2"] or ' ' }}" data-kode="3.4.2">Catatan Auditor</a></li>
                                 </ul>
                               </div>
                               <div class="row">
@@ -535,11 +543,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Catatan Auditor 1.1.a</h4>
+        <h4 class="modal-title" id="myModalLabel">Catatan Auditor poin <span id="kode"></span></h4>
       </div>
       <div class="modal-body">
-        <figure class="highlight">
-            Catatan auditor tertera pada bagian ini.
+        <figure class="highlight" id="catatan">
         </figure>
       </div>
       <div class="modal-footer">
@@ -550,3 +557,22 @@
   </div>
 </div>
 @endpush
+
+@section("js")
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#upload_file").on("show.bs.modal", function (event) {
+                const catatan = $(event.relatedTarget);
+
+                var detail_catatan = catatan.data("catatan");
+                var kode_catatan = catatan.data("kode");
+
+                $("#kode").text(kode_catatan);
+                $("#catatan").text(detail_catatan);         
+                
+            });
+    });
+</script>
+
+@endsection

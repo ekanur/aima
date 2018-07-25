@@ -17,7 +17,8 @@ class Standar3Controller extends Controller
           $dataCheck = false;
         }
         $prodi = $this->getProdi();
-        return view('standar3.index', compact('standar', 'data', 'dataCheck', 'prodi'));
+        $catatan_auditor = $this->getCatatan('App\Standar3Auditor');
+        return view('standar3.index', compact('standar', 'data', 'dataCheck', 'prodi', 'catatan_auditor'));
     }
 
 
