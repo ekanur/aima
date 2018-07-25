@@ -18,8 +18,8 @@ class NilaiStandar4Controller extends Controller
     $standar_status_code=$standar_status->getStatus();
     $standar_message=$standar_status->getStatusMessage();
     $standar="Rekap Nilai Standar 4";
-    $nilai_kprodi=Standar4::select('kode','kategori')->where('id_prodi',$idprodi)->get();
-    $nilai_auditor=Standar4Auditor::select('kode','kategori')->where([['id_prodi', '=',$idprodi], ['auditor_id', '=',session("auditor_id")]])->get();
+    $nilai_kprodi=Standar4::select('kode','kategori')->where('id_prodi',$idprodi)->whereYear("created_at", date("Y"))->get();
+    $nilai_auditor=Standar4Auditor::select('kode','kategori')->where([['id_prodi', '=',$idprodi], ['auditor_id', '=',session("auditor_id")]])->whereYear("created_at", date("Y"))->get();
     $prodi = Prodi::findOrFail($idprodi);
     $nama_prodi = $prodi->jjg_kd." ".$prodi->pro_nm;
     // $total =NilaiStandar1::standar1s("kategori")->sum('nilai');

@@ -13,14 +13,14 @@ class NilaiStandar2Controller extends Controller
 {
   public function index($idprodi)
   {
-          $standar_status = new StandarStatus($idprodi);
+    $standar_status = new StandarStatus($idprodi);
       // dd($standar_status->getStatusMessage());
-      $standar_status_code=$standar_status->getStatus();
-      $standar_message=$standar_status->getStatusMessage();
-     $standar="Rekap Nilai Standar 2";
+    $standar_status_code=$standar_status->getStatus();
+    $standar_message=$standar_status->getStatusMessage();
+    $standar="Rekap Nilai Standar 2";
     $nilai_kprodi=Standar2::select('kode','kategori')->where('id_prodi',$idprodi)->whereYear("created_at", date("Y"))->get();
     $nilai_auditor=Standar2Auditor::select('kode','kategori')->where([['id_prodi', '=',$idprodi], ['auditor_id', '=',session("auditor_id")]])->whereYear("created_at", date("Y"))->get();
-        $prodi = Prodi::findOrFail($idprodi);
+    $prodi = Prodi::findOrFail($idprodi);
     $nama_prodi = $prodi->jjg_kd." ".$prodi->pro_nm;
     // $total =NilaiStandar1::standar1s("kategori")->sum('nilai');
     $total = 0;
