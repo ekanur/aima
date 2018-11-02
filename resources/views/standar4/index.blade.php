@@ -407,6 +407,7 @@
                                     <option value="1" <?php if(!$dataCheck){ if (json_decode($data[9]->data)[0] == 1){ echo "selected"; }}?>>5 - 6 mata kuliah diajar oelh dosen tidak tetap yang tidak sesuai kahaliannya</option>
                                     <option value="0" <?php if(!$dataCheck){ if (json_decode($data[9]->data)[0] == 0){ echo "selected"; }}?>>Lebih dari 6 matakuliah diajar oleh dosen tidak tetap yang tidak sesuai keahliannya</option>
                                   </select>
+                                  <p class="help-block">Jika tidak ada dosen tidak tetap. Maka pilih opsi <blockquote>Semua dosen tidak tetap mengajar mata kuliah yang sesuai keahliannya</blockquote></p>
                                 </div>
                               </div>
                             </div>

@@ -19,7 +19,7 @@
                             <div class="col-md-12 komponen">
                                 <span class="nomor pull-left">1.1.a</span>
                                 <div class="deskriptor pull-left">
-                                    <strong>Kejelasan dan kerealistikan visi, misi, tujuan, dan sasaran, serta strategi pencapaian sasaran Fakultas/Sekolah Tinggi.</strong>
+                                    <strong>Kejelasan dan kerealistikan visi, misi, tujuan, dan sasaran, serta strategi pencapaian sasaran Fakultas/Sekolah Tinggi/Pascasarjana.</strong>
                                     
                                 </div>
                                  <div class="dropdown pull-right">
@@ -71,7 +71,7 @@
                             <div class="col-md-12 komponen">
                                 <span class="nomor pull-left">1.2</span>
                                 <div class="deskriptor pull-left">
-                                    <strong>Pemahaman  visi, misi, tujuan, dan sasaran Fakultas/ Sekolah Tinggi oleh seluruh pemangku kepentingan internal (internal stakeholders): sivitas akademika (dosen dan mahasiswa) dan tenaga kependidikan.</strong>
+                                    <strong>Pemahaman  visi, misi, tujuan, dan sasaran Fakultas / Sekolah Tinggi / Pascasarjana oleh seluruh pemangku kepentingan internal (internal stakeholders): sivitas akademika (dosen dan mahasiswa) dan tenaga kependidikan.</strong>
                                 </div>
                                 <div class="dropdown pull-right">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
