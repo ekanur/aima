@@ -48,7 +48,7 @@ class Standar3Controller extends Controller
       if($in->n_3_1_1_b1 == 0 || $in->n_3_1_1_b2 == 0){
         $rasiomaba = 0;
       }else{
-        $rasiomaba =  $in->n_3_1_1_b1/$in->n_3_1_1_b2;
+        $rasiomaba =  ($in->n_3_1_1_b1/$in->n_3_1_1_b2)*100;
       }
         
         if ($rasiomaba>=95) {
