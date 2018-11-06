@@ -4,7 +4,6 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 use Session;
-use App\Pegawai;
 use App\KProdi;
 use App\Auditor;
 use Illuminate\Support\Facades\DB;

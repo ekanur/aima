@@ -11,6 +11,7 @@ class Standar3Controller extends Controller
     {
         $standar="Standar 3";
         $data = Standar3::select('kode', 'data', 'skor', 'kategori')->where('id_prodi', '=', session('id_prodi'))->whereYear("created_at", '=', date("Y"))->orderBy('kode', 'asc')->get();
+        // dd(json_decode($data[0]->data)[0]);
         if(!$data->count()){
           $dataCheck = true;
         }else{

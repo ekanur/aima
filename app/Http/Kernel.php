@@ -40,6 +40,11 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
         ],
+        'saml' => [
+            \App\Http\Middleware\EncryptCookies::class,
+            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+            \Illuminate\Session\Middleware\StartSession::class,
+        ],
     ];
 
     /**
@@ -58,6 +63,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'auth_josso' => 'App\Http\Middleware\Authenticate_josso',
         'cekAuditor' => 'App\Http\Middleware\CheckAuditor',
-        'cekKoordinator' => 'App\Http\Middleware\CheckKoordinator'
+        'cekKoordinator' => 'App\Http\Middleware\CheckKoordinator',
+        'samlauth' => \App\Http\Middleware\SamlAuth::class
     ];
 }

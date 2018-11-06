@@ -41,7 +41,7 @@
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
                                   <label for="kd">KD</label>
-                                  <input class="form-control border-input" type="number" name="kd4_3_1_a" min="0" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[0] ?>" required>
+                                  <input class="form-control border-input" type="number" name="kd4_3_1_a" min="0" value="@if(isset($data[0])){{json_decode($data[0]->data)[0]}}@endif" required>
                                   <span>%</span>
                                 </div>
                                 <div class="col-md-8">
@@ -81,7 +81,7 @@
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
                                   <label for="kd">KD</label>
-                                  <input class="form-control border-input" type="number" name="kd4_3_1_b" min="0" value="<?php if(!$dataCheck) echo json_decode($data[1]->data)[0] ?>" required>
+                                  <input class="form-control border-input" type="number" name="kd4_3_1_b" min="0" value="@if(isset($data[1])){{json_decode($data[1]->data)[0]}}@endif" required>
                                   <span>%</span>
                                 </div>
                                 <div class="col-md-8">
@@ -121,7 +121,7 @@
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
                                   <label for="kd">KD</label>
-                                  <input class="form-control border-input" type="number" name="kd4_3_1_c" min="0" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[0] ?>" required>
+                                  <input class="form-control border-input" type="number" name="kd4_3_1_c" min="0" value="@if(isset($data[2])){{json_decode($data[2]->data)[0]}}@endif" required>
                                   <span>%</span>
                                 </div>
                                 <div class="col-md-8">
@@ -161,7 +161,7 @@
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
                                   <label for="kd">KD</label>
-                                  <input class="form-control border-input" type="number" name="kd4_3_1_d" min="0" value="<?php if(!$dataCheck) echo json_decode($data[3]->data)[0] ?>" required>
+                                  <input class="form-control border-input" type="number" name="kd4_3_1_d" min="0" value="@if(isset($data[3])){{json_decode($data[3]->data)[0]}}@endif" required>
                                   <span>%</span>
                                 </div>
                                 <div class="col-md-8">
@@ -201,7 +201,7 @@
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
                                   <label for="kd">R<small>MD</small></label>
-                                  <input class="form-control border-input" type="number" name="rmd4_3_2" min="0" value="<?php if(!$dataCheck) echo json_decode($data[4]->data)[0] ?>" required>
+                                  <input class="form-control border-input" type="number" name="rmd4_3_2" min="0" value="@if(isset($data[4])){{json_decode($data[4]->data)[0]}}@endif" required>
                                 </div>
                                 <div class="col-md-8">
                                   <small>Rasio mahasiswa terhadap dosen</small>
@@ -240,7 +240,7 @@
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
                                   <label for="kd">R<small>FTE</small></label>
-                                  <input class="form-control border-input" type="number" name="rfte4_3_3" min="0" value="<?php if(!$dataCheck) echo json_decode($data[5]->data)[0] ?>" required>
+                                  <input class="form-control border-input" type="number" name="rfte4_3_3" min="0" value="@if(isset($data[5])){{json_decode($data[5]->data)[0]}}@endif" required>
                                 </div>
                                 <div class="col-md-8">
                                   <small>Rata-rata FTE</small>
@@ -280,10 +280,10 @@
                                 <div class="col-md-12">
                                   <select class="form-control border-input" name="n4_3_4" required="">
                                   <option disabled selected >--Pilih--</option>
-                                    <option value="4" <?php if(!$dataCheck){ if (json_decode($data[6]->data)[0] == 4){ echo "selected"; }}?>>Semua mata kuliah diajar oleh dosen yang sesuai keahliannya</option>
-                                    <option value="3" <?php if(!$dataCheck){ if (json_decode($data[6]->data)[0] == 3){ echo "selected"; }}?>>1 - 3 mata kuliah diajar oleh dosen tidak sesuai dengan keahliannya</option>
-                                    <option value="2" <?php if(!$dataCheck){ if (json_decode($data[6]->data)[0] == 2){ echo "selected"; }}?>>4 - 7 mata kuliah diajar oleh doesn yang tidak sesuai keahliannya</option>
-                                    <option value="1" <?php if(!$dataCheck){ if (json_decode($data[6]->data)[0] == 1){ echo "selected"; }}?>>Lebih dari 7 matakuliah diajar oleh dosen yang tidak sesuai keahliannya</option>
+                                    <option value="4" @if(isset($data[6])) @if (json_decode($data[6]->data)[0] == 4) {{ "selected" }} @endif @endif>Semua mata kuliah diajar oleh dosen yang sesuai keahliannya</option>
+                                    <option value="3" @if(isset($data[6])) @if (json_decode($data[6]->data)[0] == 3) {{ "selected" }} @endif @endif>1 - 3 mata kuliah diajar oleh dosen tidak sesuai dengan keahliannya</option>
+                                    <option value="2" @if(isset($data[6])) @if (json_decode($data[6]->data)[0] == 2) {{ "selected" }} @endif @endif>4 - 7 mata kuliah diajar oleh doesn yang tidak sesuai keahliannya</option>
+                                    <option value="1" @if(isset($data[6])) @if (json_decode($data[6]->data)[0] == 1) {{ "selected" }} @endif @endif>Lebih dari 7 matakuliah diajar oleh dosen yang tidak sesuai keahliannya</option>
                                   </select>
                                 </div>
                               </div>
@@ -320,7 +320,7 @@
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
                                   <label for="kd">PK<small>DT</small></label>
-                                  <input class="form-control border-input" type="number" name="pkdt4_3_6" min="0" value="<?php if(!$dataCheck) echo json_decode($data[7]->data)[0] ?>" required>
+                                  <input class="form-control border-input" type="number" name="pkdt4_3_6" min="0" value="@if(isset($data[7])){{json_decode($data[7]->data)[0]}}@endif" required>
                                   <span>%</span>
                                 </div>
                                 <div class="col-md-8">
@@ -360,7 +360,7 @@
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
                                   <label for="kd">P<small>DTT</small></label>
-                                  <input class="form-control border-input" type="number" name="pdtt4_4_1" min="0" value="<?php if(!$dataCheck) echo json_decode($data[8]->data)[0] ?>" required>
+                                  <input class="form-control border-input" type="number" name="pdtt4_4_1" min="0" value="@if(isset($data[8])){{json_decode($data[8]->data)[0]}}@endif" required>
                                   <span>%</span>
                                 </div>
                                 <div class="col-md-8">
@@ -401,11 +401,11 @@
                                 <div class="col-md-12">
                                   <select class="form-control border-input" name="n4_4_2_a" required="">
                                   <option disabled selected >--Pilih--</option>
-                                    <option value="4" <?php if(!$dataCheck){ if (json_decode($data[9]->data)[0] == 4){ echo "selected"; }}?>>Semua dosen tidak tetap mengajar mata kuliah yang sesuai keahliannya</option>
-                                    <option value="3" <?php if(!$dataCheck){ if (json_decode($data[9]->data)[0] == 3){ echo "selected"; }}?>>1 - 2 mata kuliah diajar oleh dosen tidak tetap yang tidak sesuai keahliannya</option>
-                                    <option value="2" <?php if(!$dataCheck){ if (json_decode($data[9]->data)[0] == 2){ echo "selected"; }}?>>3 - 4 mata kuliah diajar oelh dosen tidak tetap yang tidak sesuai keahliannya</option>
-                                    <option value="1" <?php if(!$dataCheck){ if (json_decode($data[9]->data)[0] == 1){ echo "selected"; }}?>>5 - 6 mata kuliah diajar oelh dosen tidak tetap yang tidak sesuai kahaliannya</option>
-                                    <option value="0" <?php if(!$dataCheck){ if (json_decode($data[9]->data)[0] == 0){ echo "selected"; }}?>>Lebih dari 6 matakuliah diajar oleh dosen tidak tetap yang tidak sesuai keahliannya</option>
+                                    <option value="4" @if(isset($data[9])) @if (json_decode($data[9]->data)[0] == 4) {{ "selected" }} @endif @endif>Semua dosen tidak tetap mengajar mata kuliah yang sesuai keahliannya</option>
+                                    <option value="3" @if(isset($data[9])) @if (json_decode($data[9]->data)[0] == 3) {{ "selected" }} @endif @endif>1 - 2 mata kuliah diajar oleh dosen tidak tetap yang tidak sesuai keahliannya</option>
+                                    <option value="2" @if(isset($data[9])) @if (json_decode($data[9]->data)[0] == 2) {{ "selected" }} @endif @endif>3 - 4 mata kuliah diajar oelh dosen tidak tetap yang tidak sesuai keahliannya</option>
+                                    <option value="1" @if(isset($data[9])) @if (json_decode($data[9]->data)[0] == 1) {{ "selected" }} @endif @endif>5 - 6 mata kuliah diajar oelh dosen tidak tetap yang tidak sesuai kahaliannya</option>
+                                    <option value="0" @if(isset($data[9])) @if (json_decode($data[9]->data)[0] == 0) {{ "selected" }} @endif @endif>Lebih dari 6 matakuliah diajar oleh dosen tidak tetap yang tidak sesuai keahliannya</option>
                                   </select>
                                   <p class="help-block">Jika tidak ada dosen tidak tetap. Maka pilih opsi <blockquote>Semua dosen tidak tetap mengajar mata kuliah yang sesuai keahliannya</blockquote></p>
                                 </div>
@@ -443,7 +443,7 @@
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
                                   <label for="kd">PK<small>DTT</small></label>
-                                  <input class="form-control border-input" type="number" name="pkdtt4_4_2_b" min="0" value="<?php if(!$dataCheck) echo json_decode($data[10]->data)[0] ?>" required>
+                                  <input class="form-control border-input" type="number" name="pkdtt4_4_2_b" min="0" value="@if(isset($data[10])){{json_decode($data[10]->data)[0]}}@endif" required>
                                   <span>%</span>
                                 </div>
                                 <div class="col-md-8">
@@ -483,7 +483,7 @@
                               <div class="form-group col-md-12 form-inline">
                                 <div class="col-md-4">
                                   <label for="kd">J<small>TAP</small></label>
-                                  <input class="form-control border-input" type="number" name="jtap4_5_1" min="0" value="<?php if(!$dataCheck) echo json_decode($data[11]->data)[0] ?>" required>
+                                  <input class="form-control border-input" type="number" name="jtap4_5_1" min="0" value="@if(isset($data[11])){{json_decode($data[11]->data)[0]}}@endif" required>
                                 </div>
                                 <div class="col-md-8">
                                   <small>Jumlah tenaga ahli/pakar</small>
@@ -525,12 +525,12 @@
                             <div class="row">
                               <div class="form-group col-md-6">
                                 <label for="n2_4_5_2">N2</label>
-                                <input type="number" min=0 name="n2_4_5_2" class="form-control border-input" id="n2_4_5_2" min="0" value="<?php if(!$dataCheck) echo json_decode($data[12]->data)[0] ?>" required>
+                                <input type="number" min=0 name="n2_4_5_2" class="form-control border-input" id="n2_4_5_2" min="0" value="@if(isset($data[12])){{json_decode($data[12]->data)[0]}}@endif" required>
                                 <small>Jumlah dosen yang mengikuti tugas belajar jenjang S2 pada bidang keahlian yang sesuai dengan PS dalam kurun waktu tiga tahun terakhir</small>
                               </div>
                               <div class="form-group col-md-6">
                                 <label for="n3_4_5_2">N3</label>
-                                <input type="number" min=0 name="n3_4_5_2" class="form-control border-input" id="n3_4_5_2" min="0" value="<?php if(!$dataCheck) echo json_decode($data[12]->data)[1] ?>" required>
+                                <input type="number" min=0 name="n3_4_5_2" class="form-control border-input" id="n3_4_5_2" min="0" value="@if(isset($data[12])){{json_decode($data[12]->data)[1]}}@endif" required>
                                 <small>Jumlah dosen yang mengikuti tugas belajar jenjang S3 pada bidang keahlian yang sesuai dengan PS dalam kurun waktu tiga tahun terakhir</small>
                               </div>
                             </div>
@@ -565,17 +565,17 @@
                             <div class="row">
                               <div class="form-group col-md-4">
                                 <label for="a4_5_3">a</label>
-                                <input type="number" min=0 name="a4_5_3" class="form-control border-input" id="a4_5_3" min="0" value="<?php if(!$dataCheck) echo json_decode($data[13]->data)[0] ?>" required>
+                                <input type="number" min=0 name="a4_5_3" class="form-control border-input" id="a4_5_3" min="0" value="@if(isset($data[13])){{json_decode($data[13]->data)[0]}}@endif" required>
                                 <small>Jumlah makalah atau kegiatan (sebagai penyaji)</small>
                               </div>
                               <div class="form-group col-md-4">
                                 <label for="b4_5_3">b</label>
-                                <input type="number" min=0 name="b4_5_3" class="form-control border-input" id="b4_5_3" min="0" value="<?php if(!$dataCheck) echo json_decode($data[13]->data)[1] ?>" required>
+                                <input type="number" min=0 name="b4_5_3" class="form-control border-input" id="b4_5_3" min="0" value="@if(isset($data[13])){{json_decode($data[13]->data)[1]}}@endif" required>
                                 <small>Jumlah kehadiran (sebagai peserta)</small>
                               </div>
                               <div class="form-group col-md-4">
                                 <label for="n4_5_3">b</label>
-                                <input type="number" min=0 name="n4_5_3" class="form-control border-input" id="n4_5_3" min="0" value="<?php if(!$dataCheck) echo json_decode($data[13]->data)[2] ?>" required>
+                                <input type="number" min=0 name="n4_5_3" class="form-control border-input" id="n4_5_3" min="0" value="@if(isset($data[13])){{json_decode($data[13]->data)[2]}}@endif" required>
                                 <small>Jumlah dosen tetap</small>
                               </div>
                             </div>
@@ -602,11 +602,11 @@
                               <div class="col-md-12">
                                 <select class="form-control border-input" name="n4_5_4" required="">
                                   <option disabled selected >--Pilih--</option>
-                                  <option value="4" <?php if(!$dataCheck){ if (json_decode($data[14]->data)[0] == 4){ echo "selected"; }}?>>Mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari institusi internasional (disertai bukti)</option>
-                                  <option value="3" <?php if(!$dataCheck){ if (json_decode($data[14]->data)[0] == 3){ echo "selected"; }}?>>Mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari institusi nasional (disertai bukti)</option>
-                                  <option value="2" <?php if(!$dataCheck){ if (json_decode($data[14]->data)[0] == 2){ echo "selected"; }}?>>Mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari institusi regional/lokal (disertai bukti)</option>
-                                  <option value="1" <?php if(!$dataCheck){ if (json_decode($data[14]->data)[0] == 1){ echo "selected"; }}?>>Mendapatkan penghargaan, hibah, pendanaan program dan kegiatan akademik yang berupa hibah dana dari PT snediri (disertai bukti)</option>
-                                  <option value="0" <?php if(!$dataCheck){ if (json_decode($data[14]->data)[0] == 0){ echo "selected"; }}?>>Tidak pernah mendapat penghargaan</option>
+                                  <option value="4" @if(isset($data[14])) @if (json_decode($data[14]->data)[0] == 4) {{ "selected" }} @endif @endif>Mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari institusi internasional (disertai bukti)</option>
+                                  <option value="3" @if(isset($data[14])) @if (json_decode($data[14]->data)[0] == 3) {{ "selected" }} @endif @endif>Mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari institusi nasional (disertai bukti)</option>
+                                  <option value="2" @if(isset($data[14])) @if (json_decode($data[14]->data)[0] == 2) {{ "selected" }} @endif @endif>Mendapatkan penghargaan hibah, pendanaan program dan kegiatan akademik dari institusi regional/lokal (disertai bukti)</option>
+                                  <option value="1" @if(isset($data[14])) @if (json_decode($data[14]->data)[0] == 1) {{ "selected" }} @endif @endif>Mendapatkan penghargaan, hibah, pendanaan program dan kegiatan akademik yang berupa hibah dana dari PT snediri (disertai bukti)</option>
+                                  <option value="0" @if(isset($data[14])) @if (json_decode($data[14]->data)[0] == 0) {{ "selected" }} @endif @endif>Tidak pernah mendapat penghargaan</option>
                                 </select>
                               </div>
                             </div>
@@ -656,17 +656,17 @@
                             <div class="row">
                               <div class="form-group col-md-4">
                                 <label for="x1_4_6_1_a">X1</label>
-                                <input type="number" min=0 name="x1_4_6_1_a" class="form-control border-input" id="x1_4_6_1_a" min="0" value="<?php if(!$dataCheck) echo json_decode($data[15]->data)[0] ?>" required>
+                                <input type="number" min=0 name="x1_4_6_1_a" class="form-control border-input" id="x1_4_6_1_a" min="0" value="@if(isset($data[15])){{json_decode($data[15]->data)[0]}}@endif" required>
                                 <small>Jumlah pustakawan yang berpendidikan S2 atau S3</small>
                               </div>
                               <div class="form-group col-md-4">
                                 <label for="x2_4_6_1_a">X2</label>
-                                <input type="number" min=0 name="x2_4_6_1_a" class="form-control border-input" id="x2_4_6_1_a" min="0" value="<?php if(!$dataCheck) echo json_decode($data[15]->data)[1] ?>" required>
+                                <input type="number" min=0 name="x2_4_6_1_a" class="form-control border-input" id="x2_4_6_1_a" min="0" value="@if(isset($data[15])){{json_decode($data[15]->data)[1]}}@endif" required>
                                 <small>Jumlah pustakawan yang berpendidikan D4 atau S1</small>
                               </div>
                               <div class="form-group col-md-4">
                                 <label for="x3_4_6_1_a">X3</label>
-                                <input type="number" min=0 name="x3_4_6_1_a" class="form-control border-input" id="x3_4_6_1_a" min="0" value="<?php if(!$dataCheck) echo json_decode($data[15]->data)[2] ?>" required>
+                                <input type="number" min=0 name="x3_4_6_1_a" class="form-control border-input" id="x3_4_6_1_a" min="0" value="@if(isset($data[15])){{json_decode($data[15]->data)[2]}}@endif" required>
                                 <small>Jumlah pustakawan yang berpendidikan D1, D2, atau D3</small>
                               </div>
                             </div>
@@ -701,22 +701,22 @@
                             <div class="row">
                               <div class="form-group col-md-3">
                                 <label for="x1_4_6_1_c">X1</label>
-                                <input type="number" min=0 name="x1_4_6_1_c" class="form-control border-input" id="x1_4_6_1_c" min="0" value="<?php if(!$dataCheck) echo json_decode($data[16]->data)[0] ?>" required>
+                                <input type="number" min=0 name="x1_4_6_1_c" class="form-control border-input" id="x1_4_6_1_c" min="0" value="@if(isset($data[16])){{json_decode($data[16]->data)[0]}}@endif" required>
                                 <small>Jumlah tenaga administrasi yang berpendidikan D4 atau S1 ke atas</small>
                               </div>
                               <div class="form-group col-md-3">
                                 <label for="x2_4_6_1_c">X2</label>
-                                <input type="number" min=0 name="x2_4_6_1_c" class="form-control border-input" id="x2_4_6_1_c" min="0" value="<?php if(!$dataCheck) echo json_decode($data[16]->data)[1] ?>" required>
+                                <input type="number" min=0 name="x2_4_6_1_c" class="form-control border-input" id="x2_4_6_1_c" min="0" value="@if(isset($data[16])){{json_decode($data[16]->data)[1]}}@endif" required>
                                 <small>Jumlah tenaga administrasi yang berpendidikan D3</small>
                               </div>
                               <div class="form-group col-md-3">
                                 <label for="x3_4_6_1_c">X3</label>
-                                <input type="number" min=0 name="x3_4_6_1_c" class="form-control border-input" id="x3_4_6_1_c" min="0" value="<?php if(!$dataCheck) echo json_decode($data[16]->data)[2] ?>" required>
+                                <input type="number" min=0 name="x3_4_6_1_c" class="form-control border-input" id="x3_4_6_1_c" min="0" value="@if(isset($data[16])){{json_decode($data[16]->data)[2]}}@endif" required>
                                 <small>Jumlah tenaga administrasi yang berpendidikan D1 atau D2</small>
                               </div>
                               <div class="form-group col-md-3">
                                 <label for="x4_4_6_1_c">X4</label>
-                                <input type="number" min=0 name="x4_4_6_1_c" class="form-control border-input" id="x4_4_6_1_c" min="0" value="<?php if(!$dataCheck) echo json_decode($data[16]->data)[3] ?>" required>
+                                <input type="number" min=0 name="x4_4_6_1_c" class="form-control border-input" id="x4_4_6_1_c" min="0" value="@if(isset($data[16])){{json_decode($data[16]->data)[3]}}@endif" required>
                                 <small>Jumlah tenaga adminstirasi yang berpendidikan SMU / SMK</small>
                               </div>
                             </div>

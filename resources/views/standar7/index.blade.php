@@ -22,22 +22,22 @@
                                  <div class="row">
                                    <div class="form-group col-md-3">
                                      <label for="7_1_1_na">Na</label>
-                                     <input type="number" min=0 name="na7_1_1" class="form-control border-input" id="7_1_1_na" min="0" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[0] ?>" required>
+                                     <input type="number" min=0 name="na7_1_1" class="form-control border-input" id="7_1_1_na" min="0" value="@if(isset($data[0])){{json_decode($data[0]->data)[0]}}@endif" required>
                                      <small>Jumlah penelitian dnegan biaya luar negeri yang sesuai bidang ilmu</small>
                                    </div>
                                    <div class="form-group col-md-3">
                                      <label for="7_1_1_nb">Nb</label>
-                                     <input type="number" min=0 name="nb7_1_1" class="form-control border-input" id="7_1_1_nb" min="0" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[1] ?>" required>
+                                     <input type="number" min=0 name="nb7_1_1" class="form-control border-input" id="7_1_1_nb" min="0" value="@if(isset($data[0])){{json_decode($data[0]->data)[1]}}@endif" required>
                                      <small>Jumlah penelitian dengna biaya luar yang sesuai bidang ilmu</small>
                                    </div>
                                    <div class="form-group col-md-3">
                                      <label for="7_1_1_nc">Nc</label>
-                                     <input type="number" min=0 name="nc7_1_1" class="form-control border-input" id="7_1_1_nc" min="0" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[2] ?>" required>
+                                     <input type="number" min=0 name="nc7_1_1" class="form-control border-input" id="7_1_1_nc" min="0" value="@if(isset($data[0])){{json_decode($data[0]->data)[2]}}@endif" required>
                                      <small>Jumlah penelitian dengna biaya dari PT/sendiri yang sesuai bidang ilmu</small>
                                    </div>
                                    <div class="form-group col-md-3">
                                      <label for="7_1_1_f">F</label>
-                                     <input type="number" min=0 name="f7_1_1" class="form-control border-input" id="7_1_1_f" min="1" value="<?php if(!$dataCheck) echo json_decode($data[0]->data)[3] ?>" required>
+                                     <input type="number" min=0 name="f7_1_1" class="form-control border-input" id="7_1_1_f" min="1" value="@if(isset($data[0])){{json_decode($data[0]->data)[3]}}@endif" required>
                                      <small>Jumlah dosen tetap yang bidang keahliannya sesuai dengna PS</small>
                                    </div>
                                  </div>
@@ -62,7 +62,7 @@
                                 <div class="row">
                                   <div class="form-group col-md-12 form-inline">
                                     <label for="pd">PD</label>
-                                    <input class="form-control border-input" type="number" name="pd7_1_2" min="0" value="<?php if(!$dataCheck) echo json_decode($data[1]->data)[0] ?>" required>
+                                    <input class="form-control border-input" type="number" name="pd7_1_2" min="0" value="@if(isset($data[1])){{json_decode($data[1]->data)[0]}}@endif" required>
                                     <span>%</span>
                                     <small>Persentasi mahasiswa yang melakukan tugas akhir dalam penelitian dosen</small>
                                   </div>
@@ -91,22 +91,22 @@
                                 <div class="row">
                                   <div class="form-group col-md-3">
                                     <label for="7_1_3_na">Na</label>
-                                    <input type="number" min=0 name="na7_1_3" class="form-control border-input" id="7_1_3_na" min="0" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[0] ?>" required>
+                                    <input type="number" min=0 name="na7_1_3" class="form-control border-input" id="7_1_3_na" min="0" value="@if(isset($data[2])){{json_decode($data[2]->data)[0]}}@endif" required>
                                     <small>Jumlah penelitian dnegan biaya luar negeri yang sesuai bidang ilmu</small>
                                   </div>
                                   <div class="form-group col-md-3">
                                     <label for="7_1_3_nb">Nb</label>
-                                    <input type="number" min=0 name="nb7_1_3" class="form-control border-input" id="7_1_3_nb" min="0" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[1] ?>" required>
+                                    <input type="number" min=0 name="nb7_1_3" class="form-control border-input" id="7_1_3_nb" min="0" value="@if(isset($data[2])){{json_decode($data[2]->data)[1]}}@endif" required>
                                     <small>Jumlah penelitian dengna biaya luar yang sesuai bidang ilmu</small>
                                   </div>
                                   <div class="form-group col-md-3">
                                     <label for="7_1_3_nc">Nc</label>
-                                    <input type="number" min=0 name="nc7_1_3" class="form-control border-input" id="7_1_3_nc" min="0" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[2] ?>" required>
+                                    <input type="number" min=0 name="nc7_1_3" class="form-control border-input" id="7_1_3_nc" min="0" value="@if(isset($data[2])){{json_decode($data[2]->data)[2]}}@endif" required>
                                     <small>Jumlah penelitian dengna biaya dari PT/sendiri yang sesuai bidang ilmu</small>
                                   </div>
                                   <div class="form-group col-md-3">
                                     <label for="7_1_3_f">F</label>
-                                    <input type="number" min=0 name="f7_1_3" class="form-control border-input" id="7_1_3_f" min="1" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[3] ?>" required>
+                                    <input type="number" min=0 name="f7_1_3" class="form-control border-input" id="7_1_3_f" min="1" value="@if(isset($data[2])){{json_decode($data[2]->data)[3]}}@endif" required>
                                     <small>Jumlah dosen tetap yang bidang keahliannya sesuai dengna PS</small>
                                   </div>
                                 </div>
@@ -134,13 +134,13 @@
                                   <div class="col-md-12">
                                     <select name="n7_1_4" id="" class="form-control border-input" required="">
                                         <option disabled selected >--Pilih--</option>
-                                        <option value="2" <?php if(!$dataCheck){ if (json_decode($data[3]->data)[0] == 2){ echo "selected"; }}?>>
+                                        <option value="2" @if(!$dataCheck) @if(json_decode($data[3]->data)[0] == 2) {{"selected" }}@endif @endif>
                                           Tidak ada karya dosen tetap yang memperoleh HaKI
                                         </option>
-                                        <option value="3" <?php if(!$dataCheck){ if (json_decode($data[3]->data)[0] == 3){ echo "selected"; }}?>>
+                                        <option value="3" @if(!$dataCheck) @if(json_decode($data[3]->data)[0] == 3) {{"selected" }}@endif @endif>
                                           Satu yang memperoleh HaKI
                                         </option>
-                                        <option value="4" <?php if(!$dataCheck){ if (json_decode($data[3]->data)[0] == 4){ echo "selected"; }}?>>
+                                        <option value="4" @if(!$dataCheck) @if(json_decode($data[3]->data)[0] == 4) {{"selected" }}@endif @endif>
                                           Dua atau lebih karya yang memperoleh HaKI
                                         </option>
                                     </select>
@@ -169,22 +169,22 @@
                                 <div class="row">
                                   <div class="form-group col-md-3">
                                     <label for="7_2_1_na">Na</label>
-                                    <input type="number" min=0 name="na7_2_1" class="form-control border-input" id="7_2_1_na" min="0" value="<?php if(!$dataCheck) echo json_decode($data[4]->data)[0] ?>" required>
+                                    <input type="number" min=0 name="na7_2_1" class="form-control border-input" id="7_2_1_na" min="0" value="@if(isset($data[4])){{json_decode($data[4]->data)[0]}}@endif" required>
                                     <small>Jumlah kegiatan PkM dengan biaya luar negeri yang sesuai bidang ilmu</small>
                                   </div>
                                   <div class="form-group col-md-3">
                                     <label for="7_2_1_nb">Nb</label>
-                                    <input type="number" min=0 name="nb7_2_1" class="form-control border-input" id="7_2_1_nb" min="0" value="<?php if(!$dataCheck) echo json_decode($data[4]->data)[1] ?>" required>
+                                    <input type="number" min=0 name="nb7_2_1" class="form-control border-input" id="7_2_1_nb" min="0" value="@if(isset($data[4])){{json_decode($data[4]->data)[1]}}@endif" required>
                                     <small>Jumlah kegiatan PkM dengna biaya luar yang sesuai bidang ilmu</small>
                                   </div>
                                   <div class="form-group col-md-3">
                                     <label for="7_2_1_nc">Nc</label>
-                                    <input type="number" min=0 name="nc7_2_1" class="form-control border-input" id="7_2_1_nc" min="0" value="<?php if(!$dataCheck) echo json_decode($data[4]->data)[2] ?>" required>
+                                    <input type="number" min=0 name="nc7_2_1" class="form-control border-input" id="7_2_1_nc" min="0" value="@if(isset($data[4])){{json_decode($data[4]->data)[2]}}@endif" required>
                                     <small>Jumlah kegiatan PkM dengan biaya dari PT/sendiri yang sesuai bidang ilmu</small>
                                   </div>
                                   <div class="form-group col-md-3">
                                     <label for="7_2_1_f">F</label>
-                                    <input type="number" min=0 name="f7_2_1" class="form-control border-input" id="7_2_1_f" min="1" value="<?php if(!$dataCheck) echo json_decode($data[4]->data)[3] ?>" required>
+                                    <input type="number" min=0 name="f7_2_1" class="form-control border-input" id="7_2_1_f" min="1" value="@if(isset($data[4])){{json_decode($data[4]->data)[3]}}@endif" required>
                                     <small>Jumlah dosen tetap yang bidang keahliannya sesuai dengan PS</small>
                                   </div>
                                 </div>

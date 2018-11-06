@@ -26,11 +26,11 @@
                               <div class="col-md-8">
                                 <select name="standar5_1_1_1_a" id="" class="form-control border-input" required="">
                                   <option disabled selected >--Pilih--</option>
-                                  <option value="0" <?php if(!$dataCheck){ if (json_decode($data[0]->data)[0] == 0){ echo "selected"; }}?>>Kurikulum tidak memuat kompetensi lulusan secara lengkap</option>
-                                  <option value="1" <?php if(!$dataCheck){ if (json_decode($data[0]->data)[0] == 1){ echo "selected"; }}?>>Kurikulum memuat kompetensi lulusan secara lengkap (utama, pendukung, lainnya), namun rumusannya kurang jelas</option>
-                                  <option value="2" <?php if(!$dataCheck){ if (json_decode($data[0]->data)[0] == 2){ echo "selected"; }}?>>Kurikulum memuat kompetensi lulusan secara lengkap (utama, pendukung, lainnya) yang terumuskan secara cukup jelas</option>
-                                  <option value="3" <?php if(!$dataCheck){ if (json_decode($data[0]->data)[0] == 3){ echo "selected"; }}?>>Kurikulum memuat kompetensi lulusan secara lengkap (utama, pendukung, lainnya) yang terumuskan secara jelas</option>
-                                  <option value="4" <?php if(!$dataCheck){ if (json_decode($data[0]->data)[0] == 4){ echo "selected"; }}?>>kurikulum memuat kompetensi lulusan secara lengkap (utama, pendukung, lainnya) yang terumuskan secara sangat jelas</option>
+                                  <option value="0" @if(isset($data[0]))@if(json_decode($data[0]->data)[0] == 0){{ "selected" }}@endif @endif>Kurikulum tidak memuat kompetensi lulusan secara lengkap</option>
+                                  <option value="1" @if(isset($data[0]))@if(json_decode($data[0]->data)[0] == 1){{ "selected" }}@endif @endif>Kurikulum memuat kompetensi lulusan secara lengkap (utama, pendukung, lainnya), namun rumusannya kurang jelas</option>
+                                  <option value="2" @if(isset($data[0]))@if(json_decode($data[0]->data)[0] == 2){{ "selected" }}@endif @endif>Kurikulum memuat kompetensi lulusan secara lengkap (utama, pendukung, lainnya) yang terumuskan secara cukup jelas</option>
+                                  <option value="3" @if(isset($data[0]))@if(json_decode($data[0]->data)[0] == 3){{ "selected" }}@endif @endif>Kurikulum memuat kompetensi lulusan secara lengkap (utama, pendukung, lainnya) yang terumuskan secara jelas</option>
+                                  <option value="4" @if(isset($data[0]))@if(json_decode($data[0]->data)[0] == 4){{ "selected" }}@endif @endif>kurikulum memuat kompetensi lulusan secara lengkap (utama, pendukung, lainnya) yang terumuskan secara sangat jelas</option>
                                 </select>
                               </div>
                             </div>
@@ -61,11 +61,11 @@
                               <div class="col-md-8">
                                 <select name="standar5_1_2_b" id="" class="form-control border-input" required="">
                                 <option disabled selected >--Pilih--</option>
-                                  <option value="0" <?php if(!$dataCheck){ if (json_decode($data[1]->data)[0] == 0){ echo "selected"; }}?>>Tidak sesuai dengan visi - misi serta tidak jelas orientasinya atau Tidak memuat standar kompetensi</option>
-                                  <option value="1" <?php if(!$dataCheck){ if (json_decode($data[1]->data)[0] == 1){ echo "selected"; }}?>>Tidak sesuai dengan visi - misi</option>
-                                  <option value="2" <?php if(!$dataCheck){ if (json_decode($data[1]->data)[0] == 2){ echo "selected"; }}?>>Sesuai dengan visi - misi, tetapi masih beroreintasi ke masa lalu</option>
-                                  <option value="3" <?php if(!$dataCheck){ if (json_decode($data[1]->data)[0] == 3){ echo "selected"; }}?>>Sesuai dengan visi - misi, berorientasi ke masa kini</option>
-                                  <option value="4" <?php if(!$dataCheck){ if (json_decode($data[1]->data)[0] == 4){ echo "selected"; }}?>>Sesuai dengan visi - misi, sudah berorientasi ke masa depan</option>
+                                  <option value="0" @if(isset($data[1]))@if(json_decode($data[1]->data)[0] == 0){{ "selected" }}@endif @endif>Tidak sesuai dengan visi - misi serta tidak jelas orientasinya atau Tidak memuat standar kompetensi</option>
+                                  <option value="1" @if(isset($data[1]))@if(json_decode($data[1]->data)[0] == 1){{ "selected" }}@endif @endif>Tidak sesuai dengan visi - misi</option>
+                                  <option value="2" @if(isset($data[1]))@if(json_decode($data[1]->data)[0] == 2){{ "selected" }}@endif @endif>Sesuai dengan visi - misi, tetapi masih beroreintasi ke masa lalu</option>
+                                  <option value="3" @if(isset($data[1]))@if(json_decode($data[1]->data)[0] == 3){{ "selected" }}@endif @endif>Sesuai dengan visi - misi, berorientasi ke masa kini</option>
+                                  <option value="4" @if(isset($data[1]))@if(json_decode($data[1]->data)[0] == 4){{ "selected" }}@endif @endif>Sesuai dengan visi - misi, sudah berorientasi ke masa depan</option>
                                 </select>
                               </div>
                             </div>
@@ -93,7 +93,7 @@
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <!-- <label for="pdmk">PDMK</label> -->
-                                <input class="form-control border-input" type="number" min=0 name="pdmk5_1_2_c" value="<?php if(!$dataCheck) echo json_decode($data[2]->data)[0] ?>" required="">
+                                <input class="form-control border-input" type="number" min=0 name="pdmk5_1_2_c" value="@if(isset($data[2])){{ json_decode($data[2]->data)[0] }}@endif" required="">
                                 <span>%</span>
                                 <small>mata kuliah yang memiliki deskripsi, silabus dan SAP</small>
                               </div>
@@ -131,10 +131,10 @@
                               <div class="col-md-8">
                                   <select name="standar5_1_3_a" id="" class="form-control border-input" required="">
                                       <option disabled selected >--Pilih--</option>
-                                      <option value="1" <?php if(!$dataCheck){ if (json_decode($data[3]->data)[0] == 1){ echo "selected"; }}?>>Tidak ada monitoring</option>
-                                      <option value="2" <?php if(!$dataCheck){ if (json_decode($data[3]->data)[0] == 2){ echo "selected"; }}?>>Ada monitoring tetapi tidak ada evaluasi</option>
-                                      <option value="3" <?php if(!$dataCheck){ if (json_decode($data[3]->data)[0] == 3){ echo "selected"; }}?>>Ada monitoring, evaluasi tidak kontinu</option>
-                                      <option value="4" <?php if(!$dataCheck){ if (json_decode($data[3]->data)[0] == 4){ echo "selected"; }}?>>Ada monitoring dan evaluasi secara kontinu</option>
+                                      <option value="1" @if(isset($data[3]))@if(json_decode($data[3]->data)[0] == 1){{ "selected" }}@endif @endif>Tidak ada monitoring</option>
+                                      <option value="2" @if(isset($data[3]))@if(json_decode($data[3]->data)[0] == 2){{ "selected" }}@endif @endif>Ada monitoring tetapi tidak ada evaluasi</option>
+                                      <option value="3" @if(isset($data[3]))@if(json_decode($data[3]->data)[0] == 3){{ "selected" }}@endif @endif>Ada monitoring, evaluasi tidak kontinu</option>
+                                      <option value="4" @if(isset($data[3]))@if(json_decode($data[3]->data)[0] == 4){{ "selected" }}@endif @endif>Ada monitoring dan evaluasi secara kontinu</option>
                                   </select>
                               </div>
 
@@ -180,11 +180,11 @@
                                <div class="col-md-8">
                                    <select name="standar5_3_2" id="" class="form-control border-input" required="">
                                       <option disabled selected >--Pilih--</option>
-                                       <option value="0" <?php if(!$dataCheck){ if (json_decode($data[4]->data)[0] == 0){ echo "selected"; }}?>>Semua soal ujian tidak bermutu atau tidak sesuai dengan GBPP/SAP</option>
-                                       <option value="1" <?php if(!$dataCheck){ if (json_decode($data[4]->data)[0] == 1){ echo "selected"; }}?>>Hanya satu contoh soal ujian yang mutunya baik, dan sesuai denganGBPP/SAP</option>
-                                       <option value="2" <?php if(!$dataCheck){ if (json_decode($data[4]->data)[0] == 2){ echo "selected"; }}?>>Dua s.d. tiga contoh soal ujian yang mutunya baik, dansesuai dengan GBPP/SAP</option>
-                                       <option value="3" <?php if(!$dataCheck){ if (json_decode($data[4]->data)[0] == 3){ echo "selected"; }}?>>Empat dari lima contoh soal ujian yang mutunya baik, dan sesuai denganGBPP/SAP</option>
-                                       <option value="4" <?php if(!$dataCheck){ if (json_decode($data[4]->data)[0] == 4){ echo "selected"; }}?>>Mutu soal ujian untuk lima matakuliah yang diberkan semuanyabermutu baik, dan sesuai dengan GBPP/</option>
+                                       <option value="0" @if(isset($data[4]))@if(json_decode($data[4]->data)[0] == 0){{ "selected" }}@endif @endif>Semua soal ujian tidak bermutu atau tidak sesuai dengan GBPP/SAP</option>
+                                       <option value="1" @if(isset($data[4]))@if(json_decode($data[4]->data)[0] == 1){{ "selected" }}@endif @endif>Hanya satu contoh soal ujian yang mutunya baik, dan sesuai denganGBPP/SAP</option>
+                                       <option value="2" @if(isset($data[4]))@if(json_decode($data[4]->data)[0] == 2){{ "selected" }}@endif @endif>Dua s.d. tiga contoh soal ujian yang mutunya baik, dansesuai dengan GBPP/SAP</option>
+                                       <option value="3" @if(isset($data[4]))@if(json_decode($data[4]->data)[0] == 3){{ "selected" }}@endif @endif>Empat dari lima contoh soal ujian yang mutunya baik, dan sesuai denganGBPP/SAP</option>
+                                       <option value="4" @if(isset($data[4]))@if(json_decode($data[4]->data)[0] == 4){{ "selected" }}@endif @endif>Mutu soal ujian untuk lima matakuliah yang diberkan semuanyabermutu baik, dan sesuai dengan GBPP/</option>
                                    </select>
                                </div>
                              </div>
@@ -214,7 +214,7 @@
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
                                 <!-- <label for="rmpa">RMPA</label> -->
-                                <input class="form-control border-input" type="number" name="rmpa5_4_1_a" value="<?php if(!$dataCheck) echo json_decode($data[5]->data)[0] ?>" required="">
+                                <input class="form-control border-input" type="number" name="rmpa5_4_1_a" value="@if(isset($data[5])){{ json_decode($data[5]->data)[0] }}@endif" required="">
                                 <small>Pertemuan</small>
                               </div>
                             </div>
@@ -243,7 +243,7 @@
                             </div>
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
-                                <input type="number" min=0 name="pp5_4_1_c"class="form-control border-input" id="5_4_1_c_pp" value="<?php if(!$dataCheck) echo json_decode($data[6]->data)[0] ?>" required="">
+                                <input type="number" min=0 name="pp5_4_1_c"class="form-control border-input" id="5_4_1_c_pp" value="@if(isset($data[6])){{ json_decode($data[6]->data)[0] }}@endif" required="">
                                 <small>Pertemuan</small>
                               </div>
                             </div>
@@ -275,11 +275,11 @@
                                 <div class="col-md-8">
                                     <select name="standar5_4_2" id="" class="form-control border-input" required="">
                                       <option disabled selected >--Pilih--</option>
-                                      <option value="0" <?php if(!$dataCheck){ if (json_decode($data[7]->data)[0] == 0){ echo "selected"; }}?>>Sistem bantuan dan bimbingan akademik tidak jalan, atau tidak ada bimbingan</option>
-                                      <option value="1" <?php if(!$dataCheck){ if (json_decode($data[7]->data)[0] == 1){ echo "selected"; }}?>>Sistem bantuan dan bimbingan akademik tidak efektif</option>
-                                      <option value="2" <?php if(!$dataCheck){ if (json_decode($data[7]->data)[0] == 2){ echo "selected"; }}?>>Sistem bantuan dan bimbingan akademik cukup efektif</option>
-                                      <option value="3" <?php if(!$dataCheck){ if (json_decode($data[7]->data)[0] == 3){ echo "selected"; }}?>>Simtem bimbingan akademik efektif</option>
-                                      <option value="4" <?php if(!$dataCheck){ if (json_decode($data[7]->data)[0] == 4){ echo "selected"; }}?>>Sistem bimbingan akademik sangat efektif</option>
+                                      <option value="0" @if(isset($data[7]))@if(json_decode($data[7]->data)[0] == 0){{ "selected" }}@endif @endif>Sistem bantuan dan bimbingan akademik tidak jalan, atau tidak ada bimbingan</option>
+                                      <option value="1" @if(isset($data[7]))@if(json_decode($data[7]->data)[0] == 1){{ "selected" }}@endif @endif>Sistem bantuan dan bimbingan akademik tidak efektif</option>
+                                      <option value="2" @if(isset($data[7]))@if(json_decode($data[7]->data)[0] == 2){{ "selected" }}@endif @endif>Sistem bantuan dan bimbingan akademik cukup efektif</option>
+                                      <option value="3" @if(isset($data[7]))@if(json_decode($data[7]->data)[0] == 3){{ "selected" }}@endif @endif>Simtem bimbingan akademik efektif</option>
+                                      <option value="4" @if(isset($data[7]))@if(json_decode($data[7]->data)[0] == 4){{ "selected" }}@endif @endif>Sistem bimbingan akademik sangat efektif</option>
                                     </select>
                               </div>
                               </div>
@@ -308,7 +308,7 @@
 
                             <div class="row">
                               <div class="form-group col-md-12 form-inline">
-                                <input type="number" min=0 name="rmta5_5_1_b"class="form-control border-input" id="5_5_1_b_rmta" value="<?php if(!$dataCheck) echo json_decode($data[8]->data)[0] ?>" required="">
+                                <input type="number" min=0 name="rmta5_5_1_b"class="form-control border-input" id="5_5_1_b_rmta" value="@if(isset($data[8])){{ json_decode($data[8]->data)[0] }}@endif" required="">
                                 <small>Pertemuan </small>
                               </div>
                             </div>
@@ -329,7 +329,7 @@
 
                               <div class="row">
                                 <div class="form-group col-md-12 form-inline">
-                                  <input type="number" min=0 name="rbta5_5_1_c"class="form-control border-input" id="5_5_1_c_rbta" value="<?php if(!$dataCheck) echo json_decode($data[9]->data)[0] ?>" required="">
+                                  <input type="number" min=0 name="rbta5_5_1_c"class="form-control border-input" id="5_5_1_c_rbta" value="@if(isset($data[9])){{ json_decode($data[9]->data)[0] }}@endif" required="">
                                   <small>Pertemuan </small>
                                 </div>
                               </div>
@@ -354,12 +354,12 @@
                               <div class="row">
                                       <div class="col-md-8 ">
                                           <select name="standar5_5_2" id="" class="form-control border-input" required="">
-                                                  <option value="0" <?php if(!$dataCheck){ if (json_decode($data[10]->data)[0] == 0){ echo "selected"; }}?>>Struktur kurikulum tugas akhir dijadwalkan selesai dalam satu semester</option>
-                                                  <option value="1" <?php if(!$dataCheck){ if (json_decode($data[10]->data)[0] == 1){ echo "selected"; }}?>>Struktur kurikulum tugas akhir dijadwalkan selesai dalam dua semester</option>
+                                                  <option value="0" @if(isset($data[10]))@if(json_decode($data[10]->data)[0] == 0){{ "selected" }}@endif @endif>Struktur kurikulum tugas akhir dijadwalkan selesai dalam satu semester</option>
+                                                  <option value="1" @if(isset($data[10]))@if(json_decode($data[10]->data)[0] == 1){{ "selected" }}@endif @endif>Struktur kurikulum tugas akhir dijadwalkan selesai dalam dua semester</option>
                                           </select>
                                       </div>
                                       <div class="form-grpu col-md-4 form-inline">
-                                        <input class="form-control border-input" type="number" name="rpta5_5_2" id="5_5_2_rpta" value="<?php if(!$dataCheck) echo json_decode($data[10]->data)[1] ?>" required="" min=1 step="1">
+                                        <input class="form-control border-input" type="number" name="rpta5_5_2" id="5_5_2_rpta" value="@if(isset($data[10])){{ json_decode($data[10]->data)[1] }}@endif" required="" min=1 step="1">
                                         <small>Bulan penyelesaian</small>
                                       </div>
                             </div>
@@ -391,10 +391,10 @@
                                 <div class="col-md-8">
                                     <select name="standar5_7_2" id="" class="form-control border-input" required="">
                                         <option disabled selected >--Pilih--</option>
-                                        <option value="1" <?php if(!$dataCheck){ if (json_decode($data[11]->data)[0] == 1){ echo "selected"; }}?>>Prasarana utama masih kurang, demikian pula dengan dukungan dana.</option>
-                                        <option value="2" <?php if(!$dataCheck){ if (json_decode($data[11]->data)[0] == 2){ echo "selected"; }}?>>Tersedia, cukup lengkap, milik sendiri atau sewa, dan dana yang cukup memadai.</option>
-                                        <option value="3" <?php if(!$dataCheck){ if (json_decode($data[11]->data)[0] == 3){ echo "selected"; }}?>>Tersedia, milik sendiri, lengkap, dan dana yang memadai</option>
-                                        <option value="4" <?php if(!$dataCheck){ if (json_decode($data[11]->data)[0] == 4){ echo "selected"; }}?>>Tersedia, milik sendiri, sangat lengkap dan dana yang sangat memadai</option>
+                                        <option value="1" @if(isset($data[11]))@if(json_decode($data[11]->data)[0] == 1){{ "selected" }}@endif @endif>Prasarana utama masih kurang, demikian pula dengan dukungan dana.</option>
+                                        <option value="2" @if(isset($data[11]))@if(json_decode($data[11]->data)[0] == 2){{ "selected" }}@endif @endif>Tersedia, cukup lengkap, milik sendiri atau sewa, dan dana yang cukup memadai.</option>
+                                        <option value="3" @if(isset($data[11]))@if(json_decode($data[11]->data)[0] == 3){{ "selected" }}@endif @endif>Tersedia, milik sendiri, lengkap, dan dana yang memadai</option>
+                                        <option value="4" @if(isset($data[11]))@if(json_decode($data[11]->data)[0] == 4){{ "selected" }}@endif @endif>Tersedia, milik sendiri, sangat lengkap dan dana yang sangat memadai</option>
                                     </select>
                                 </div>
                               </div>
@@ -429,10 +429,10 @@
                                 <div class="col-md-8">
                                   <select name="standar5_7_3" id="" class="form-control border-input" required="">
                                     <option disabled selected >--Pilih--</option>
-                                    <option value="1" <?php if(!$dataCheck){ if (json_decode($data[12]->data)[0] == 1){ echo "selected"; }}?>>Kegiatan ilmiah yang terjadwal dilaksanakan lebih dari enam bulan sekali</option>
-                                    <option value="2" <?php if(!$dataCheck){ if (json_decode($data[12]->data)[0] == 2){ echo "selected"; }}?>>Kegiatan ilmiah yang terjadwal dilaksanakan empat s.d. enam bulan sekali</option>
-                                    <option value="3" <?php if(!$dataCheck){ if (json_decode($data[12]->data)[0] == 3){ echo "selected"; }}?>>Kegiatan ilmiah yang terjadwal dilaksanakan dua s.d tiga bulan sekali</option>
-                                    <option value="4" <?php if(!$dataCheck){ if (json_decode($data[12]->data)[0] == 4){ echo "selected"; }}?>>Kegiatan ilmiah yang terjadwal dilaksanakan setiap bulan</option>
+                                    <option value="1" @if(isset($data[12]))@if(json_decode($data[12]->data)[0] == 1){{ "selected" }}@endif @endif>Kegiatan ilmiah yang terjadwal dilaksanakan lebih dari enam bulan sekali</option>
+                                    <option value="2" @if(isset($data[12]))@if(json_decode($data[12]->data)[0] == 2){{ "selected" }}@endif @endif>Kegiatan ilmiah yang terjadwal dilaksanakan empat s.d. enam bulan sekali</option>
+                                    <option value="3" @if(isset($data[12]))@if(json_decode($data[12]->data)[0] == 3){{ "selected" }}@endif @endif>Kegiatan ilmiah yang terjadwal dilaksanakan dua s.d tiga bulan sekali</option>
+                                    <option value="4" @if(isset($data[12]))@if(json_decode($data[12]->data)[0] == 4){{ "selected" }}@endif @endif>Kegiatan ilmiah yang terjadwal dilaksanakan setiap bulan</option>
                                   </select>
                                 </div>
                             </div>
@@ -464,10 +464,10 @@
                             <div class="col-md-8">
                               <select name="standar5_7_5" id="" class="form-control border-input" required="">
                                 <option disabled selected >--Pilih--</option>
-                                <option value="1" <?php if(!$dataCheck){ if (json_decode($data[13]->data)[0] == 1){ echo "selected"; }}?>>Kegiatan yang dilakukan tidak menunjang pengembangan perilaku kecendekiawanan</option>
-                                <option value="2" <?php if(!$dataCheck){ if (json_decode($data[13]->data)[0] == 2){ echo "selected"; }}?>>Kegiatan yang dilakukan cukup menunjang pengembangan perilaku kecendekiawanan</option>
-                                <option value="3" <?php if(!$dataCheck){ if (json_decode($data[13]->data)[0] == 3){ echo "selected"; }}?>>Kegiatan yang dilakukan menunjang pengembangan perilaku kecendekiawan</option>
-                                <option value="4" <?php if(!$dataCheck){ if (json_decode($data[13]->data)[0] == 4){ echo "selected"; }}?>>Kegiatan yang dilakukan sangat menunjang pengembangan perilaku kecendekiawan</option>
+                                <option value="1" @if(isset($data[13]))@if(json_decode($data[13]->data)[0] == 1){{ "selected" }}@endif @endif>Kegiatan yang dilakukan tidak menunjang pengembangan perilaku kecendekiawanan</option>
+                                <option value="2" @if(isset($data[13]))@if(json_decode($data[13]->data)[0] == 2){{ "selected" }}@endif @endif>Kegiatan yang dilakukan cukup menunjang pengembangan perilaku kecendekiawanan</option>
+                                <option value="3" @if(isset($data[13]))@if(json_decode($data[13]->data)[0] == 3){{ "selected" }}@endif @endif>Kegiatan yang dilakukan menunjang pengembangan perilaku kecendekiawan</option>
+                                <option value="4" @if(isset($data[13]))@if(json_decode($data[13]->data)[0] == 4){{ "selected" }}@endif @endif>Kegiatan yang dilakukan sangat menunjang pengembangan perilaku kecendekiawan</option>
                               </select>
                             </div>
                           </div>

@@ -77,7 +77,7 @@
                                   
                             </li>
                             <li>
-                                  <a href="{{ url('/servicelogout') }}" >
+                                  <a href="{{ url('/logout') }}" >
                                         <i class="ti-power-off"></i>
                                         <p>Logout</p>
                                   </a>

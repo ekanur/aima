@@ -10,10 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/servicecheck','SecurityController@check');
-Route::get('/servicelogout','SecurityController@logout');
+Route::get('/error','Controller@error');
+Route::get('/logout','Controller@logout');
 
- Route::group(['middleware' => 'auth_josso'], function() {
+
+Route::group(['middleware' => 'samlauth'], function() {
+  // dd(session("tipe"));
   Route::group(['middleware' => 'cekKoordinator'], function() {
     Route::get('/', "Standar1Controller@index");
     Route::get("/standar1", "Standar1Controller@index");

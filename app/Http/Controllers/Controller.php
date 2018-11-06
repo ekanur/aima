@@ -8,6 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Session;
 use App\Prodi;
+use Saml2;
 
 class Controller extends BaseController
 {
@@ -50,5 +51,14 @@ class Controller extends BaseController
     	Session::put('id_prodi', $id_prodi);
 
     	return redirect()->back();
+    }
+
+    public function error(){
+        dd(session('saml2_error_detail'));
+    }
+
+    public function logout()
+    {
+        return Saml2::logout();
     }
 }

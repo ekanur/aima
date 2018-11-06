@@ -15,7 +15,7 @@ class Standar1Controller extends Controller
 
   }
   public function index(){
-    // dd(session('id_prodi'));
+    // dd(session("tipe"));
     $standar1 = Standar1::where("id_prodi", session('id_prodi'))->whereYear("created_at", '=', date("Y"))->get();
     $data=array();
     foreach ($standar1 as $data_standar1) {
