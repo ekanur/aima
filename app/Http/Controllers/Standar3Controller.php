@@ -177,9 +177,9 @@ class Standar3Controller extends Controller
         $skor3_3_1_b = $kategori3_3_1_b;
 
         //PERHITUNGAN 3.3.1.c
-        $na=((4*$in->a3_3_1_c)+(3*$in->b3_3_1_c)+(2*$in->c3_3_1_c)+$in->d3_3_1_c)/7;
+        $na=(((4*$in->a3_3_1_c)+(3*$in->b3_3_1_c)+(2*$in->c3_3_1_c)+($in->d3_3_1_c))/7)/100;
         $kategori3_3_1_c=$na;
-        $kategori3_3_1_c = intval(round($kategori3_3_1_c));
+        // $kategori3_3_1_c = intval(round($kategori3_3_1_c));
         $data3_3_1_c = '['.$in->a3_3_1_c.', '.$in->b3_3_1_c.', '.$in->c3_3_1_c.', '.$in->d3_3_1_c.']';
         $skor3_3_1_c = $na;
 

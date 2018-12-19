@@ -35,36 +35,34 @@ class SamlLoginListener
 
         
         $koordinator = KProdi::where("nip","=", $userData["username"][0])->get();
-            $prodi = array();
-
-            foreach ($koordinator as $kprodi) {
-                $prodi[]=$kprodi->pro_kd;
-            }
-                    // dd($prodi);
 
             $dosen = DB::connection("pgsql_3")->table("m_dosen")->join("m_prodi", "m_dosen.pro_kd", "=", "m_prodi.pro_kd")->select("m_prodi.pro_kd", "m_prodi.pro_nm", "m_prodi.jjg_kd")->where("m_dosen.dsn_nip", "=", $userData["username"][0])->get();
-            $auditor = Auditor::where("nip", "=", $userData["username"][0])->first();
+            $auditor = Auditor::where("nip", "=", $userData["username"][0])->get();
 
+                if(sizeof($auditor)>0){
+                    // $request->merge(array("role"=>"auditor","nip" =>$userData["username"][0]));
+                    session(["role"=>"auditor"]);
+                    // session("nip", $userData["username"][0]);
+                    session(["auditor_id" => $auditor[0]->id]);
+                            // session("id_jurusan", );
+                }elseif(sizeof($koordinator)>0){
+                    // $request->merge(array("role"=>"koordinator","nip" =>$userData["username"][0], "prodi" => json_encode($prodi)));
+                    $prodi = array();
 
-
-            if(sizeof($auditor)>0){
-                // $request->merge(array("role"=>"auditor","nip" =>$userData["username"][0]));
-                session(["role"=>"auditor"]);
-                // session("nip", $userData["username"][0]);
-                session(["auditor_id" => $auditor->id]);
-                        // session("id_jurusan", );
-            }elseif(sizeof($koordinator)>0){
-                // $request->merge(array("role"=>"koordinator","nip" =>$userData["username"][0], "prodi" => json_encode($prodi)));
-                session(["role" => "koordinator"]);
-                // session('nip', $userData["username"][0]);
-                if (null==session('id_prodi')) {
-                    session(['id_prodi' => $prodi[0]]);
+                    foreach ($koordinator as $kprodi) {
+                        $prodi[]=$kprodi->pro_kd;
+                    }
+                    session(["role" => "koordinator"]);
+                    // session('nip', $userData["username"][0]);
+                    if (null==session('id_prodi')) {
+                        session(['id_prodi' => $prodi[0]]);
+                    }
+                            // session('nama_prodi', $dosen[0]->jjg_kd." ".$dosen[0]->pro_nm);
+                    session(["prodi" => json_encode($prodi)]);
                 }
-                        // session('nama_prodi', $dosen[0]->jjg_kd." ".$dosen[0]->pro_nm);
-                session(["prodi" => json_encode($prodi)]);
-            }
 
-        session(["nip" => $userData["username"][0]]);
-        session(["tipe" => $userData["tipe"][0]]);
+                session(["nip" => $userData["username"][0]]);
+                session(["tipe" => $userData["tipe"][0]]);
+            
     }
 }

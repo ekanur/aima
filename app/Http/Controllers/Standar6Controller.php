@@ -32,8 +32,7 @@ class Standar6Controller extends Controller
        }
         $kategori6_2_1 = intval(round($kategori6_2_1));
         $data6_2_1 = '['.$nDOM.']';
-        $skor6_2_1 = $nDOM;
-
+        $skor6_2_1 = $kategori6_2_1;
 
        //PERHITUNGAN 6.2.2
        $nRPD = $request->nilai6_2_2dana;
@@ -45,7 +44,7 @@ class Standar6Controller extends Controller
        }
        $kategori6_2_2 = intval(round($kategori6_2_2));
        $data6_2_2 = '['.$nRPD.']';
-       $skor6_2_2 = $nRPD;
+       $skor6_2_2 = $kategori6_2_2;
 
        //PERHITUNGAN 6.2.3
        $nRPKM = $request->nilai6_2_3satu+$request->nilai6_2_3dua+$request->nilai6_2_3tiga;
@@ -57,7 +56,7 @@ class Standar6Controller extends Controller
        }
        $kategori6_2_3 = intval(round($kategori6_2_3));
        $data6_2_3 = '['.$request->nilai6_2_3satu.']';
-       $skor6_2_3 = $nRPKM;
+       $skor6_2_3 = $kategori6_2_3;
 
        //PERHITUNGAN 6.3.1
        $nilaiA=$request->a+2*$request->b+3*$request->c+4*$request->d;
@@ -74,13 +73,13 @@ class Standar6Controller extends Controller
        $skor6_3_1 = $slrdt;
 
       //PERHITUNGAN 6.4.1a
-      $kategori6_4_1_a=$request->nilai6_4_1_a/100;
+      $kategori6_4_1_a = ($request->nilai6_4_1_a/100 >= 4)? 4 : $request->nilai6_4_1_a/100;
       $kategori6_4_1_a = intval(round($kategori6_4_1_a));
       $data6_4_1_a = '['.$request->nilai6_4_1_a.']';
       $skor6_4_1_a = $kategori6_4_1_a;
 
       //PERHITUNGAN 6.4.1b
-      $kategori6_4_1_b=$request->nilai6_4_1_b/50;
+      $kategori6_4_1_b = ($request->nilai6_4_1_b/50 >= 4)? 4 : $request->nilai6_4_1_b/50;
       $kategori6_4_1_b = intval(round($kategori6_4_1_b));
       $data6_4_1_b = '['.$request->nilai6_4_1_b.']';
       $skor6_4_1_b = $kategori6_4_1_b;

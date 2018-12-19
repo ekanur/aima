@@ -38,10 +38,6 @@
                                      <input type="number" min=0 step=1  name="n_3_1_1_daya" class="form-control border-input" id="3_1_1" value="@if(isset($data[0])){{json_decode($data[0]->data)[1]}}@endif" required="">
                                    </div>
                                </div>
-                            
-                              
-                             
-                             
                           </div>
 
                       </li>
@@ -378,22 +374,23 @@
                               <div class="row">
                                     <div class="form-group col-md-3">
                                       <label for="a">Sangat Baik</label>
-                                      <input type="number" min=0 step=1 name="a3_3_1_c" class="form-control border-input" id="a" value="@if(isset($data[11])){{json_decode($data[11]->data)[0]}}@endif" required="">
+                                      <input type="number" min=0 step=1 name="a3_3_1_c" class="form-control border-input" id="a" value="@if(isset($data[11])){{json_decode($data[11]->data)[0]}}@endif" required="" min="0" max="700">
                                     </div>
                                     <div class="form-group col-md-3">
                                       <label for="b">Baik</label>
-                                      <input type="number" min=0 step=1 name="b3_3_1_c" class="form-control border-input" id="b" value="@if(isset($data[11])){{json_decode($data[11]->data)[1]}}@endif" required="">
+                                      <input type="number" min=0 step=1 name="b3_3_1_c" class="form-control border-input" id="b" value="@if(isset($data[11])){{json_decode($data[11]->data)[1]}}@endif" required="" min="0" max="700">
                                     </div>
                                     <div class="form-group col-md-3">
                                       <label for="c">Cukup</label>
-                                      <input type="number" min=0 step=1 name="c3_3_1_c" class="form-control border-input" id="c" value="@if(isset($data[11])){{json_decode($data[11]->data)[2]}}@endif" required="">
+                                      <input type="number" min=0 step=1 name="c3_3_1_c" class="form-control border-input" id="c" value="@if(isset($data[11])){{json_decode($data[11]->data)[2]}}@endif" required="" min="0" max="700">
                                     </div>
                                     <div class="form-group col-md-3">
                                       <label for="d">Kurang</label>
-                                      <input type="number" min=0 step=1 name="d3_3_1_c" class="form-control border-input" id="d" value="@if(isset($data[11])){{json_decode($data[11]->data)[3]}}@endif" required="">
+                                      <input type="number" min=0 step=1 name="d3_3_1_c" class="form-control border-input" id="d" value="@if(isset($data[11])){{json_decode($data[11]->data)[3]}}@endif" required="" min="0" max="700">
                                     </div>
 
                                   </div>
+                                  <p id="msg_3_3_1_c" style="display: none">Total nilai (sangat baik+baik+cukup+kurang) <= 700</p>
                               </div>
                           
                       </li>
@@ -572,6 +569,31 @@
                 $("#catatan").text(detail_catatan);         
                 
             });
+      let kualitas_alumni = 0;
+
+
+      $("input[name='a3_3_1_c'], input[name='b3_3_1_c'], input[name='c3_3_1_c'], input[name='d3_3_1_c']").change(function(){
+        let input = $(event.relatedTarget);
+        let sangat_baik = $("input[name='a3_3_1_c']").val();
+        let baik = $("input[name='b3_3_1_c']").val();
+        let cukup = $("input[name='c3_3_1_c']").val();
+        let kurang = $("input[name='d3_3_1_c']").val();
+        
+        kualitas_alumni = parseInt(sangat_baik) + parseInt(baik) + parseInt(cukup) + parseInt(kurang);
+
+        if(kualitas_alumni > 700){
+          alert("poin 3.3.1.c maksimal 700");
+          $(".footer button").attr("disabled", true);
+          $("input[name='a3_3_1_c'], input[name='b3_3_1_c'], input[name='c3_3_1_c'], input[name='d3_3_1_c']").attr("max", 0);
+          $("p#msg_3_3_1_c").show();
+        }else{
+          $(".footer button").attr("disabled", false);
+          $("p#msg_3_3_1_c").hide();
+          $("input[name='a3_3_1_c'], input[name='b3_3_1_c'], input[name='c3_3_1_c'], input[name='d3_3_1_c']").attr("max", 700);
+        }
+
+      });
+
     });
 </script>
 

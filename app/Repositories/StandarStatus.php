@@ -22,15 +22,17 @@ class StandarStatus
 	
 	function __construct($id_prodi)
 	{
-		$this->standar1 = Standar1::where('id_prodi', '=', $id_prodi)->first();
-		$this->standar2 = Standar2::where('id_prodi', '=', $id_prodi)->first();
-		$this->standar3 = Standar3::where('id_prodi', '=', $id_prodi)->first();
-		$this->standar4 = Standar4::where('id_prodi', '=', $id_prodi)->first();
-		$this->standar5 = Standar5::where('id_prodi', '=', $id_prodi)->first();
-		$this->standar6 = Standar6::where('id_prodi', '=', $id_prodi)->first();
-		$this->standar7 = Standar7::where('id_prodi', '=', $id_prodi)->first();
+		$this->standar1 = Standar1::where('id_prodi', '=', $id_prodi)->count();
+		$this->standar2 = Standar2::where('id_prodi', '=', $id_prodi)->count();
+		$this->standar3 = Standar3::where('id_prodi', '=', $id_prodi)->count();
+		$this->standar4 = Standar4::where('id_prodi', '=', $id_prodi)->count();
+		$this->standar5 = Standar5::where('id_prodi', '=', $id_prodi)->count();
+		$this->standar6 = Standar6::where('id_prodi', '=', $id_prodi)->count();
+		$this->standar7 = Standar7::where('id_prodi', '=', $id_prodi)->count();
 
-		$this->status_code = count($this->standar1)+count($this->standar2)+count($this->standar3)+count($this->standar4)+count($this->standar5)+count($this->standar6)+count($this->standar7);
+		// dd($this->standar1." ".$this->standar2." ".$this->standar3." ".$this->standar4." ".$this->standar5." ".$this->standar6);
+
+		$this->status_code = $this->standar1 + $this->standar2 + $this->standar3 + $this->standar4 + $this->standar5 + $this->standar6 + $this->standar7 ;
 	}
 
 	public function getStatus(){
