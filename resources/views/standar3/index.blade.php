@@ -176,10 +176,10 @@
                                     <div class="form-group col-md-3">
                                       <select name="n_3_1_3" id="" class="form-control border-input" required="">
                                         <option disabled selected >--Pilih--</option>
-                                        <option value="1" @if(isset($data[5])) @if(json_decode($data[5]->data)[0] == 1) {{ "selected" }}@endif @endif >Tidak ada</option>
-                                        <option value="2" @if(isset($data[5])) @if(json_decode($data[5]->data)[0] == 2) {{ "selected" }}@endif @endif >Tingkat Lokal</option>
-                                        <option value="3" @if(isset($data[5])) @if(json_decode($data[5]->data)[0] == 3) {{ "selected" }}@endif @endif >Tingkat Wilayah</option>
-                                        <option value="4" @if(isset($data[5])) @if(json_decode($data[5]->data)[0] == 4) {{ "selected" }}@endif @endif >Tingkat Internasional</option>
+                                        <option value="1" @if(isset($data[5])) @if(json_decode($data[5]->data)[0] == 1) {{ "selected" }}@endif @endif >Tidak ada bukti penghargaan</option>
+                                        <option value="2" @if(isset($data[5])) @if(json_decode($data[5]->data)[0] == 2) {{ "selected" }}@endif @endif >Ada bukti penghargaan juara lomba ilmiah, olah raga, maupun seni tingkat lokal PT</option>
+                                        <option value="3" @if(isset($data[5])) @if(json_decode($data[5]->data)[0] == 3) {{ "selected" }}@endif @endif >Ada bukti penghargaan juara lomba ilmiah, olah raga, maupun seni tingkat wilayah</option>
+                                        <option value="4" @if(isset($data[5])) @if(json_decode($data[5]->data)[0] == 4) {{ "selected" }}@endif @endif >Ada bukti penghargaan juara lomba ilmiah, olah raga, maupun seni tingkat nasional atau internasional</option>
                                       </select>
                                     </div>
                                   </div>
