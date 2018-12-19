@@ -60,22 +60,7 @@ class Standar5Controller extends Controller
       $skor5_1_2_c = $masuk->pdmk5_1_2_c;
 
       //perhitungan skor 5.1.3.a
-      // if($masuk->bmkp5_1_3_a  >= 9 && $masuk->rmkp5_1_3_a >= 2){
-      //     $kategori5_1_3_a=4;
-      // }
-      //
-      // elseif($masuk->bmkp5_1_3_a >= 9 && $masuk->rmkp5_1_3_a == 1 ){
-      //     $kategori5_1_3_a= 3 * $masuk->rmkp5_1_3_a;
-      // }
-      // elseif($masuk->bmkp5_1_3_a < 9 || $masuk->rmkp5_1_3_a < 1){
-      //   $kategori5_1_3_a = 2;
-      // }
-      //
-      // elseif($masuk->bmkp5_3_1_a == null || $masuk->rmkp5_3_1_a == null){
-      //   $kategori5_1_3_a = 0;
-      // }
-      $kategori5_1_3_a = $masuk->standar5_1_3_a / 3;
-      $kategori5_1_3_a= intval(round($kategori5_1_3_a)); // pembulatan $kategori5_1_3_a
+      $kategori5_1_3_a = $masuk->standar5_1_3_a; // pembulatan $kategori5_1_3_a
       $data5_1_3_a = '['.$masuk->standar5_1_3_a.']';
       $skor5_1_3_a = $kategori5_1_3_a;
 
